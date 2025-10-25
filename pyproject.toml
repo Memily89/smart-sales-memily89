@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools>=80", "wheel"]
 
 [project]
-authors = [{name = "Denise Case"}] # TODO: Change to YOUR name (ownership matters)
+authors = [{name = "Micah Emily"}] 
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.12",
@@ -40,6 +40,7 @@ Repository = "https://github.com/denisecase/pro-analytics-02-starter"
 dev = [
   "pytest", # run some tests automatically
   "pytest-cov", # coverage report for more visibility
+  "pre-commit", # git hooks for quality checks
 ]
 docs = [
   "mkdocs",                # Core MkDocs
