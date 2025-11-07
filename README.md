@@ -168,3 +168,17 @@ Before starting a new session, remember to do a `git pull` and keep your tools u
 Each time forward progress is made, remember to git add-commit-push.
 
 
+### Added Starter Code
+- Created new file 'src/analytics_project/data_prep.py'
+- Copied code from the [smart-sales-starter-files](https://github.com/denisecase/smart-sales-starter-files) GitHub repo
+- Saved the file in correct folder
+
+### Run Data Prep Module and Commit
+- Opened the terminal
+-  Ran module using
+-  uv run python -m analytics_project.data_prep
+   -  git add, commit, push
+      -  git add .
+      -  git commit -m "add starter files"
+      -  git push -u origin main
+-
