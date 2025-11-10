@@ -23,18 +23,18 @@ import sys
 import pandas as pd
 
 # Ensure project root is in sys.path for local imports (now 3 parents are needed)
-sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent.parent))
 
 # Import local modules (e.g. utils/logger.py)
 # Optional: Use a data_scrubber module for common data cleaning tasks
-from utils.logger import logger
+from analytics_project.utils.logger import logger
 
 # Constants
 SCRIPTS_DATA_PREP_DIR: pathlib.Path = (
     pathlib.Path(__file__).resolve().parent
 )  # Directory of the current script
 SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent
-PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent
+PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR  # This is the analytics_project directory
 DATA_DIR: pathlib.Path = PROJECT_ROOT / "data"
 RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"
 PREPARED_DATA_DIR: pathlib.Path = DATA_DIR / "prepared"  # place to store prepared data
