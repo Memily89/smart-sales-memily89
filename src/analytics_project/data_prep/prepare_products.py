@@ -65,11 +65,9 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
     df = pd.read_csv(file_path)
     logger.info(f"Loaded dataframe with {len(df)} rows and {len(df.columns)} columns")
 
-    # TODO: OPTIONAL Add data profiling here to understand the dataset
-    # Suggestion: Log the datatypes of each column and the number of unique values
-    # Example:
-    # logger.info(f"Column datatypes: \n{df.dtypes}")
-    # logger.info(f"Number of unique values: \n{df.nunique()}")
+    # Add data profiling to understand the dataset
+    logger.info(f"Column datatypes:\n{df.dtypes}")
+    logger.info(f"Number of unique values:\n{df.nunique()}")
 
     return df
 
@@ -101,11 +99,16 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_duplicates with dataframe shape={df.shape}")
     initial_count = len(df)
 
-    # TODO: Consider which columns should be used to identify duplicates
-    # Example: For products, SKU or product code is typically unique
-    # So we could do something like this:
-    # df = df.drop_duplicates(subset=['product_code'])
-    df = df.drop_duplicates()
+    # For products, ProductID is the unique identifier
+    # Remove duplicates based on ProductID (keep first occurrence)
+    if "productid" in df.columns:
+        logger.info("Removing duplicates based on productid column")
+        df = df.drop_duplicates(subset=["productid"], keep="first")
+        logger.info("Duplicates removed based on ProductID")
+    else:
+        # Fallback: remove all duplicate rows
+        logger.warning("productid column not found, removing complete duplicate rows instead")
+        df = df.drop_duplicates()
 
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} duplicate rows")
@@ -115,6 +118,7 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     """Handle missing values by filling or dropping.
+
     This logic is specific to the actual data and business rules.
 
     Args:
@@ -149,6 +153,7 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
 
 def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     """Remove outliers based on thresholds.
+
     This logic is very specific to the actual data and business rules.
 
     Args:
@@ -160,20 +165,37 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
 
-    # TODO: Identify numeric columns that might have outliers.
-    # Recommended - just use ranges based on reasonable data
-    # People should not be 22 feet tall, etc.
-    # OPTIONAL ADVANCED: Use IQR method to identify outliers in numeric columns
-    # Example:
-    # for col in ['price', 'weight', 'length', 'width', 'height']:
-    #     if col in df.columns and df[col].dtype in ['int64', 'float64']:
-    #         Q1 = df[col].quantile(0.25)
-    #         Q3 = df[col].quantile(0.75)
-    #         IQR = Q3 - Q1
-    #         lower_bound = Q1 - 1.5 * IQR
-    #         upper_bound = Q3 + 1.5 * IQR
-    #         df = df[(df[col] >= lower_bound) & (df[col] <= upper_bound)]
-    #         logger.info(f"Applied outlier removal to {col}: bounds [{lower_bound}, {upper_bound}]")
+    # Use IQR-based outlier removal for numeric product fields
+    numeric_candidates = ["unitprice", "stockcount"]
+    for col in numeric_candidates:
+        if col in df.columns and pd.api.types.is_numeric_dtype(df[col]):
+            q1 = df[col].quantile(0.25)
+            q3 = df[col].quantile(0.75)
+            iqr = q3 - q1
+            if pd.isna(iqr) or iqr == 0:
+                logger.debug(f"Skipping IQR outlier removal for {col}: IQR={iqr}")
+                continue
+            lower_bound = q1 - 1.5 * iqr
+            upper_bound = q3 + 1.5 * iqr
+            before = len(df)
+            df = df[(df[col] >= lower_bound) & (df[col] <= upper_bound)]
+            after = len(df)
+            logger.info(
+                f"Applied IQR outlier removal to {col}: bounds [{lower_bound}, {upper_bound}] - removed {before - after} rows"
+            )
+
+    # Additional simple sanity rules (no negative prices/stock)
+    if "unitprice" in df.columns and pd.api.types.is_numeric_dtype(df["unitprice"]):
+        neg_prices = df[df["unitprice"] < 0].shape[0]
+        if neg_prices > 0:
+            logger.info(f"Removing {neg_prices} rows with negative unitprice")
+            df = df[df["unitprice"] >= 0]
+
+    if "stockcount" in df.columns and pd.api.types.is_numeric_dtype(df["stockcount"]):
+        neg_stock = df[df["stockcount"] < 0].shape[0]
+        if neg_stock > 0:
+            logger.info(f"Removing {neg_stock} rows with negative stockcount")
+            df = df[df["stockcount"] >= 0]
 
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} outlier rows")
@@ -192,13 +214,24 @@ def standardize_formats(df: pd.DataFrame) -> pd.DataFrame:
     """
     logger.info(f"FUNCTION START: standardize_formats with dataframe shape={df.shape}")
 
-    # TODO: OPTIONAL ADVANCED Implement standardization for product data
-    # Suggestion: Consider standardizing text fields, units, and categorical variables
-    # Examples (update based on your column names and types):
-    # df['product_name'] = df['product_name'].str.title()  # Title case for product names
-    # df['category'] = df['category'].str.lower()  # Lowercase for categories
-    # df['price'] = df['price'].round(2)  # Round prices to 2 decimal places
-    # df['weight_unit'] = df['weight_unit'].str.upper()  # Uppercase units
+    # Standardize textual fields
+    if "productname" in df.columns:
+        # Strip whitespace and title-case common product names
+        df["productname"] = df["productname"].astype(str).str.strip().str.title()
+
+    if "category" in df.columns:
+        df["category"] = df["category"].astype(str).str.strip().str.lower()
+
+    if "supplier" in df.columns:
+        df["supplier"] = df["supplier"].astype(str).str.strip()
+
+    # Round currency/float fields
+    if "unitprice" in df.columns and pd.api.types.is_numeric_dtype(df["unitprice"]):
+        df["unitprice"] = df["unitprice"].round(2)
+
+    # Ensure integer-like fields are integers
+    if "stockcount" in df.columns and pd.api.types.is_numeric_dtype(df["stockcount"]):
+        df["stockcount"] = df["stockcount"].astype(int)
 
     logger.info("Completed standardizing formats")
     return df
@@ -215,19 +248,33 @@ def validate_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     logger.info(f"FUNCTION START: validate_data with dataframe shape={df.shape}")
 
-    # TODO: Implement data validation rules specific to products
-    # Suggestion: Check for valid values in critical fields
-    # Example:
-    # invalid_prices = df[df['price'] < 0].shape[0]
-    # logger.info(f"Found {invalid_prices} products with negative prices")
-    # df = df[df['price'] >= 0]
+    # ProductID must be positive
+    if "productid" in df.columns:
+        invalid_ids = df[df["productid"] <= 0].shape[0]
+        if invalid_ids > 0:
+            logger.info(f"Dropping {invalid_ids} rows with non-positive productid")
+            df = df[df["productid"] > 0]
+
+    # UnitPrice must be non-negative
+    if "unitprice" in df.columns and pd.api.types.is_numeric_dtype(df["unitprice"]):
+        neg_prices = df[df["unitprice"] < 0].shape[0]
+        if neg_prices > 0:
+            logger.info(f"Dropping {neg_prices} rows with negative unitprice")
+            df = df[df["unitprice"] >= 0]
+
+    # StockCount should be integer >= 0
+    if "stockcount" in df.columns and pd.api.types.is_numeric_dtype(df["stockcount"]):
+        neg_stock = df[df["stockcount"] < 0].shape[0]
+        if neg_stock > 0:
+            logger.info(f"Dropping {neg_stock} rows with negative stockcount")
+            df = df[df["stockcount"] >= 0]
 
     logger.info("Data validation complete")
     return df
 
 
 def main() -> None:
-    """Main function for processing product data."""
+    """Process product data for analytics."""
     logger.info("==================================")
     logger.info("STARTING prepare_products_data.py")
     logger.info("==================================")
@@ -259,7 +306,9 @@ def main() -> None:
 
     # Log if any column names changed
     changed_columns = [
-        f"{old} -> {new}" for old, new in zip(original_columns, df.columns) if old != new
+        f"{old} -> {new}"
+        for old, new in zip(original_columns, df.columns, strict=True)
+        if old != new
     ]
     if changed_columns:
         logger.info(f"Cleaned column names: {', '.join(changed_columns)}")

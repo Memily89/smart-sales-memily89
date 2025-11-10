@@ -123,10 +123,41 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     missing_before = df.isna().sum().sum()
     logger.info(f"Total missing values before handling: {missing_before}")
 
-    # TODO: Fill or drop missing values based on business rules
-    # Example:
-    # df['CustomerName'].fillna('Unknown', inplace=True)
-    # df.dropna(subset=['CustomerID'], inplace=True)
+    # Log missing values by column before handling
+    missing_by_column = df.isna().sum()
+    if missing_by_column.sum() > 0:
+        logger.info(f"Missing values by column:\n{missing_by_column[missing_by_column > 0]}")
+
+    # Fill or drop missing values based on business rules
+    # Strategy: Drop rows with missing critical identifiers
+    # CustomerID and Name are essential for customer identification
+    if "CustomerID" in df.columns:
+        df = df.dropna(subset=["CustomerID"])
+        logger.info("Dropped rows with missing CustomerID")
+
+    if "Name" in df.columns:
+        df = df.dropna(subset=["Name"])
+        logger.info("Dropped rows with missing Name")
+
+    # Fill missing Region with 'Unknown' as a safe default
+    if "Region" in df.columns and df["Region"].isna().sum() > 0:
+        df["Region"] = df["Region"].fillna("Unknown")
+        logger.info("Filled missing Region values with 'Unknown'")
+
+    # Fill missing ContactMethod with 'Email' as a safe default
+    if "ContactMethod" in df.columns and df["ContactMethod"].isna().sum() > 0:
+        df["ContactMethod"] = df["ContactMethod"].fillna("Email")
+        logger.info("Filled missing ContactMethod values with 'Email'")
+
+    # Fill missing DaysSinceLastPurchase with 0 (assume never purchased)
+    if "DaysSinceLastPurchase" in df.columns and df["DaysSinceLastPurchase"].isna().sum() > 0:
+        df["DaysSinceLastPurchase"] = df["DaysSinceLastPurchase"].fillna(0)
+        logger.info("Filled missing DaysSinceLastPurchase values with 0")
+
+    # Fill missing JoinDate with a default date (optional - can also drop)
+    if "JoinDate" in df.columns and df["JoinDate"].isna().sum() > 0:
+        df = df.dropna(subset=["JoinDate"])
+        logger.info("Dropped rows with missing JoinDate")
 
     # Log missing values count after handling
     missing_after = df.isna().sum().sum()
@@ -137,6 +168,7 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
 
 def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     """Remove outliers based on thresholds.
+
     This logic is very specific to the actual data and business rules.
 
     Args:
@@ -148,9 +180,21 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
 
-    # TODO: Define numeric columns and apply rules for outlier removal
-    # Example:
-    # df = df[(df['Age'] > 18) & (df['Age'] < 100)]
+    # Define numeric columns and apply rules for outlier removal
+    # DaysSinceLastPurchase: Remove records with unrealistic values
+    # Assuming valid range: 0 to 365 days (within a year)
+    if "DaysSinceLastPurchase" in df.columns:
+        logger.info(
+            f"DaysSinceLastPurchase range before: {df['DaysSinceLastPurchase'].min()} - {df['DaysSinceLastPurchase'].max()}"
+        )
+        df = df[(df["DaysSinceLastPurchase"] >= 0) & (df["DaysSinceLastPurchase"] <= 365)]
+        logger.info(
+            f"DaysSinceLastPurchase range after: {df['DaysSinceLastPurchase'].min()} - {df['DaysSinceLastPurchase'].max()}"
+        )
+
+    # CustomerID: Should be positive integers
+    if "CustomerID" in df.columns:
+        df = df[df["CustomerID"] > 0]
 
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} outlier rows")
@@ -164,7 +208,7 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
-    """Main function for processing customer data."""
+    """Process customer data for analytics."""
     logger.info("==================================")
     logger.info("STARTING prepare_customers_data.py")
     logger.info("==================================")

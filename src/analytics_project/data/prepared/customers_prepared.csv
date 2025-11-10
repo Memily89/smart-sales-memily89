@@ -11,19 +11,16 @@ CustomerID,Name,Region,JoinDate,DaysSinceLastPurchase,ContactMethod
 1009,Zachary Bell Jr.,East,4/20/2023,179,SMS
 1010,Mike Davis,East,3/23/2022,337,SMS
 1011,Amanda Myers,West,9/5/2021,198,Email
-1012,Tara Miller,North,8/10/2020,859,Call
 1013,Alyssa Morgan,North,7/22/2022,122,SMS
 1014,Cindy Woods,East,4/2/2024,75,SMS
 1015,Jennifer Rodgers,North,2/12/2023,21,Call
 1016,Andrea Roberts,East,5/16/2021,1,SMS
-1017,Brittney Burnett,North,7/3/2020,951,Email
 1018,Edwin Garrison,South-West,8/31/2020,284,SMS
 1019,Michelle Torres,Central,11/18/2020,63,SMS
 1020,Michelle Brewer,East,7/14/2021,125,Email
 1021,Aaron Burnett,South,2/13/2024,128,Call
 1022,Austin Gutierrez,East,11/25/2021,121,Call
 1023,Dustin Medina,East,6/14/2021,73,Email
-1024,Andres Avila,Central,9/19/2022,492,Email
 1025,Garrett Lewis,South,8/4/2023,296,Call
 1026,Gary Walls,North,10/5/2023,295,Email
 1027,Anthony Schroeder,East,10/4/2020,244,Email
