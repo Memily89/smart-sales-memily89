@@ -86,73 +86,61 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
-    """Handle missing values using conservative business rules.
+    """Handle missing values and outliers in the DataFrame."""
+    initial = len(df)  # Track initial row count
 
-    - Drop rows missing TransactionID, CustomerID, ProductID
-    - Drop rows with missing or zero SaleAmount
-    - Fill missing DiscountPercent with 0
-    - Fill missing PaymentType with 'Unknown'
-    """
-    logger.info(f"FUNCTION START: handle_missing_values with dataframe shape={df.shape}")
+    # Numeric columns
+    numeric_cols = df.select_dtypes(include=["number"]).columns
+    for col in numeric_cols:
+        mean_value = df[col].mean()
+        df[col] = df[col].fillna(mean_value)
+        logger.info(f"Filled missing values in '{col}' with mean {mean_value:.2f}")
 
-    # Log missing before
-    missing_before = df.isna().sum()
-    logger.info(f"Missing values by column before handling:\n{missing_before}")
+    # Categorical columns
+    categorical_cols = df.select_dtypes(include=["object"]).columns
+    for col in categorical_cols:
+        if not df[col].mode().empty:
+            mode_value = df[col].mode()[0]
+        else:
+            mode_value = "Unknown"
+        df[col] = df[col].fillna(mode_value)
+        logger.info(f"Filled missing values in '{col}' with mode '{mode_value}'")
 
-    # Drop rows missing critical identifiers
-    critical = [c for c in ["TransactionID", "CustomerID", "ProductID"] if c in df.columns]
-    if critical:
+    # Remove negative SaleAmount
+    if "SaleAmount" in df.columns and pd.api.types.is_numeric_dtype(df["SaleAmount"]):
+        neg = (df["SaleAmount"] < 0).sum()
+        if neg > 0:
+            df = df[df["SaleAmount"] >= 0]
+            logger.info(f"Removed {neg} rows with negative SaleAmount")
+
+    # DiscountPercent bounds 0..100
+    if "DiscountPercent" in df.columns and pd.api.types.is_numeric_dtype(df["DiscountPercent"]):
         before = len(df)
-        df = df.dropna(subset=critical)
-        logger.info(f"Dropped {before - len(df)} rows missing critical columns: {critical}")
+        df = df[(df["DiscountPercent"] >= 0) & (df["DiscountPercent"] <= 100)]
+        logger.info(f"Applied bounds to DiscountPercent, removed {before - len(df)} rows")
 
-    # Drop rows where SaleAmount is missing or zero
-    if "SaleAmount" in df.columns:
-        before = len(df)
-        df = df.dropna(subset=["SaleAmount"])
-        df = df[df["SaleAmount"] != 0]
-        logger.info(f"Dropped {before - len(df)} rows with missing or zero SaleAmount")
-
-    # Fill DiscountPercent with 0 if missing
-    if "DiscountPercent" in df.columns and df["DiscountPercent"].isna().sum() > 0:
-        df["DiscountPercent"] = df["DiscountPercent"].fillna(0)
-        logger.info("Filled missing DiscountPercent with 0")
-
-    # Fill PaymentType with 'Unknown'
-    if "PaymentType" in df.columns and df["PaymentType"].isna().sum() > 0:
-        df["PaymentType"] = df["PaymentType"].fillna("Unknown")
-        logger.info("Filled missing PaymentType with 'Unknown'")
-
-    missing_after = df.isna().sum()
-    logger.info(f"Missing values by column after handling:\n{missing_after}")
-    logger.info(f"{len(df)} records remaining after handling missing values.")
+    logger.info(f"Removed {initial - len(df)} outlier rows")
+    logger.info(f"{len(df)} records remaining after cleaning.")
     return df
 
 
 def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
-    """Remove outliers from numeric sale columns using IQR and rules.
+    """Remove outliers from the sales DataFrame.
 
-    Applies IQR to SaleAmount and DiscountPercent (where present), and
-    removes negative sale amounts.
+    Specifically:
+    - Remove rows with negative SaleAmount
+    - Remove rows with DiscountPercent outside 0..100
+
+    Args:
+        df (pd.DataFrame): Input DataFrame
+
+    Returns:
+        pd.DataFrame: DataFrame with outliers removed
     """
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial = len(df)
 
-    # IQR on SaleAmount
-    if "SaleAmount" in df.columns and pd.api.types.is_numeric_dtype(df["SaleAmount"]):
-        q1 = df["SaleAmount"].quantile(0.25)
-        q3 = df["SaleAmount"].quantile(0.75)
-        iqr = q3 - q1
-        if iqr and not pd.isna(iqr):
-            lb = q1 - 1.5 * iqr
-            ub = q3 + 1.5 * iqr
-            before = len(df)
-            df = df[(df["SaleAmount"] >= lb) & (df["SaleAmount"] <= ub)]
-            logger.info(
-                f"Applied IQR removal to SaleAmount bounds [{lb}, {ub}] removed {before - len(df)} rows"
-            )
-
-    # Remove negative SaleAmount explicitly
+    # Remove negative SaleAmount
     if "SaleAmount" in df.columns and pd.api.types.is_numeric_dtype(df["SaleAmount"]):
         neg = df[df["SaleAmount"] < 0].shape[0]
         if neg > 0:
