@@ -23,19 +23,19 @@ import sys
 import pandas as pd
 
 # Ensure project root is in sys.path for local imports (now 3 parents are needed)
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent.parent))
+sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent))
 
 # Import local modules (e.g. utils/logger.py)
 # Optional: Use a data_scrubber module for common data cleaning tasks
-from analytics_project.utils.data_scrubber import DataScrubber
-from analytics_project.utils.logger import logger
+from utils.data_scrubber import DataScrubber
+from utils.logger import logger
 
 # Constants
 SCRIPTS_DATA_PREP_DIR: pathlib.Path = (
     pathlib.Path(__file__).resolve().parent
 )  # Directory of the current script
 SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent
-PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR  # This is the analytics_project directory
+PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent
 DATA_DIR: pathlib.Path = PROJECT_ROOT / "data"
 RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"
 PREPARED_DATA_DIR: pathlib.Path = DATA_DIR / "prepared"  # place to store prepared data
@@ -123,41 +123,10 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     missing_before = df.isna().sum().sum()
     logger.info(f"Total missing values before handling: {missing_before}")
 
-    # Log missing values by column before handling
-    missing_by_column = df.isna().sum()
-    if missing_by_column.sum() > 0:
-        logger.info(f"Missing values by column:\n{missing_by_column[missing_by_column > 0]}")
-
-    # Fill or drop missing values based on business rules
-    # Strategy: Drop rows with missing critical identifiers
-    # CustomerID and Name are essential for customer identification
-    if "CustomerID" in df.columns:
-        df = df.dropna(subset=["CustomerID"])
-        logger.info("Dropped rows with missing CustomerID")
-
-    if "Name" in df.columns:
-        df = df.dropna(subset=["Name"])
-        logger.info("Dropped rows with missing Name")
-
-    # Fill missing Region with 'Unknown' as a safe default
-    if "Region" in df.columns and df["Region"].isna().sum() > 0:
-        df["Region"] = df["Region"].fillna("Unknown")
-        logger.info("Filled missing Region values with 'Unknown'")
-
-    # Fill missing ContactMethod with 'Email' as a safe default
-    if "ContactMethod" in df.columns and df["ContactMethod"].isna().sum() > 0:
-        df["ContactMethod"] = df["ContactMethod"].fillna("Email")
-        logger.info("Filled missing ContactMethod values with 'Email'")
-
-    # Fill missing DaysSinceLastPurchase with 0 (assume never purchased)
-    if "DaysSinceLastPurchase" in df.columns and df["DaysSinceLastPurchase"].isna().sum() > 0:
-        df["DaysSinceLastPurchase"] = df["DaysSinceLastPurchase"].fillna(0)
-        logger.info("Filled missing DaysSinceLastPurchase values with 0")
-
-    # Fill missing JoinDate with a default date (optional - can also drop)
-    if "JoinDate" in df.columns and df["JoinDate"].isna().sum() > 0:
-        df = df.dropna(subset=["JoinDate"])
-        logger.info("Dropped rows with missing JoinDate")
+    # TODO: Fill or drop missing values based on business rules
+    # Example:
+    # df['CustomerName'].fillna('Unknown', inplace=True)
+    # df.dropna(subset=['CustomerID'], inplace=True)
 
     # Log missing values count after handling
     missing_after = df.isna().sum().sum()
@@ -168,7 +137,6 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
 
 def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     """Remove outliers based on thresholds.
-
     This logic is very specific to the actual data and business rules.
 
     Args:
@@ -180,21 +148,9 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
 
-    # Define numeric columns and apply rules for outlier removal
-    # DaysSinceLastPurchase: Remove records with unrealistic values
-    # Assuming valid range: 0 to 365 days (within a year)
-    if "DaysSinceLastPurchase" in df.columns:
-        logger.info(
-            f"DaysSinceLastPurchase range before: {df['DaysSinceLastPurchase'].min()} - {df['DaysSinceLastPurchase'].max()}"
-        )
-        df = df[(df["DaysSinceLastPurchase"] >= 0) & (df["DaysSinceLastPurchase"] <= 365)]
-        logger.info(
-            f"DaysSinceLastPurchase range after: {df['DaysSinceLastPurchase'].min()} - {df['DaysSinceLastPurchase'].max()}"
-        )
-
-    # CustomerID: Should be positive integers
-    if "CustomerID" in df.columns:
-        df = df[df["CustomerID"] > 0]
+    # TODO: Define numeric columns and apply rules for outlier removal
+    # Example:
+    df = df[(df["InStoreTripPercent"] < 1)]
 
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} outlier rows")
@@ -208,7 +164,7 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main() -> None:
-    """Process customer data for analytics."""
+    """Main function for processing customer data."""
     logger.info("==================================")
     logger.info("STARTING prepare_customers_data.py")
     logger.info("==================================")
@@ -233,17 +189,14 @@ def main() -> None:
 
     # Clean column names
     original_columns = df.columns.tolist()
-    if len(df.columns) > 0:
-        df.columns = df.columns.str.strip()
+    df.columns = df.columns.str.strip()
 
-        # Log if any column names changed
-        changed_columns = [
-            f"{old} -> {new}"
-            for old, new in zip(original_columns, df.columns, strict=True)
-            if old != new
-        ]
-        if changed_columns:
-            logger.info(f"Cleaned column names: {', '.join(changed_columns)}")
+    # Log if any column names changed
+    changed_columns = [
+        f"{old} -> {new}" for old, new in zip(original_columns, df.columns) if old != new
+    ]
+    if changed_columns:
+        logger.info(f"Cleaned column names: {', '.join(changed_columns)}")
 
     # Remove duplicates
     df = remove_duplicates(df)
