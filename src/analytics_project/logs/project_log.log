@@ -1,0 +1,359 @@
+2025-11-22 02:34:22.483 | INFO     | __main__:main:43 - STARTING logger.py
+2025-11-22 02:34:22.483 | INFO     | __main__:log_example:36 - This is an example info message.
+2025-11-22 02:34:22.483 | WARNING  | __main__:log_example:37 - This is an example warning message.
+2025-11-22 02:34:22.483 | ERROR    | __main__:log_example:38 - This is an example error message.
+2025-11-22 02:34:22.483 | INFO     | __main__:main:48 - View the log output at C:\Repos\bi-analytics-data-project-01\src\analytics_project\logs\project_log.log
+2025-11-22 02:34:22.483 | INFO     | __main__:main:49 - EXITING logger.py.
+2025-11-22 02:57:10.690 | INFO     | __main__:main:143 - ==================================
+2025-11-22 02:57:10.691 | INFO     | __main__:main:144 - STARTING prepare_customers_data.py
+2025-11-22 02:57:10.699 | INFO     | __main__:main:145 - ==================================
+2025-11-22 02:57:10.699 | INFO     | __main__:main:147 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-22 02:57:10.699 | INFO     | __main__:main:148 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-22 02:57:10.700 | INFO     | __main__:main:149 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-22 02:57:10.700 | INFO     | __main__:read_raw_data:54 - READING: C:\Repos\bi-analytics-data-project-01\data\raw\customers_data.csv.
+2025-11-22 02:57:10.727 | INFO     | __main__:main:161 - Initial dataframe columns: CustomerID, Name, Region, JoinDate,  DaysSinceLastPurchase,  ContactMethod
+2025-11-22 02:57:10.727 | INFO     | __main__:main:162 - Initial dataframe shape: (201, 6)
+2025-11-22 02:57:10.728 | INFO     | __main__:main:173 - Cleaned column names:  DaysSinceLastPurchase -> DaysSinceLastPurchase,  ContactMethod -> ContactMethod
+2025-11-22 02:57:10.728 | INFO     | __main__:remove_duplicates:76 - FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-11-22 02:57:10.736 | INFO     | __main__:remove_duplicates:80 - Original dataframe shape: (201, 6)
+2025-11-22 02:57:10.736 | INFO     | __main__:remove_duplicates:81 - Deduped  dataframe shape: (201, 6)
+2025-11-22 02:57:10.736 | INFO     | __main__:handle_missing_values:87 - FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-11-22 02:57:10.743 | INFO     | __main__:handle_missing_values:91 - Total missing values before handling: 0
+2025-11-22 02:57:10.747 | INFO     | __main__:handle_missing_values:105 - Total missing values after handling: 0
+2025-11-22 02:57:10.747 | INFO     | __main__:handle_missing_values:106 - 201 records remaining after handling missing values.
+2025-11-22 02:57:10.747 | INFO     | __main__:remove_outliers:112 - FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-11-22 02:57:10.750 | INFO     | __main__:remove_outliers:131 - Removed 2 outlier rows
+2025-11-22 02:57:10.750 | INFO     | __main__:remove_outliers:132 - 199 records remaining after removing outliers.
+2025-11-22 02:57:10.750 | INFO     | __main__:save_prepared_data:66 - FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(199, 6)
+2025-11-22 02:57:10.758 | INFO     | __main__:save_prepared_data:71 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\customers_prepared.csv
+2025-11-22 02:57:10.759 | INFO     | __main__:main:187 - ==================================
+2025-11-22 02:57:10.760 | INFO     | __main__:main:188 - Original shape: (199, 6)
+2025-11-22 02:57:10.760 | INFO     | __main__:main:189 - Cleaned shape:  (201, 6)
+2025-11-22 02:57:10.760 | INFO     | __main__:main:190 - ==================================
+2025-11-22 02:57:10.761 | INFO     | __main__:main:191 - FINISHED prepare_customers_data.py
+2025-11-22 02:57:10.761 | INFO     | __main__:main:192 - ==================================
+2025-11-22 03:12:47.183 | INFO     | __main__:main:275 - ==================================
+2025-11-22 03:12:47.184 | INFO     | __main__:main:276 - STARTING prepare_products_data.py
+2025-11-22 03:12:47.184 | INFO     | __main__:main:277 - ==================================
+2025-11-22 03:12:47.184 | INFO     | __main__:main:279 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-22 03:12:47.185 | INFO     | __main__:main:280 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-22 03:12:47.185 | INFO     | __main__:main:281 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-22 03:12:47.185 | INFO     | __main__:main:282 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-22 03:12:47.185 | INFO     | __main__:read_raw_data:52 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-22 03:12:47.185 | INFO     | __main__:read_raw_data:54 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\products_data.csv
+2025-11-22 03:12:47.189 | INFO     | __main__:read_raw_data:56 - Loaded dataframe with 100 rows and 6 columns
+2025-11-22 03:12:47.200 | INFO     | __main__:read_raw_data:59 - Column datatypes:
+ProductID        int64
+ProductName     object
+Category        object
+UnitPrice      float64
+StockCount       int64
+Supplier        object
+dtype: object
+2025-11-22 03:12:47.204 | INFO     | __main__:read_raw_data:60 - Number of unique values:
+ProductID      100
+ProductName     98
+Category         4
+UnitPrice      100
+StockCount      91
+Supplier        19
+dtype: int64
+2025-11-22 03:12:47.204 | INFO     | __main__:read_raw_data:52 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-22 03:12:47.204 | INFO     | __main__:read_raw_data:54 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\products_data.csv
+2025-11-22 03:12:47.209 | INFO     | __main__:read_raw_data:56 - Loaded dataframe with 100 rows and 6 columns
+2025-11-22 03:12:47.210 | INFO     | __main__:read_raw_data:59 - Column datatypes:
+ProductID        int64
+ProductName     object
+Category        object
+UnitPrice      float64
+StockCount       int64
+Supplier        object
+dtype: object
+2025-11-22 03:12:47.212 | INFO     | __main__:read_raw_data:60 - Number of unique values:
+ProductID      100
+ProductName     98
+Category         4
+UnitPrice      100
+StockCount      91
+Supplier        19
+dtype: int64
+2025-11-22 03:12:47.212 | INFO     | __main__:main:297 - Initial dataframe columns: ProductID, ProductName, Category, UnitPrice, StockCount, Supplier
+2025-11-22 03:12:47.212 | INFO     | __main__:main:298 - Initial dataframe shape: (100, 6)
+2025-11-22 03:12:47.213 | INFO     | __main__:main:311 - Cleaned column names: ProductID -> productid, ProductName -> productname, Category -> category, UnitPrice -> unitprice, StockCount -> stockcount, Supplier -> supplier
+2025-11-22 03:12:47.213 | INFO     | __main__:remove_duplicates:89 - FUNCTION START: remove_duplicates with dataframe shape=(100, 6)
+2025-11-22 03:12:47.213 | INFO     | __main__:remove_duplicates:95 - Removing duplicates based on productid column
+2025-11-22 03:12:47.213 | INFO     | __main__:remove_duplicates:97 - Duplicates removed based on ProductID
+2025-11-22 03:12:47.213 | INFO     | __main__:remove_duplicates:104 - Removed 0 duplicate rows
+2025-11-22 03:12:47.213 | INFO     | __main__:remove_duplicates:105 - 100 records remaining after removing duplicates.
+2025-11-22 03:12:47.213 | INFO     | __main__:handle_missing_values:112 - FUNCTION START: handle_missing_values with dataframe shape=(100, 6)
+2025-11-22 03:12:47.217 | INFO     | __main__:handle_missing_values:116 - Missing values by column before handling:
+productid      0
+productname    0
+category       0
+unitprice      0
+stockcount     0
+supplier       0
+dtype: int64
+2025-11-22 03:12:47.223 | INFO     | __main__:handle_missing_values:145 - Missing values by column after handling:
+productid      0
+productname    0
+category       0
+unitprice      0
+stockcount     0
+supplier       0
+dtype: int64
+2025-11-22 03:12:47.224 | INFO     | __main__:handle_missing_values:146 - 100 records remaining after handling missing values.
+2025-11-22 03:12:47.224 | INFO     | __main__:remove_outliers:162 - FUNCTION START: remove_outliers with dataframe shape=(100, 6)
+2025-11-22 03:12:47.226 | INFO     | __main__:remove_outliers:180 - Applied IQR outlier removal to unitprice: bounds [-518.0887499999999, 1544.90125] - removed 0 rows
+2025-11-22 03:12:47.228 | INFO     | __main__:remove_outliers:180 - Applied IQR outlier removal to stockcount: bounds [-215.125, 685.875] - removed 0 rows
+2025-11-22 03:12:47.230 | INFO     | __main__:remove_outliers:198 - Removed 0 outlier rows
+2025-11-22 03:12:47.230 | INFO     | __main__:remove_outliers:199 - 100 records remaining after removing outliers.
+2025-11-22 03:12:47.230 | INFO     | __main__:validate_data:246 - FUNCTION START: validate_data with dataframe shape=(100, 6)
+2025-11-22 03:12:47.232 | INFO     | __main__:validate_data:269 - Data validation complete
+2025-11-22 03:12:47.232 | INFO     | __main__:standardize_formats:212 - FUNCTION START: standardize_formats with dataframe shape=(100, 6)
+2025-11-22 03:12:47.234 | INFO     | __main__:standardize_formats:233 - Completed standardizing formats
+2025-11-22 03:12:47.235 | INFO     | __main__:save_prepared_data:72 - FUNCTION START: save_prepared_data with file_name=products_prepared.csv, dataframe shape=(100, 6)
+2025-11-22 03:12:47.238 | INFO     | __main__:save_prepared_data:77 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\products_prepared.csv
+2025-11-22 03:12:47.239 | INFO     | __main__:main:331 - ==================================
+2025-11-22 03:12:47.239 | INFO     | __main__:main:332 - Original shape: (100, 6)
+2025-11-22 03:12:47.240 | INFO     | __main__:main:333 - Cleaned shape:  (100, 6)
+2025-11-22 03:12:47.240 | INFO     | __main__:main:334 - ==================================
+2025-11-22 03:12:47.240 | INFO     | __main__:main:335 - FINISHED prepare_products_data.py
+2025-11-22 03:12:47.241 | INFO     | __main__:main:336 - ==================================
+2025-11-22 03:20:28.266 | INFO     | __main__:main:257 - ==================================
+2025-11-22 03:20:28.267 | INFO     | __main__:main:258 - STARTING prepare_sales_data.py
+2025-11-22 03:20:28.267 | INFO     | __main__:main:259 - ==================================
+2025-11-22 03:20:28.268 | INFO     | __main__:main:261 - Root         : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-22 03:20:28.268 | INFO     | __main__:main:262 - data/raw     : C:\Repos\bi-analytics-data-project-01\src\analytics_project\data\raw
+2025-11-22 03:20:28.268 | INFO     | __main__:main:263 - data/prepared: C:\Repos\bi-analytics-data-project-01\src\analytics_project\data\prepared
+2025-11-22 03:20:28.268 | INFO     | __main__:main:264 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-22 03:20:28.269 | INFO     | __main__:read_raw_data:64 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-22 03:20:28.269 | INFO     | __main__:read_raw_data:66 - Reading data from C:\Repos\bi-analytics-data-project-01\src\analytics_project\data\raw\sales_data.csv
+2025-11-22 03:21:18.317 | INFO     | __main__:main:246 - ==================================
+2025-11-22 03:21:18.317 | INFO     | __main__:main:247 - STARTING prepare_sales_data.py
+2025-11-22 03:21:18.317 | INFO     | __main__:main:248 - ==================================
+2025-11-22 03:21:18.317 | INFO     | __main__:main:250 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-22 03:21:18.317 | INFO     | __main__:main:251 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-22 03:21:18.317 | INFO     | __main__:main:252 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-22 03:21:18.317 | INFO     | __main__:main:253 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-22 03:21:18.317 | INFO     | __main__:read_raw_data:59 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-22 03:21:18.317 | INFO     | __main__:read_raw_data:61 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\sales_data.csv
+2025-11-22 03:21:18.352 | INFO     | __main__:read_raw_data:63 - Loaded dataframe with 2001 rows and 9 columns
+2025-11-22 03:21:18.352 | INFO     | __main__:main:265 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, PaymentType, DiscountPercent
+2025-11-22 03:21:18.352 | INFO     | __main__:main:266 - Initial dataframe shape: (2001, 9)
+2025-11-22 03:21:18.353 | INFO     | __main__:remove_duplicates:74 - FUNCTION START: remove_duplicates with dataframe shape=(2001, 9)
+2025-11-22 03:21:18.354 | INFO     | __main__:remove_duplicates:78 - Removed duplicates based on TransactionID
+2025-11-22 03:21:18.355 | INFO     | __main__:remove_duplicates:83 - Removed 1 duplicate rows
+2025-11-22 03:21:18.355 | INFO     | __main__:remove_duplicates:84 - 2000 records remaining after removing duplicates.
+2025-11-22 03:21:18.355 | INFO     | __main__:handle_missing_values:96 - FUNCTION START: handle_missing_values with dataframe shape=(2000, 9)
+2025-11-22 03:21:18.357 | INFO     | __main__:handle_missing_values:99 - Missing values by column before handling:
+TransactionID      0
+SaleDate           0
+CustomerID         0
+ProductID          0
+StoreID            0
+CampaignID         1
+SaleAmount         0
+PaymentType        0
+DiscountPercent    0
+dtype: int64
+2025-11-22 03:21:18.370 | INFO     | __main__:handle_missing_values:108 - Dropped 0 rows missing critical columns: ['TransactionID', 'SaleAmount', 'CustomerID', 'ProductID']
+2025-11-22 03:21:18.373 | INFO     | __main__:handle_missing_values:121 - Missing values by column after handling:
+TransactionID      0
+SaleDate           0
+CustomerID         0
+ProductID          0
+StoreID            0
+CampaignID         1
+SaleAmount         0
+PaymentType        0
+DiscountPercent    0
+dtype: int64
+2025-11-22 03:21:18.373 | INFO     | __main__:handle_missing_values:122 - 2000 records remaining after handling missing values.
+2025-11-22 03:21:18.373 | INFO     | __main__:remove_outliers:132 - FUNCTION START: remove_outliers with dataframe shape=(2000, 9)
+2025-11-22 03:21:18.374 | INFO     | __main__:remove_outliers:162 - Removed 0 outlier rows
+2025-11-22 03:21:18.374 | INFO     | __main__:remove_outliers:163 - 2000 records remaining after removing outliers.
+2025-11-22 03:21:18.374 | INFO     | __main__:validate_data:206 - FUNCTION START: validate_data with dataframe shape=(2000, 9)
+2025-11-22 03:21:18.375 | INFO     | __main__:validate_data:220 - Data validation complete
+2025-11-22 03:21:18.376 | INFO     | __main__:standardize_formats:174 - FUNCTION START: standardize_formats with dataframe shape=(2000, 9)
+2025-11-22 03:21:18.384 | INFO     | __main__:standardize_formats:196 - Completed standardizing formats
+2025-11-22 03:21:18.384 | INFO     | __main__:save_prepared_data:231 - FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(2000, 9)
+2025-11-22 03:21:18.392 | INFO     | __main__:save_prepared_data:236 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\sales_prepared.csv
+2025-11-22 03:21:18.392 | INFO     | __main__:main:299 - ==================================
+2025-11-22 03:21:18.392 | INFO     | __main__:main:300 - Original shape: (2000, 9)
+2025-11-22 03:21:18.392 | INFO     | __main__:main:301 - Cleaned shape:  (2001, 9)
+2025-11-22 03:21:18.392 | INFO     | __main__:main:302 - ==================================
+2025-11-22 03:21:18.392 | INFO     | __main__:main:303 - FINISHED prepare_sales_data.py
+2025-11-22 03:21:18.392 | INFO     | __main__:main:304 - ==================================
+2025-11-22 04:03:08.739 | INFO     | __main__:main:143 - ==================================
+2025-11-22 04:03:08.742 | INFO     | __main__:main:144 - STARTING prepare_customers_data.py
+2025-11-22 04:03:08.742 | INFO     | __main__:main:145 - ==================================
+2025-11-22 04:03:08.742 | INFO     | __main__:main:147 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-22 04:03:08.742 | INFO     | __main__:main:148 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-22 04:03:08.742 | INFO     | __main__:main:149 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-22 04:03:08.742 | INFO     | __main__:read_raw_data:54 - READING: C:\Repos\bi-analytics-data-project-01\data\raw\customers_data.csv.
+2025-11-22 04:03:08.742 | INFO     | __main__:main:161 - Initial dataframe columns: CustomerID, Name, Region, JoinDate,  DaysSinceLastPurchase,  ContactMethod
+2025-11-22 04:03:08.742 | INFO     | __main__:main:162 - Initial dataframe shape: (201, 6)
+2025-11-22 04:03:08.742 | INFO     | __main__:main:173 - Cleaned column names:  DaysSinceLastPurchase -> DaysSinceLastPurchase,  ContactMethod -> ContactMethod
+2025-11-22 04:03:08.742 | INFO     | __main__:remove_duplicates:76 - FUNCTION START: remove_duplicates with dataframe shape=(201, 6)
+2025-11-22 04:03:08.751 | INFO     | __main__:remove_duplicates:80 - Original dataframe shape: (201, 6)
+2025-11-22 04:03:08.751 | INFO     | __main__:remove_duplicates:81 - Deduped  dataframe shape: (201, 6)
+2025-11-22 04:03:08.751 | INFO     | __main__:handle_missing_values:87 - FUNCTION START: handle_missing_values with dataframe shape=(201, 6)
+2025-11-22 04:03:08.752 | INFO     | __main__:handle_missing_values:91 - Total missing values before handling: 0
+2025-11-22 04:03:08.754 | INFO     | __main__:handle_missing_values:105 - Total missing values after handling: 0
+2025-11-22 04:03:08.754 | INFO     | __main__:handle_missing_values:106 - 201 records remaining after handling missing values.
+2025-11-22 04:03:08.755 | INFO     | __main__:remove_outliers:112 - FUNCTION START: remove_outliers with dataframe shape=(201, 6)
+2025-11-22 04:03:08.761 | INFO     | __main__:remove_outliers:131 - Removed 2 outlier rows
+2025-11-22 04:03:08.761 | INFO     | __main__:remove_outliers:132 - 199 records remaining after removing outliers.
+2025-11-22 04:03:08.761 | INFO     | __main__:save_prepared_data:66 - FUNCTION START: save_prepared_data with file_name=customers_prepared.csv, dataframe shape=(199, 6)
+2025-11-22 04:03:08.762 | INFO     | __main__:save_prepared_data:71 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\customers_prepared.csv
+2025-11-22 04:03:08.765 | INFO     | __main__:main:187 - ==================================
+2025-11-22 04:03:08.765 | INFO     | __main__:main:188 - Original shape: (199, 6)
+2025-11-22 04:03:08.765 | INFO     | __main__:main:189 - Cleaned shape:  (201, 6)
+2025-11-22 04:03:08.767 | INFO     | __main__:main:190 - ==================================
+2025-11-22 04:03:08.767 | INFO     | __main__:main:191 - FINISHED prepare_customers_data.py
+2025-11-22 04:03:08.768 | INFO     | __main__:main:192 - ==================================
+2025-11-22 04:03:14.654 | INFO     | __main__:main:275 - ==================================
+2025-11-22 04:03:14.654 | INFO     | __main__:main:276 - STARTING prepare_products_data.py
+2025-11-22 04:03:14.654 | INFO     | __main__:main:277 - ==================================
+2025-11-22 04:03:14.654 | INFO     | __main__:main:279 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-22 04:03:14.654 | INFO     | __main__:main:280 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-22 04:03:14.654 | INFO     | __main__:main:281 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-22 04:03:14.659 | INFO     | __main__:main:282 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-22 04:03:14.659 | INFO     | __main__:read_raw_data:52 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-22 04:03:14.659 | INFO     | __main__:read_raw_data:54 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\products_data.csv
+2025-11-22 04:03:14.667 | INFO     | __main__:read_raw_data:56 - Loaded dataframe with 100 rows and 6 columns
+2025-11-22 04:03:14.668 | INFO     | __main__:read_raw_data:59 - Column datatypes:
+ProductID        int64
+ProductName     object
+Category        object
+UnitPrice      float64
+StockCount       int64
+Supplier        object
+dtype: object
+2025-11-22 04:03:14.670 | INFO     | __main__:read_raw_data:60 - Number of unique values:
+ProductID      100
+ProductName     98
+Category         4
+UnitPrice      100
+StockCount      91
+Supplier        19
+dtype: int64
+2025-11-22 04:03:14.670 | INFO     | __main__:read_raw_data:52 - FUNCTION START: read_raw_data with file_name=products_data.csv
+2025-11-22 04:03:14.670 | INFO     | __main__:read_raw_data:54 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\products_data.csv
+2025-11-22 04:03:14.671 | INFO     | __main__:read_raw_data:56 - Loaded dataframe with 100 rows and 6 columns
+2025-11-22 04:03:14.671 | INFO     | __main__:read_raw_data:59 - Column datatypes:
+ProductID        int64
+ProductName     object
+Category        object
+UnitPrice      float64
+StockCount       int64
+Supplier        object
+dtype: object
+2025-11-22 04:03:14.671 | INFO     | __main__:read_raw_data:60 - Number of unique values:
+ProductID      100
+ProductName     98
+Category         4
+UnitPrice      100
+StockCount      91
+Supplier        19
+dtype: int64
+2025-11-22 04:03:14.671 | INFO     | __main__:main:297 - Initial dataframe columns: ProductID, ProductName, Category, UnitPrice, StockCount, Supplier
+2025-11-22 04:03:14.671 | INFO     | __main__:main:298 - Initial dataframe shape: (100, 6)
+2025-11-22 04:03:14.671 | INFO     | __main__:main:311 - Cleaned column names: ProductID -> productid, ProductName -> productname, Category -> category, UnitPrice -> unitprice, StockCount -> stockcount, Supplier -> supplier
+2025-11-22 04:03:14.671 | INFO     | __main__:remove_duplicates:89 - FUNCTION START: remove_duplicates with dataframe shape=(100, 6)
+2025-11-22 04:03:14.678 | INFO     | __main__:remove_duplicates:95 - Removing duplicates based on productid column
+2025-11-22 04:03:14.678 | INFO     | __main__:remove_duplicates:97 - Duplicates removed based on ProductID
+2025-11-22 04:03:14.679 | INFO     | __main__:remove_duplicates:104 - Removed 0 duplicate rows
+2025-11-22 04:03:14.679 | INFO     | __main__:remove_duplicates:105 - 100 records remaining after removing duplicates.
+2025-11-22 04:03:14.679 | INFO     | __main__:handle_missing_values:112 - FUNCTION START: handle_missing_values with dataframe shape=(100, 6)
+2025-11-22 04:03:14.680 | INFO     | __main__:handle_missing_values:116 - Missing values by column before handling:
+productid      0
+productname    0
+category       0
+unitprice      0
+stockcount     0
+supplier       0
+dtype: int64
+2025-11-22 04:03:14.686 | INFO     | __main__:handle_missing_values:145 - Missing values by column after handling:
+productid      0
+productname    0
+category       0
+unitprice      0
+stockcount     0
+supplier       0
+dtype: int64
+2025-11-22 04:03:14.686 | INFO     | __main__:handle_missing_values:146 - 100 records remaining after handling missing values.
+2025-11-22 04:03:14.687 | INFO     | __main__:remove_outliers:162 - FUNCTION START: remove_outliers with dataframe shape=(100, 6)
+2025-11-22 04:03:14.690 | INFO     | __main__:remove_outliers:180 - Applied IQR outlier removal to unitprice: bounds [-518.0887499999999, 1544.90125] - removed 0 rows
+2025-11-22 04:03:14.692 | INFO     | __main__:remove_outliers:180 - Applied IQR outlier removal to stockcount: bounds [-215.125, 685.875] - removed 0 rows
+2025-11-22 04:03:14.694 | INFO     | __main__:remove_outliers:198 - Removed 0 outlier rows
+2025-11-22 04:03:14.694 | INFO     | __main__:remove_outliers:199 - 100 records remaining after removing outliers.
+2025-11-22 04:03:14.694 | INFO     | __main__:validate_data:246 - FUNCTION START: validate_data with dataframe shape=(100, 6)
+2025-11-22 04:03:14.694 | INFO     | __main__:validate_data:269 - Data validation complete
+2025-11-22 04:03:14.694 | INFO     | __main__:standardize_formats:212 - FUNCTION START: standardize_formats with dataframe shape=(100, 6)
+2025-11-22 04:03:14.694 | INFO     | __main__:standardize_formats:233 - Completed standardizing formats
+2025-11-22 04:03:14.699 | INFO     | __main__:save_prepared_data:72 - FUNCTION START: save_prepared_data with file_name=products_prepared.csv, dataframe shape=(100, 6)
+2025-11-22 04:03:14.703 | INFO     | __main__:save_prepared_data:77 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\products_prepared.csv
+2025-11-22 04:03:14.703 | INFO     | __main__:main:331 - ==================================
+2025-11-22 04:03:14.703 | INFO     | __main__:main:332 - Original shape: (100, 6)
+2025-11-22 04:03:14.704 | INFO     | __main__:main:333 - Cleaned shape:  (100, 6)
+2025-11-22 04:03:14.704 | INFO     | __main__:main:334 - ==================================
+2025-11-22 04:03:14.705 | INFO     | __main__:main:335 - FINISHED prepare_products_data.py
+2025-11-22 04:03:14.705 | INFO     | __main__:main:336 - ==================================
+2025-11-22 04:03:20.221 | INFO     | __main__:main:246 - ==================================
+2025-11-22 04:03:20.222 | INFO     | __main__:main:247 - STARTING prepare_sales_data.py
+2025-11-22 04:03:20.222 | INFO     | __main__:main:248 - ==================================
+2025-11-22 04:03:20.223 | INFO     | __main__:main:250 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-22 04:03:20.223 | INFO     | __main__:main:251 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-22 04:03:20.224 | INFO     | __main__:main:252 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-22 04:03:20.224 | INFO     | __main__:main:253 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-22 04:03:20.224 | INFO     | __main__:read_raw_data:59 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-22 04:03:20.225 | INFO     | __main__:read_raw_data:61 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\sales_data.csv
+2025-11-22 04:03:20.237 | INFO     | __main__:read_raw_data:63 - Loaded dataframe with 2001 rows and 9 columns
+2025-11-22 04:03:20.238 | INFO     | __main__:main:265 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, PaymentType, DiscountPercent
+2025-11-22 04:03:20.238 | INFO     | __main__:main:266 - Initial dataframe shape: (2001, 9)
+2025-11-22 04:03:20.239 | INFO     | __main__:remove_duplicates:74 - FUNCTION START: remove_duplicates with dataframe shape=(2001, 9)
+2025-11-22 04:03:20.242 | INFO     | __main__:remove_duplicates:78 - Removed duplicates based on TransactionID
+2025-11-22 04:03:20.243 | INFO     | __main__:remove_duplicates:83 - Removed 1 duplicate rows
+2025-11-22 04:03:20.244 | INFO     | __main__:remove_duplicates:84 - 2000 records remaining after removing duplicates.
+2025-11-22 04:03:20.244 | INFO     | __main__:handle_missing_values:96 - FUNCTION START: handle_missing_values with dataframe shape=(2000, 9)
+2025-11-22 04:03:20.247 | INFO     | __main__:handle_missing_values:99 - Missing values by column before handling:
+TransactionID      0
+SaleDate           0
+CustomerID         0
+ProductID          0
+StoreID            0
+CampaignID         1
+SaleAmount         0
+PaymentType        0
+DiscountPercent    0
+dtype: int64
+2025-11-22 04:03:20.250 | INFO     | __main__:handle_missing_values:108 - Dropped 0 rows missing critical columns: ['TransactionID', 'SaleAmount', 'CustomerID', 'ProductID']
+2025-11-22 04:03:20.253 | INFO     | __main__:handle_missing_values:121 - Missing values by column after handling:
+TransactionID      0
+SaleDate           0
+CustomerID         0
+ProductID          0
+StoreID            0
+CampaignID         1
+SaleAmount         0
+PaymentType        0
+DiscountPercent    0
+dtype: int64
+2025-11-22 04:03:20.254 | INFO     | __main__:handle_missing_values:122 - 2000 records remaining after handling missing values.
+2025-11-22 04:03:20.255 | INFO     | __main__:remove_outliers:132 - FUNCTION START: remove_outliers with dataframe shape=(2000, 9)
+2025-11-22 04:03:20.255 | INFO     | __main__:remove_outliers:162 - Removed 0 outlier rows
+2025-11-22 04:03:20.255 | INFO     | __main__:remove_outliers:163 - 2000 records remaining after removing outliers.
+2025-11-22 04:03:20.256 | INFO     | __main__:validate_data:206 - FUNCTION START: validate_data with dataframe shape=(2000, 9)
+2025-11-22 04:03:20.257 | INFO     | __main__:validate_data:220 - Data validation complete
+2025-11-22 04:03:20.257 | INFO     | __main__:standardize_formats:174 - FUNCTION START: standardize_formats with dataframe shape=(2000, 9)
+2025-11-22 04:03:20.269 | INFO     | __main__:standardize_formats:196 - Completed standardizing formats
+2025-11-22 04:03:20.270 | INFO     | __main__:save_prepared_data:231 - FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(2000, 9)
+2025-11-22 04:03:20.283 | INFO     | __main__:save_prepared_data:236 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\sales_prepared.csv
+2025-11-22 04:03:20.284 | INFO     | __main__:main:299 - ==================================
+2025-11-22 04:03:20.285 | INFO     | __main__:main:300 - Original shape: (2000, 9)
+2025-11-22 04:03:20.285 | INFO     | __main__:main:301 - Cleaned shape:  (2001, 9)
+2025-11-22 04:03:20.286 | INFO     | __main__:main:302 - ==================================
+2025-11-22 04:03:20.286 | INFO     | __main__:main:303 - FINISHED prepare_sales_data.py
+2025-11-22 04:03:20.287 | INFO     | __main__:main:304 - ==================================

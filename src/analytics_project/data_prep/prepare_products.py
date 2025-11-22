@@ -18,30 +18,27 @@ Tasks:
 # Import from Python Standard Library
 import pathlib
 import sys
-
-# Import from external packages (requires a virtual environment)
 import pandas as pd
 
-# Ensure project root is in sys.path for local imports (now 3 parents are needed)
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent.parent))
+# Ensure project root is in sys.path for local imports
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 # Import local modules (e.g. utils/logger.py)
-# Optional: Use a data_scrubber module for common data cleaning tasks
-from analytics_project.utils.logger import logger
+from utils.logger import logger
+from utils.data_scrubber import DataScrubber
 
 # Constants
-SCRIPTS_DATA_PREP_DIR: pathlib.Path = (
-    pathlib.Path(__file__).resolve().parent
-)  # Directory of the current script
+SCRIPTS_DATA_PREP_DIR: pathlib.Path = pathlib.Path(__file__).resolve().parent
+
+# Directory of the current script
 SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent
-PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR  # This is the analytics_project directory
+PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent.parent
 DATA_DIR: pathlib.Path = PROJECT_ROOT / "data"
 RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"
 PREPARED_DATA_DIR: pathlib.Path = DATA_DIR / "prepared"  # place to store prepared data
 
 
 # Ensure the directories exist or create them
-DATA_DIR.mkdir(exist_ok=True)
 RAW_DATA_DIR.mkdir(exist_ok=True)
 PREPARED_DATA_DIR.mkdir(exist_ok=True)
 
@@ -51,14 +48,7 @@ PREPARED_DATA_DIR.mkdir(exist_ok=True)
 
 
 def read_raw_data(file_name: str) -> pd.DataFrame:
-    """Read raw data from CSV.
-
-    Args:
-        file_name (str): Name of the CSV file to read.
-
-    Returns:
-        pd.DataFrame: Loaded DataFrame.
-    """
+    """Read raw data from CSV."""
     logger.info(f"FUNCTION START: read_raw_data with file_name={file_name}")
     file_path = RAW_DATA_DIR.joinpath(file_name)
     logger.info(f"Reading data from {file_path}")
@@ -117,37 +107,44 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
-    """Handle missing values by filling or dropping.
+    """Handle missing values by filling or dropping."""
 
-    This logic is specific to the actual data and business rules.
-
-    Args:
-        df (pd.DataFrame): Input DataFrame.
-
-    Returns:
-        pd.DataFrame: DataFrame with missing values handled.
-    """
     logger.info(f"FUNCTION START: handle_missing_values with dataframe shape={df.shape}")
 
-    # Log missing values by column before handling
-    # NA means missing or "not a number" - ask your AI for details
+    # Log missing values before handling
     missing_by_col = df.isna().sum()
     logger.info(f"Missing values by column before handling:\n{missing_by_col}")
 
-    # TODO: OPTIONAL - We can implement appropriate missing value handling
-    # specific to our data.
-    # For example: Different strategies may be needed for different columns
-    # USE YOUR COLUMN NAMES - these are just examples
-    # df['product_name'].fillna('Unknown Product', inplace=True)
-    # df['description'].fillna('', inplace=True)
-    # df['price'].fillna(df['price'].median(), inplace=True)
-    # df['category'].fillna(df['category'].mode()[0], inplace=True)
-    # df.dropna(subset=['product_code'], inplace=True)  # Remove rows without product code
+    # Product name: fill with placeholder
+    if "productname" in df.columns:
+        df["productname"].fillna("Unknown Product", inplace=True)
 
-    # Log missing values by column after handling
+    # Price: replace missing with median
+    if "unitprice" in df.columns:
+        if pd.api.types.is_numeric_dtype(df["unitprice"]):
+            median_price = df["unitprice"].median()
+            df["unitprice"].fillna(median_price, inplace=True)
+
+    # Category: fill with mode
+    if "category" in df.columns:
+        if df["category"].dropna().size > 0:
+            mode_cat = df["category"].mode()[0]
+            df["category"].fillna(mode_cat, inplace=True)
+
+    # Product code or ID missing → drop row (critical field)
+    for critical in ["productid", "product_code"]:
+        if critical in df.columns:
+            before = len(df)
+            df = df.dropna(subset=[critical])
+            dropped = before - len(df)
+            if dropped:
+                logger.info(f"Dropped {dropped} rows missing mandatory field: {critical}")
+
+    # Log missing values after handling
     missing_after = df.isna().sum()
     logger.info(f"Missing values by column after handling:\n{missing_after}")
     logger.info(f"{len(df)} records remaining after handling missing values.")
+
     return df
 
 

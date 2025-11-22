@@ -1,48 +1,44 @@
-"""scripts/data_preparation/prepare_customers.py
+"""
+Prepares Customer data from CSV
 
-This script reads customer data from the data/raw folder, cleans the data,
-and writes the cleaned version to the data/prepared folder.
+Run from project root with:
+    python -m analytics_project.data_prep.prepare_customers
 
-Tasks:
+Tasks handles:
 - Remove duplicates
 - Handle missing values
 - Remove outliers
 - Ensure consistent formatting
-
 """
 
 #####################################
 # Import Modules at the Top
 #####################################
 
-# Import from Python Standard Library
+# Import from Python Standard Library and external packages
 import pathlib
 import sys
-
-# Import from external packages (requires a virtual environment)
 import pandas as pd
 
-# Ensure project root is in sys.path for local imports (now 3 parents are needed)
-sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent.parent))
+# Ensure project root is in sys.path for local imports
+sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent))
 
 # Import local modules (e.g. utils/logger.py)
-# Optional: Use a data_scrubber module for common data cleaning tasks
-from utils.data_scrubber import DataScrubber
 from utils.logger import logger
+from utils.data_scrubber import DataScrubber
 
 # Constants
-SCRIPTS_DATA_PREP_DIR: pathlib.Path = (
-    pathlib.Path(__file__).resolve().parent
-)  # Directory of the current script
+SCRIPTS_DATA_PREP_DIR: pathlib.Path = pathlib.Path(__file__).resolve().parent
+
+# Directory of the current script
 SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent
-PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent
+PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent.parent
 DATA_DIR: pathlib.Path = PROJECT_ROOT / "data"
 RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"
 PREPARED_DATA_DIR: pathlib.Path = DATA_DIR / "prepared"  # place to store prepared data
 
 
 # Ensure the directories exist or create them
-DATA_DIR.mkdir(exist_ok=True)
 RAW_DATA_DIR.mkdir(exist_ok=True)
 PREPARED_DATA_DIR.mkdir(exist_ok=True)
 
@@ -66,12 +62,7 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
 
 
 def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
-    """Save cleaned data to CSV.
-
-    Args:
-        df (pd.DataFrame): Cleaned DataFrame.
-        file_name (str): Name of the output file.
-    """
+    """Save cleaned data to CSV."""
     logger.info(
         f"FUNCTION START: save_prepared_data with file_name={file_name}, dataframe shape={df.shape}"
     )
@@ -81,25 +72,9 @@ def save_prepared_data(df: pd.DataFrame, file_name: str) -> None:
 
 
 def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
-    """Remove duplicate rows from the DataFrame.
-    How do you decide if a row is duplicated?
-    Which do you keep? Which do you delete?
-
-    Args:
-        df (pd.DataFrame): Input DataFrame.
-
-    Returns:
-        pd.DataFrame: DataFrame with duplicates removed.
-    """
+    """Remove duplicate rows from the DataFrame."""
     logger.info(f"FUNCTION START: remove_duplicates with dataframe shape={df.shape}")
-
-    # Let's delegate this to the DataScrubber class
-    # First, create an instance of the DataScrubber class
-    # by passing in the dataframe as an argument.
     df_scrubber = DataScrubber(df)
-
-    # Now, call the method on our instance to remove duplicates.
-    # This method will return a new dataframe with duplicates removed.
     df_deduped = df_scrubber.remove_duplicate_records()
 
     logger.info(f"Original dataframe shape: {df.shape}")
@@ -108,27 +83,24 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
-    """Handle missing values by filling or dropping.
-    This logic is specific to the actual data and business rules.
-
-    Args:
-        df (pd.DataFrame): Input DataFrame.
-
-    Returns:
-        pd.DataFrame: DataFrame with missing values handled.
-    """
+    """Handle missing values by filling or dropping."""
     logger.info(f"FUNCTION START: handle_missing_values with dataframe shape={df.shape}")
 
     # Log missing values count before handling
     missing_before = df.isna().sum().sum()
     logger.info(f"Total missing values before handling: {missing_before}")
 
-    # TODO: Fill or drop missing values based on business rules
-    # Example:
-    # df['CustomerName'].fillna('Unknown', inplace=True)
-    # df.dropna(subset=['CustomerID'], inplace=True)
+    if "CustomerName" in df.columns:
+        df["CustomerName"].fillna("Unknown", inplace=True)
 
-    # Log missing values count after handling
+    if "CustomerID" in df.columns:
+        df.dropna(subset=["CustomerID"], inplace=True)
+
+    numeric_cols = df.select_dtypes(include=["number"]).columns
+    for col in numeric_cols:
+        if df[col].isna().sum() > 0:
+            df[col].fillna(df[col].median(), inplace=True)
+
     missing_after = df.isna().sum().sum()
     logger.info(f"Total missing values after handling: {missing_after}")
     logger.info(f"{len(df)} records remaining after handling missing values.")
@@ -136,21 +108,24 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
-    """Remove outliers based on thresholds.
-    This logic is very specific to the actual data and business rules.
-
-    Args:
-        df (pd.DataFrame): Input DataFrame.
-
-    Returns:
-        pd.DataFrame: DataFrame with outliers removed.
-    """
+    """Remove outliers based on thresholds."""
     logger.info(f"FUNCTION START: remove_outliers with dataframe shape={df.shape}")
     initial_count = len(df)
 
-    # TODO: Define numeric columns and apply rules for outlier removal
-    # Example:
-    df = df[(df["InStoreTripPercent"] < 1)]
+    # === TODO filled in ===
+    numeric_cols = df.select_dtypes(include=["number"]).columns
+
+    for col in numeric_cols:
+        Q1 = df[col].quantile(0.25)
+        Q3 = df[col].quantile(0.75)
+        IQR = Q3 - Q1
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+        df = df[(df[col] >= lower_bound) & (df[col] <= upper_bound)]
+
+    # Keep existing business rule example for InStoreTripPercent if column exists
+    if "InStoreTripPercent" in df.columns:
+        df = df[df["InStoreTripPercent"] < 1]
 
     removed_count = initial_count - len(df)
     logger.info(f"Removed {removed_count} outlier rows")
@@ -163,7 +138,7 @@ def remove_outliers(df: pd.DataFrame) -> pd.DataFrame:
 #####################################
 
 
-def main() -> None:
+def main():
     """Main function for processing customer data."""
     logger.info("==================================")
     logger.info("STARTING prepare_customers_data.py")
@@ -172,7 +147,6 @@ def main() -> None:
     logger.info(f"Root         : {PROJECT_ROOT}")
     logger.info(f"data/raw     : {RAW_DATA_DIR}")
     logger.info(f"data/prepared: {PREPARED_DATA_DIR}")
-    logger.info(f"scripts      : {SCRIPTS_DIR}")
 
     input_file = "customers_data.csv"
     output_file = "customers_prepared.csv"

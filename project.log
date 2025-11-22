@@ -348,3 +348,13 @@ Norwegian: Hei! Velkommen til Python-programmering.
 2025-11-21 21:33:ERROR   AT utils_logger.py:118: This is an example error message.
 2025-11-21 21:33:INFO    AT utils_logger.py:125: View the log output at C:\Repos\bi-analytics-data-project-01\project.log
 2025-11-21 21:33:INFO    AT test_utils_logger.py:65: Smoke test message
+2025-11-21 23:32:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\bi-analytics-data-project-01\project.log
+2025-11-21 23:32:INFO    AT utils_logger.py:116: This is an example info message.
+2025-11-21 23:32:WARNING AT utils_logger.py:117: This is an example warning message.
+2025-11-21 23:32:ERROR   AT utils_logger.py:118: This is an example error message.
+2025-11-21 23:32:INFO    AT utils_logger.py:125: View the log output at C:\Repos\bi-analytics-data-project-01\project.log
+2025-11-22 02:34:INFO    AT utils_logger.py:105: Logging to file: C:\Repos\bi-analytics-data-project-01\project.log
+2025-11-22 02:34:INFO    AT utils_logger.py:116: This is an example info message.
+2025-11-22 02:34:WARNING AT utils_logger.py:117: This is an example warning message.
+2025-11-22 02:34:ERROR   AT utils_logger.py:118: This is an example error message.
+2025-11-22 02:34:INFO    AT utils_logger.py:125: View the log output at C:\Repos\bi-analytics-data-project-01\project.log

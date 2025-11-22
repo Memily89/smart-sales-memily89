@@ -18,38 +18,33 @@ Tasks:
 # Import from Python Standard Library
 import pathlib
 import sys
-
-# Import from external packages (requires a virtual environment)
 import pandas as pd
 
-# Ensure project root is in sys.path for local imports (now 3 parents are needed)
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent.parent))
+# Ensure project root is in sys.path for local imports
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
 # Import local modules (e.g. utils/logger.py)
-# Optional: Use a data_scrubber module for common data cleaning tasks
-from analytics_project.utils.logger import logger
+from utils.logger import logger
+from utils.data_scrubber import DataScrubber
 
 # Constants
-SCRIPTS_DATA_PREP_DIR: pathlib.Path = (
-    pathlib.Path(__file__).resolve().parent
-)  # Directory of the current script
+SCRIPTS_DATA_PREP_DIR: pathlib.Path = pathlib.Path(__file__).resolve().parent
+
+# Directory of the current script
 SCRIPTS_DIR: pathlib.Path = SCRIPTS_DATA_PREP_DIR.parent
-PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR  # This is the analytics_project directory
+PROJECT_ROOT: pathlib.Path = SCRIPTS_DIR.parent.parent
 DATA_DIR: pathlib.Path = PROJECT_ROOT / "data"
 RAW_DATA_DIR: pathlib.Path = DATA_DIR / "raw"
 PREPARED_DATA_DIR: pathlib.Path = DATA_DIR / "prepared"  # place to store prepared data
 
 
 # Ensure the directories exist or create them
-DATA_DIR.mkdir(exist_ok=True)
 RAW_DATA_DIR.mkdir(exist_ok=True)
 PREPARED_DATA_DIR.mkdir(exist_ok=True)
 
 #####################################
 # Define Functions - Reusable blocks of code / instructions
 #####################################
-
-# TODO: Complete this by implementing functions based on the logic in the other scripts
 
 
 def read_raw_data(file_name: str) -> pd.DataFrame:
@@ -66,12 +61,6 @@ def read_raw_data(file_name: str) -> pd.DataFrame:
     logger.info(f"Reading data from {file_path}")
     df = pd.read_csv(file_path)
     logger.info(f"Loaded dataframe with {len(df)} rows and {len(df.columns)} columns")
-
-    # TODO: OPTIONAL Add data profiling here to understand the dataset
-    # Suggestion: Log the datatypes of each column and the number of unique values
-    # Example:
-    # logger.info(f"Column datatypes: \n{df.dtypes}")
-    # logger.info(f"Number of unique values: \n{df.nunique()}")
 
     return df
 
