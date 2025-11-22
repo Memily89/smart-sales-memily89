@@ -88,24 +88,30 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     """Handle missing values using conservative business rules.
 
-    - Drop rows missing TransactionID or SaleAmount (critical)
-    - Drop rows missing CustomerID or ProductID
+    - Drop rows missing TransactionID, CustomerID, ProductID
+    - Drop rows with missing or zero SaleAmount
     - Fill missing DiscountPercent with 0
     - Fill missing PaymentType with 'Unknown'
     """
     logger.info(f"FUNCTION START: handle_missing_values with dataframe shape={df.shape}")
+
     # Log missing before
     missing_before = df.isna().sum()
     logger.info(f"Missing values by column before handling:\n{missing_before}")
 
-    # Drop rows missing critical identifiers or amounts
-    critical = [
-        c for c in ["TransactionID", "SaleAmount", "CustomerID", "ProductID"] if c in df.columns
-    ]
+    # Drop rows missing critical identifiers
+    critical = [c for c in ["TransactionID", "CustomerID", "ProductID"] if c in df.columns]
     if critical:
         before = len(df)
         df = df.dropna(subset=critical)
         logger.info(f"Dropped {before - len(df)} rows missing critical columns: {critical}")
+
+    # Drop rows where SaleAmount is missing or zero
+    if "SaleAmount" in df.columns:
+        before = len(df)
+        df = df.dropna(subset=["SaleAmount"])
+        df = df[df["SaleAmount"] != 0]
+        logger.info(f"Dropped {before - len(df)} rows with missing or zero SaleAmount")
 
     # Fill DiscountPercent with 0 if missing
     if "DiscountPercent" in df.columns and df["DiscountPercent"].isna().sum() > 0:
@@ -201,7 +207,7 @@ def validate_data(df: pd.DataFrame) -> pd.DataFrame:
     """Validate sale data against simple business rules.
 
     - Ensure TransactionID positive if present
-    - Ensure SaleAmount numeric and non-negative
+    - Ensure SaleAmount numeric, non-negative, and not zero
     """
     logger.info(f"FUNCTION START: validate_data with dataframe shape={df.shape}")
 
@@ -212,10 +218,10 @@ def validate_data(df: pd.DataFrame) -> pd.DataFrame:
             logger.info(f"Dropped {bad} rows with non-positive TransactionID")
 
     if "SaleAmount" in df.columns and pd.api.types.is_numeric_dtype(df["SaleAmount"]):
-        bad = df[df["SaleAmount"].isna()].shape[0]
+        bad = df[(df["SaleAmount"].isna()) | (df["SaleAmount"] <= 0)].shape[0]
         if bad > 0:
-            df = df.dropna(subset=["SaleAmount"])
-            logger.info(f"Dropped {bad} rows with non-numeric SaleAmount")
+            df = df[(df["SaleAmount"].notna()) & (df["SaleAmount"] > 0)]
+            logger.info(f"Dropped {bad} rows with missing, zero, or negative SaleAmount")
 
     logger.info("Data validation complete")
     return df
