@@ -49,7 +49,7 @@ def create_schema(cursor: sqlite3.Cursor) -> None:
             customer_name TEXT,
             region TEXT,
             join_date TEXT,
-            customer_status TEXT,
+            days_since_last_purchase INTEGER,
             contact_method TEXT
         )
     """)
@@ -97,19 +97,61 @@ def delete_existing_records(cursor: sqlite3.Cursor) -> None:
 def insert_customers(customers_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert customer data into the customer table."""
     logger.info(f"Inserting {len(customers_df)} customer rows.")
-    customers_df.to_sql("customer", cursor.connection, if_exists="append", index=False)
+    # Ensure DataFrame columns match the destination table columns
+    table_info = cursor.execute("PRAGMA table_info('customer')").fetchall()
+    db_columns = [col[1] for col in table_info]
+    # Keep only columns that exist in DB; add missing DB columns with None
+    df_cols = customers_df.columns.tolist()
+    cols_to_insert = [c for c in df_cols if c in db_columns]
+    if not cols_to_insert:
+        logger.error("No matching columns to insert into 'customer' table. Aborting insert.")
+        return
+    df_to_insert = customers_df[cols_to_insert].copy()
+    for db_col in db_columns:
+        if db_col not in df_to_insert.columns:
+            df_to_insert[db_col] = None
+    # Reorder columns to DB order
+    df_to_insert = df_to_insert[db_columns]
+    # Ensure unique primary keys (customer_id) before inserting
+    if "customer_id" in df_to_insert.columns:
+        df_to_insert = df_to_insert.drop_duplicates(subset=["customer_id"], keep="first")
+    df_to_insert.to_sql("customer", cursor.connection, if_exists="append", index=False)
 
 
 def insert_products(products_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert product data into the product table."""
     logger.info(f"Inserting {len(products_df)} product rows.")
-    products_df.to_sql("product", cursor.connection, if_exists="append", index=False)
+    table_info = cursor.execute("PRAGMA table_info('product')").fetchall()
+    db_columns = [col[1] for col in table_info]
+    df_cols = products_df.columns.tolist()
+    cols_to_insert = [c for c in df_cols if c in db_columns]
+    if not cols_to_insert:
+        logger.error("No matching columns to insert into 'product' table. Aborting insert.")
+        return
+    df_to_insert = products_df[cols_to_insert].copy()
+    for db_col in db_columns:
+        if db_col not in df_to_insert.columns:
+            df_to_insert[db_col] = None
+    df_to_insert = df_to_insert[db_columns]
+    df_to_insert.to_sql("product", cursor.connection, if_exists="append", index=False)
 
 
 def insert_sales(sales_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert sales data into the sales table."""
     logger.info(f"Inserting {len(sales_df)} sale rows.")
-    sales_df.to_sql("sale", cursor.connection, if_exists="append", index=False)
+    table_info = cursor.execute("PRAGMA table_info('sale')").fetchall()
+    db_columns = [col[1] for col in table_info]
+    df_cols = sales_df.columns.tolist()
+    cols_to_insert = [c for c in df_cols if c in db_columns]
+    if not cols_to_insert:
+        logger.error("No matching columns to insert into 'sale' table. Aborting insert.")
+        return
+    df_to_insert = sales_df[cols_to_insert].copy()
+    for db_col in db_columns:
+        if db_col not in df_to_insert.columns:
+            df_to_insert[db_col] = None
+    df_to_insert = df_to_insert[db_columns]
+    df_to_insert.to_sql("sale", cursor.connection, if_exists="append", index=False)
 
 
 def load_data_to_db() -> None:
@@ -151,7 +193,7 @@ def load_data_to_db() -> None:
                 "Name": "customer_name",
                 "Region": "region",
                 "JoinDate": "join_date",
-                "Status": "customer_status",
+                "DaysSinceLastPurchase": "days_since_last_purchase",
                 "Contact": "contact_method",
             }
         )
