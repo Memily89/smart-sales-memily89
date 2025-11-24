@@ -182,4 +182,7 @@ Each time forward progress is made, remember to git add-commit-push.
       -  git commit -m "add starter files"
       -  git push -u origin main
 -
-### P
+### Run etl_to_dw
+- Open terminal
+- Ran module using
+- uv run python -m analytics_project.dw.etl_to_dw

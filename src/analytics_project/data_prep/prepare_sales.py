@@ -175,12 +175,26 @@ def standardize_formats(df: pd.DataFrame) -> pd.DataFrame:
             df = df.drop(columns=[c])
             logger.info(f"Dropped empty column {c}")
 
-    # Parse SaleDate
+    # Parse SaleDate -> format as mm/dd/yyyy and drop unparseable/null dates
     if "SaleDate" in df.columns:
+        parsed_dates = pd.to_datetime(df["SaleDate"], errors="coerce")
+        n_invalid = parsed_dates.isna().sum()
+        if n_invalid > 0:
+            logger.warning(
+                f"Found {n_invalid} SaleDate values that could not be parsed and will be dropped"
+            )
+            # drop rows where date could not be parsed
+            df = df[parsed_dates.notna()].copy()
+            # re-evaluate parsed_dates to align with filtered df
+            parsed_dates = pd.to_datetime(df["SaleDate"], errors="coerce")
+
+        # Format dates as mm/dd/yyyy for downstream display/consumption
         try:
-            df["SaleDate"] = pd.to_datetime(df["SaleDate"], errors="coerce").dt.strftime("%Y-%m-%d")
+            df["SaleDate"] = parsed_dates.dt.strftime("%m/%d/%Y")
         except Exception:
-            logger.debug("Could not parse SaleDate to datetime; leaving as-is")
+            logger.debug(
+                "Could not format SaleDate to mm/dd/YYYY; leaving as original string values"
+            )
 
     # Strip string columns such as PaymentType
     for col in ["PaymentType", "StoreID", "CampaignID"]:
@@ -188,6 +202,28 @@ def standardize_formats(df: pd.DataFrame) -> pd.DataFrame:
             df[col] = df[col].astype(str).str.strip()
 
     logger.info("Completed standardizing formats")
+
+    # Consistency checks: report null counts for all columns and flag critical columns
+    null_counts = df.isna().sum()
+    cols_with_nulls = {c: int(n) for c, n in null_counts.items() if n > 0}
+    if cols_with_nulls:
+        logger.warning(f"Columns with null values after standardization: {cols_with_nulls}")
+
+    # Highlight critical identifiers if present
+    critical_variants = [
+        "TransactionID",
+        "SaleAmount",
+        "CustomerID",
+        "CustomerId",
+        "ProductID",
+        "ProductId",
+    ]
+    for cv in critical_variants:
+        if cv in df.columns:
+            n = int(df[cv].isna().sum())
+            if n > 0:
+                logger.warning(f"Critical column '{cv}' has {n} null values")
+
     return df
 
 
@@ -196,6 +232,7 @@ def validate_data(df: pd.DataFrame) -> pd.DataFrame:
 
     - Ensure TransactionID positive if present
     - Ensure SaleAmount numeric, non-negative, and not zero
+    - Remove rows where SaleAmount contains "?" or is "0"
     """
     logger.info(f"FUNCTION START: validate_data with dataframe shape={df.shape}")
 
@@ -205,11 +242,20 @@ def validate_data(df: pd.DataFrame) -> pd.DataFrame:
             df = df[df["TransactionID"] > 0]
             logger.info(f"Dropped {bad} rows with non-positive TransactionID")
 
-    if "SaleAmount" in df.columns and pd.api.types.is_numeric_dtype(df["SaleAmount"]):
-        bad = df[(df["SaleAmount"].isna()) | (df["SaleAmount"] <= 0)].shape[0]
-        if bad > 0:
-            df = df[(df["SaleAmount"].notna()) & (df["SaleAmount"] > 0)]
-            logger.info(f"Dropped {bad} rows with missing, zero, or negative SaleAmount")
+    if "SaleAmount" in df.columns:
+        initial = len(df)
+        # Remove rows where SaleAmount is "?" or "0" (as strings or values)
+        df = df[~df["SaleAmount"].astype(str).str.contains(r"^\?$|^0$", regex=True, na=False)]
+        removed = initial - len(df)
+        if removed > 0:
+            logger.info(f"Dropped {removed} rows with SaleAmount containing '?' or '0'")
+
+        # Further validation for numeric values
+        if pd.api.types.is_numeric_dtype(df["SaleAmount"]):
+            bad = df[(df["SaleAmount"].isna()) | (df["SaleAmount"] <= 0)].shape[0]
+            if bad > 0:
+                df = df[(df["SaleAmount"].notna()) & (df["SaleAmount"] > 0)]
+                logger.info(f"Dropped {bad} rows with missing, zero, or negative SaleAmount")
 
     logger.info("Data validation complete")
     return df

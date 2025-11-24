@@ -69,7 +69,7 @@ def create_schema(cursor: sqlite3.Cursor) -> None:
     """)
 
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS sale (
+        CREATE TABLE IF NOT EXISTS sales (
             sale_id INTEGER PRIMARY KEY,
             sale_date TEXT,
             customer_id INTEGER,
@@ -88,70 +88,28 @@ def create_schema(cursor: sqlite3.Cursor) -> None:
 
 
 def delete_existing_records(cursor: sqlite3.Cursor) -> None:
-    """Delete all existing records from the customer, product, and sale tables."""
+    """Delete all existing records from the customer, product, and sales tables."""
     cursor.execute("DELETE FROM customer")
     cursor.execute("DELETE FROM product")
-    cursor.execute("DELETE FROM sale")
+    cursor.execute("DELETE FROM sales")
 
 
 def insert_customers(customers_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert customer data into the customer table."""
     logger.info(f"Inserting {len(customers_df)} customer rows.")
-    # Ensure DataFrame columns match the destination table columns
-    table_info = cursor.execute("PRAGMA table_info('customer')").fetchall()
-    db_columns = [col[1] for col in table_info]
-    # Keep only columns that exist in DB; add missing DB columns with None
-    df_cols = customers_df.columns.tolist()
-    cols_to_insert = [c for c in df_cols if c in db_columns]
-    if not cols_to_insert:
-        logger.error("No matching columns to insert into 'customer' table. Aborting insert.")
-        return
-    df_to_insert = customers_df[cols_to_insert].copy()
-    for db_col in db_columns:
-        if db_col not in df_to_insert.columns:
-            df_to_insert[db_col] = None
-    # Reorder columns to DB order
-    df_to_insert = df_to_insert[db_columns]
-    # Ensure unique primary keys (customer_id) before inserting
-    if "customer_id" in df_to_insert.columns:
-        df_to_insert = df_to_insert.drop_duplicates(subset=["customer_id"], keep="first")
-    df_to_insert.to_sql("customer", cursor.connection, if_exists="append", index=False)
+    customers_df.to_sql("customer", cursor.connection, if_exists="append", index=False)
 
 
 def insert_products(products_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert product data into the product table."""
     logger.info(f"Inserting {len(products_df)} product rows.")
-    table_info = cursor.execute("PRAGMA table_info('product')").fetchall()
-    db_columns = [col[1] for col in table_info]
-    df_cols = products_df.columns.tolist()
-    cols_to_insert = [c for c in df_cols if c in db_columns]
-    if not cols_to_insert:
-        logger.error("No matching columns to insert into 'product' table. Aborting insert.")
-        return
-    df_to_insert = products_df[cols_to_insert].copy()
-    for db_col in db_columns:
-        if db_col not in df_to_insert.columns:
-            df_to_insert[db_col] = None
-    df_to_insert = df_to_insert[db_columns]
-    df_to_insert.to_sql("product", cursor.connection, if_exists="append", index=False)
+    products_df.to_sql("product", cursor.connection, if_exists="append", index=False)
 
 
 def insert_sales(sales_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert sales data into the sales table."""
-    logger.info(f"Inserting {len(sales_df)} sale rows.")
-    table_info = cursor.execute("PRAGMA table_info('sale')").fetchall()
-    db_columns = [col[1] for col in table_info]
-    df_cols = sales_df.columns.tolist()
-    cols_to_insert = [c for c in df_cols if c in db_columns]
-    if not cols_to_insert:
-        logger.error("No matching columns to insert into 'sale' table. Aborting insert.")
-        return
-    df_to_insert = sales_df[cols_to_insert].copy()
-    for db_col in db_columns:
-        if db_col not in df_to_insert.columns:
-            df_to_insert[db_col] = None
-    df_to_insert = df_to_insert[db_columns]
-    df_to_insert.to_sql("sale", cursor.connection, if_exists="append", index=False)
+    logger.info(f"Inserting {len(sales_df)} sales rows.")
+    sales_df.to_sql("sales", cursor.connection, if_exists="append", index=False)
 
 
 def load_data_to_db() -> None:
@@ -194,7 +152,7 @@ def load_data_to_db() -> None:
                 "Region": "region",
                 "JoinDate": "join_date",
                 "DaysSinceLastPurchase": "days_since_last_purchase",
-                "Contact": "contact_method",
+                "ContactMethod": "contact_method",
             }
         )
         logger.info(f"Customer columns (cleaned): {list(customers_df.columns)}")
@@ -207,11 +165,8 @@ def load_data_to_db() -> None:
                 "productname": "product_name",
                 "category": "category",
                 "unitprice": "unit_price",
-                "Supplier": "supplier_name",
-                "StockQty": "stock_quantity",
-                "ReorderLevel": "reorder_level",
-                "MaxLevel": "max_level",
-                "IsActive": "is_active",
+                "supplier": "supplier_name",
+                "stockcount": "stock_quantity",
             }
         )
         logger.info(f"Product columns (cleaned):  {list(products_df.columns)}")
@@ -219,18 +174,17 @@ def load_data_to_db() -> None:
         # TODO: Rename sales_df columns to match database schema if necessary
         sales_df = sales_df.rename(
             columns={
-                "SaleID": "sale_id",
+                "TransactionID": "sale_id",
                 "SaleDate": "sale_date",
                 "CustomerID": "customer_id",
                 "ProductID": "product_id",
                 "SaleAmount": "sale_amount",
-                "GrossAmount": "gross_amount",
-                "DiscountTotal": "discount_total",
-                "NetAmount": "net_amount",
-                "COGSAmount": "cogs_amount",
-                "ProfitAmount": "profit_amount",
                 "PaymentType": "payment_type",
             }
+        )
+        # Drop columns not in the schema (StoreID, CampaignID, DiscountPercent are not in the sales table)
+        sales_df = sales_df.drop(
+            columns=["StoreID", "CampaignID", "DiscountPercent"], errors="ignore"
         )
         logger.info(f"Sales columns (cleaned):    {list(sales_df.columns)}")
         # Insert data into the database for all tables

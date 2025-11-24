@@ -667,3 +667,171 @@ dtype: int64
 2025-11-24 11:18:34.762 | INFO     | __main__:main:203 - ==================================
 2025-11-24 11:18:34.762 | INFO     | __main__:main:204 - FINISHED prepare_customers_data.py
 2025-11-24 11:18:34.763 | INFO     | __main__:main:205 - ==================================
+2025-11-24 12:25:17.053 | INFO     | __main__:main:250 - ==================================
+2025-11-24 12:25:17.053 | INFO     | __main__:main:251 - STARTING prepare_sales_data.py
+2025-11-24 12:25:17.053 | INFO     | __main__:main:252 - ==================================
+2025-11-24 12:25:17.053 | INFO     | __main__:main:254 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-24 12:25:17.053 | INFO     | __main__:main:255 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-24 12:25:17.053 | INFO     | __main__:main:256 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-24 12:25:17.055 | INFO     | __main__:main:257 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-24 12:25:17.055 | INFO     | __main__:read_raw_data:59 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-24 12:25:17.055 | INFO     | __main__:read_raw_data:61 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\sales_data.csv
+2025-11-24 12:25:17.059 | INFO     | __main__:read_raw_data:63 - Loaded dataframe with 2001 rows and 9 columns
+2025-11-24 12:25:17.059 | INFO     | __main__:main:269 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, PaymentType, DiscountPercent
+2025-11-24 12:25:17.059 | INFO     | __main__:main:270 - Initial dataframe shape: (2001, 9)
+2025-11-24 12:25:17.059 | INFO     | __main__:remove_duplicates:74 - FUNCTION START: remove_duplicates with dataframe shape=(2001, 9)
+2025-11-24 12:25:17.061 | INFO     | __main__:remove_duplicates:78 - Removed duplicates based on TransactionID
+2025-11-24 12:25:17.061 | INFO     | __main__:remove_duplicates:83 - Removed 1 duplicate rows
+2025-11-24 12:25:17.061 | INFO     | __main__:remove_duplicates:84 - 2000 records remaining after removing duplicates.
+2025-11-24 12:25:17.063 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'TransactionID' with mean 1000.50
+2025-11-24 12:25:17.063 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CustomerID' with mean 1103.90
+2025-11-24 12:25:17.063 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'ProductID' with mean 2050.45
+2025-11-24 12:25:17.064 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'StoreID' with mean 402.55
+2025-11-24 12:25:17.064 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CampaignID' with mean 1.50
+2025-11-24 12:25:17.065 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleDate' with mode '5/4/2025'
+2025-11-24 12:25:17.066 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleAmount' with mode '0'
+2025-11-24 12:25:17.066 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'PaymentType' with mode 'Cash'
+2025-11-24 12:25:17.067 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'DiscountPercent' with mode '0%'
+2025-11-24 12:25:17.067 | INFO     | __main__:handle_missing_values:122 - Removed 0 outlier rows
+2025-11-24 12:25:17.067 | INFO     | __main__:handle_missing_values:123 - 2000 records remaining after cleaning.
+2025-11-24 12:25:17.068 | INFO     | __main__:remove_outliers:140 - FUNCTION START: remove_outliers with dataframe shape=(2000, 9)
+2025-11-24 12:25:17.068 | INFO     | __main__:remove_outliers:156 - Removed 0 outlier rows
+2025-11-24 12:25:17.068 | INFO     | __main__:remove_outliers:157 - 2000 records remaining after removing outliers.
+2025-11-24 12:25:17.068 | INFO     | __main__:validate_data:201 - FUNCTION START: validate_data with dataframe shape=(2000, 9)
+2025-11-24 12:25:17.069 | INFO     | __main__:validate_data:215 - Dropped 285 rows with SaleAmount containing '?' or '0'
+2025-11-24 12:25:17.069 | INFO     | __main__:validate_data:224 - Data validation complete
+2025-11-24 12:25:17.069 | INFO     | __main__:standardize_formats:168 - FUNCTION START: standardize_formats with dataframe shape=(1715, 9)
+2025-11-24 12:25:17.075 | INFO     | __main__:standardize_formats:190 - Completed standardizing formats
+2025-11-24 12:25:17.076 | INFO     | __main__:save_prepared_data:235 - FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(1715, 9)
+2025-11-24 12:25:17.081 | INFO     | __main__:save_prepared_data:240 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\sales_prepared.csv
+2025-11-24 12:25:17.081 | INFO     | __main__:main:303 - ==================================
+2025-11-24 12:25:17.081 | INFO     | __main__:main:304 - Original shape: (1715, 9)
+2025-11-24 12:25:17.081 | INFO     | __main__:main:305 - Cleaned shape:  (2001, 9)
+2025-11-24 12:25:17.081 | INFO     | __main__:main:306 - ==================================
+2025-11-24 12:25:17.082 | INFO     | __main__:main:307 - FINISHED prepare_sales_data.py
+2025-11-24 12:25:17.082 | INFO     | __main__:main:308 - ==================================
+2025-11-24 13:48:45.096 | INFO     | __main__:main:250 - ==================================
+2025-11-24 13:48:45.096 | INFO     | __main__:main:251 - STARTING prepare_sales_data.py
+2025-11-24 13:48:45.096 | INFO     | __main__:main:252 - ==================================
+2025-11-24 13:48:45.097 | INFO     | __main__:main:254 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-24 13:48:45.097 | INFO     | __main__:main:255 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-24 13:48:45.097 | INFO     | __main__:main:256 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-24 13:48:45.097 | INFO     | __main__:main:257 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-24 13:48:45.097 | INFO     | __main__:read_raw_data:59 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-24 13:48:45.097 | INFO     | __main__:read_raw_data:61 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\sales_data.csv
+2025-11-24 13:48:45.101 | INFO     | __main__:read_raw_data:63 - Loaded dataframe with 2001 rows and 9 columns
+2025-11-24 13:48:45.101 | INFO     | __main__:main:269 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount, PaymentType, DiscountPercent
+2025-11-24 13:48:45.101 | INFO     | __main__:main:270 - Initial dataframe shape: (2001, 9)
+2025-11-24 13:48:45.102 | INFO     | __main__:remove_duplicates:74 - FUNCTION START: remove_duplicates with dataframe shape=(2001, 9)
+2025-11-24 13:48:45.103 | INFO     | __main__:remove_duplicates:78 - Removed duplicates based on TransactionID
+2025-11-24 13:48:45.103 | INFO     | __main__:remove_duplicates:83 - Removed 1 duplicate rows
+2025-11-24 13:48:45.103 | INFO     | __main__:remove_duplicates:84 - 2000 records remaining after removing duplicates.
+2025-11-24 13:48:45.104 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'TransactionID' with mean 1000.50
+2025-11-24 13:48:45.104 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CustomerID' with mean 1103.90
+2025-11-24 13:48:45.104 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'ProductID' with mean 2050.45
+2025-11-24 13:48:45.104 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'StoreID' with mean 402.55
+2025-11-24 13:48:45.105 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CampaignID' with mean 1.50
+2025-11-24 13:48:45.106 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleDate' with mode '5/4/2025'
+2025-11-24 13:48:45.107 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleAmount' with mode '0'
+2025-11-24 13:48:45.108 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'PaymentType' with mode 'Cash'
+2025-11-24 13:48:45.109 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'DiscountPercent' with mode '0%'
+2025-11-24 13:48:45.109 | INFO     | __main__:handle_missing_values:122 - Removed 0 outlier rows
+2025-11-24 13:48:45.111 | INFO     | __main__:handle_missing_values:123 - 2000 records remaining after cleaning.
+2025-11-24 13:48:45.111 | INFO     | __main__:remove_outliers:140 - FUNCTION START: remove_outliers with dataframe shape=(2000, 9)
+2025-11-24 13:48:45.111 | INFO     | __main__:remove_outliers:156 - Removed 0 outlier rows
+2025-11-24 13:48:45.111 | INFO     | __main__:remove_outliers:157 - 2000 records remaining after removing outliers.
+2025-11-24 13:48:45.111 | INFO     | __main__:validate_data:201 - FUNCTION START: validate_data with dataframe shape=(2000, 9)
+2025-11-24 13:48:45.112 | INFO     | __main__:validate_data:215 - Dropped 285 rows with SaleAmount containing '?' or '0'
+2025-11-24 13:48:45.113 | INFO     | __main__:validate_data:224 - Data validation complete
+2025-11-24 13:48:45.113 | INFO     | __main__:standardize_formats:168 - FUNCTION START: standardize_formats with dataframe shape=(1715, 9)
+2025-11-24 13:48:45.117 | INFO     | __main__:standardize_formats:190 - Completed standardizing formats
+2025-11-24 13:48:45.118 | INFO     | __main__:save_prepared_data:235 - FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(1715, 9)
+2025-11-24 13:48:45.126 | INFO     | __main__:save_prepared_data:240 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\sales_prepared.csv
+2025-11-24 13:48:45.126 | INFO     | __main__:main:303 - ==================================
+2025-11-24 13:48:45.127 | INFO     | __main__:main:304 - Original shape: (1715, 9)
+2025-11-24 13:48:45.127 | INFO     | __main__:main:305 - Cleaned shape:  (2001, 9)
+2025-11-24 13:48:45.127 | INFO     | __main__:main:306 - ==================================
+2025-11-24 13:48:45.128 | INFO     | __main__:main:307 - FINISHED prepare_sales_data.py
+2025-11-24 13:48:45.128 | INFO     | __main__:main:308 - ==================================
+2025-11-24 13:51:07.537 | INFO     | __main__:main:250 - ==================================
+2025-11-24 13:51:07.537 | INFO     | __main__:main:251 - STARTING prepare_sales_data.py
+2025-11-24 13:51:07.538 | INFO     | __main__:main:252 - ==================================
+2025-11-24 13:51:07.538 | INFO     | __main__:main:254 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-24 13:51:07.538 | INFO     | __main__:main:255 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-24 13:51:07.538 | INFO     | __main__:main:256 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-24 13:51:07.538 | INFO     | __main__:main:257 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-24 13:51:07.538 | INFO     | __main__:read_raw_data:59 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-24 13:51:07.538 | INFO     | __main__:read_raw_data:61 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\sales_data.csv
+2025-11-24 13:51:07.542 | INFO     | __main__:read_raw_data:63 - Loaded dataframe with 2001 rows and 7 columns
+2025-11-24 13:51:07.542 | INFO     | __main__:main:269 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount
+2025-11-24 13:51:07.542 | INFO     | __main__:main:270 - Initial dataframe shape: (2001, 7)
+2025-11-24 13:51:07.543 | INFO     | __main__:remove_duplicates:74 - FUNCTION START: remove_duplicates with dataframe shape=(2001, 7)
+2025-11-24 13:51:07.544 | INFO     | __main__:remove_duplicates:78 - Removed duplicates based on TransactionID
+2025-11-24 13:51:07.544 | INFO     | __main__:remove_duplicates:83 - Removed 1 duplicate rows
+2025-11-24 13:51:07.544 | INFO     | __main__:remove_duplicates:84 - 2000 records remaining after removing duplicates.
+2025-11-24 13:51:07.545 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'TransactionID' with mean 1000.50
+2025-11-24 13:51:07.546 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CustomerID' with mean 1103.90
+2025-11-24 13:51:07.546 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'ProductID' with mean 2050.45
+2025-11-24 13:51:07.546 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'StoreID' with mean 402.55
+2025-11-24 13:51:07.547 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CampaignID' with mean 1.50
+2025-11-24 13:51:07.547 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleDate' with mode '1/17/2025'
+2025-11-24 13:51:07.550 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleAmount' with mode '0'
+2025-11-24 13:51:07.550 | INFO     | __main__:handle_missing_values:122 - Removed 0 outlier rows
+2025-11-24 13:51:07.550 | INFO     | __main__:handle_missing_values:123 - 2000 records remaining after cleaning.
+2025-11-24 13:51:07.550 | INFO     | __main__:remove_outliers:140 - FUNCTION START: remove_outliers with dataframe shape=(2000, 7)
+2025-11-24 13:51:07.551 | INFO     | __main__:remove_outliers:156 - Removed 0 outlier rows
+2025-11-24 13:51:07.551 | INFO     | __main__:remove_outliers:157 - 2000 records remaining after removing outliers.
+2025-11-24 13:51:07.551 | INFO     | __main__:validate_data:201 - FUNCTION START: validate_data with dataframe shape=(2000, 7)
+2025-11-24 13:51:07.553 | INFO     | __main__:validate_data:215 - Dropped 285 rows with SaleAmount containing '?' or '0'
+2025-11-24 13:51:07.553 | INFO     | __main__:validate_data:224 - Data validation complete
+2025-11-24 13:51:07.553 | INFO     | __main__:standardize_formats:168 - FUNCTION START: standardize_formats with dataframe shape=(1715, 7)
+2025-11-24 13:51:07.561 | INFO     | __main__:standardize_formats:190 - Completed standardizing formats
+2025-11-24 13:51:07.561 | INFO     | __main__:save_prepared_data:235 - FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(1715, 7)
+2025-11-24 13:51:07.565 | INFO     | __main__:save_prepared_data:240 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\sales_prepared.csv
+2025-11-24 13:51:07.565 | INFO     | __main__:main:303 - ==================================
+2025-11-24 13:51:07.565 | INFO     | __main__:main:304 - Original shape: (1715, 7)
+2025-11-24 13:51:07.566 | INFO     | __main__:main:305 - Cleaned shape:  (2001, 7)
+2025-11-24 13:51:07.566 | INFO     | __main__:main:306 - ==================================
+2025-11-24 13:51:07.566 | INFO     | __main__:main:307 - FINISHED prepare_sales_data.py
+2025-11-24 13:51:07.566 | INFO     | __main__:main:308 - ==================================
+2025-11-24 14:03:11.880 | INFO     | __main__:main:286 - ==================================
+2025-11-24 14:03:11.880 | INFO     | __main__:main:287 - STARTING prepare_sales_data.py
+2025-11-24 14:03:11.880 | INFO     | __main__:main:288 - ==================================
+2025-11-24 14:03:11.880 | INFO     | __main__:main:290 - Root         : C:\Repos\bi-analytics-data-project-01
+2025-11-24 14:03:11.880 | INFO     | __main__:main:291 - data/raw     : C:\Repos\bi-analytics-data-project-01\data\raw
+2025-11-24 14:03:11.880 | INFO     | __main__:main:292 - data/prepared: C:\Repos\bi-analytics-data-project-01\data\prepared
+2025-11-24 14:03:11.880 | INFO     | __main__:main:293 - scripts      : C:\Repos\bi-analytics-data-project-01\src\analytics_project
+2025-11-24 14:03:11.880 | INFO     | __main__:read_raw_data:59 - FUNCTION START: read_raw_data with file_name=sales_data.csv
+2025-11-24 14:03:11.880 | INFO     | __main__:read_raw_data:61 - Reading data from C:\Repos\bi-analytics-data-project-01\data\raw\sales_data.csv
+2025-11-24 14:03:11.883 | INFO     | __main__:read_raw_data:63 - Loaded dataframe with 2001 rows and 7 columns
+2025-11-24 14:03:11.886 | INFO     | __main__:main:305 - Initial dataframe columns: TransactionID, SaleDate, CustomerID, ProductID, StoreID, CampaignID, SaleAmount
+2025-11-24 14:03:11.886 | INFO     | __main__:main:306 - Initial dataframe shape: (2001, 7)
+2025-11-24 14:03:11.886 | INFO     | __main__:remove_duplicates:74 - FUNCTION START: remove_duplicates with dataframe shape=(2001, 7)
+2025-11-24 14:03:11.887 | INFO     | __main__:remove_duplicates:78 - Removed duplicates based on TransactionID
+2025-11-24 14:03:11.887 | INFO     | __main__:remove_duplicates:83 - Removed 1 duplicate rows
+2025-11-24 14:03:11.887 | INFO     | __main__:remove_duplicates:84 - 2000 records remaining after removing duplicates.
+2025-11-24 14:03:11.888 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'TransactionID' with mean 1000.50
+2025-11-24 14:03:11.888 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CustomerID' with mean 1103.90
+2025-11-24 14:03:11.889 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'ProductID' with mean 2050.45
+2025-11-24 14:03:11.890 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'StoreID' with mean 402.55
+2025-11-24 14:03:11.890 | INFO     | __main__:handle_missing_values:97 - Filled missing values in 'CampaignID' with mean 1.50
+2025-11-24 14:03:11.891 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleDate' with mode '1/17/2025'
+2025-11-24 14:03:11.892 | INFO     | __main__:handle_missing_values:107 - Filled missing values in 'SaleAmount' with mode '0'
+2025-11-24 14:03:11.892 | INFO     | __main__:handle_missing_values:122 - Removed 0 outlier rows
+2025-11-24 14:03:11.892 | INFO     | __main__:handle_missing_values:123 - 2000 records remaining after cleaning.
+2025-11-24 14:03:11.893 | INFO     | __main__:remove_outliers:140 - FUNCTION START: remove_outliers with dataframe shape=(2000, 7)
+2025-11-24 14:03:11.893 | INFO     | __main__:remove_outliers:156 - Removed 0 outlier rows
+2025-11-24 14:03:11.893 | INFO     | __main__:remove_outliers:157 - 2000 records remaining after removing outliers.
+2025-11-24 14:03:11.893 | INFO     | __main__:validate_data:237 - FUNCTION START: validate_data with dataframe shape=(2000, 7)
+2025-11-24 14:03:11.894 | INFO     | __main__:validate_data:251 - Dropped 285 rows with SaleAmount containing '?' or '0'
+2025-11-24 14:03:11.895 | INFO     | __main__:validate_data:260 - Data validation complete
+2025-11-24 14:03:11.895 | INFO     | __main__:standardize_formats:168 - FUNCTION START: standardize_formats with dataframe shape=(1715, 7)
+2025-11-24 14:03:11.924 | INFO     | __main__:standardize_formats:204 - Completed standardizing formats
+2025-11-24 14:03:11.925 | INFO     | __main__:save_prepared_data:271 - FUNCTION START: save_prepared_data with file_name=sales_prepared.csv, dataframe shape=(1715, 7)
+2025-11-24 14:03:11.933 | INFO     | __main__:save_prepared_data:276 - Data saved to C:\Repos\bi-analytics-data-project-01\data\prepared\sales_prepared.csv
+2025-11-24 14:03:11.933 | INFO     | __main__:main:339 - ==================================
+2025-11-24 14:03:11.933 | INFO     | __main__:main:340 - Original shape: (1715, 7)
+2025-11-24 14:03:11.933 | INFO     | __main__:main:341 - Cleaned shape:  (2001, 7)
+2025-11-24 14:03:11.933 | INFO     | __main__:main:342 - ==================================
+2025-11-24 14:03:11.933 | INFO     | __main__:main:343 - FINISHED prepare_sales_data.py
+2025-11-24 14:03:11.933 | INFO     | __main__:main:344 - ==================================
