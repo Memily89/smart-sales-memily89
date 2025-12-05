@@ -1,0 +1,832 @@
+product_name,region,sale_quarter,units_sold,total_sales_revenue,sales_growth_pct,total_cogs,gross_profit,average_selling_price,average_gross_profit
+Clothing-Apex Pro Laptop,Central,2025Q1,3,1437.86,0.0,1237.05,200.81,479.29,66.94
+Clothing-Apex Pro Laptop,Central,2025Q2,2,797.53,-44.53,797.53,0.0,398.76,0.0
+Clothing-Apex Pro Laptop,Central,2025Q3,1,371.12,-53.47,412.35,-41.23,371.12,-41.23
+Clothing-Apex Pro Laptop,East,2025Q1,1,1113.34,0.0,412.35,700.99,1113.34,700.99
+Clothing-Apex Pro Laptop,East,2025Q2,2,1771.83,59.15,770.36,1001.47,885.92,500.74
+Clothing-Apex Pro Laptop,East,2025Q3,6,5273.96,197.66,2392.59,2881.37,878.99,480.23
+Clothing-Apex Pro Laptop,East,2025Q4,4,4014.2,-23.89,1567.89,2446.31,1003.55,611.58
+Clothing-Apex Pro Laptop,North,2025Q2,3,4472.56,0.0,1182.71,3289.85,1490.85,1096.62
+Clothing-Apex Pro Laptop,North,2025Q4,1,659.76,-85.25,412.35,247.41,659.76,247.41
+Clothing-Apex Pro Laptop,South,2025Q1,1,291.43,0.0,412.35,-120.92,291.43,-120.92
+Clothing-Apex Pro Laptop,South,2025Q2,1,1039.99,256.86,385.18,654.81,1039.99,654.81
+Clothing-Apex Pro Laptop,South,2025Q3,2,1092.64,5.06,797.53,295.11,546.32,147.55
+Clothing-Apex Pro Laptop,South,2025Q4,4,3170.09,190.13,1595.06,1575.03,792.52,393.76
+Clothing-Apex Pro Laptop,West,2025Q1,2,1001.46,0.0,770.36,231.1,500.73,115.55
+Clothing-Apex Pro Laptop,West,2025Q2,3,3807.83,280.23,1209.88,2597.95,1269.28,865.98
+Clothing-Apex Pro Laptop,West,2025Q3,2,1502.2,-60.55,770.36,731.84,751.1,365.92
+Clothing-Apex Pro Laptop,West,2025Q4,1,1649.4,9.8,412.35,1237.05,1649.4,1237.05
+Clothing-Clearnote Whiteboard,Central,2025Q1,1,1934.57,0.0,806.07,1128.5,1934.57,1128.5
+Clothing-Clearnote Whiteboard,Central,2025Q3,2,783.02,-59.52,1299.42,-516.4,391.51,-258.2
+Clothing-Clearnote Whiteboard,East,2025Q1,3,1649.22,0.0,1480.05,169.17,549.74,56.39
+Clothing-Clearnote Whiteboard,East,2025Q2,7,13130.58,696.17,5017.05,8113.53,1875.8,1159.08
+Clothing-Clearnote Whiteboard,East,2025Q3,2,1815.39,-86.17,1612.14,203.25,907.7,101.62
+Clothing-Clearnote Whiteboard,East,2025Q4,1,1578.72,-13.04,493.35,1085.37,1578.72,1085.37
+Clothing-Clearnote Whiteboard,North,2025Q1,2,2709.15,0.0,1299.42,1409.73,1354.58,704.86
+Clothing-Clearnote Whiteboard,North,2025Q3,1,3224.28,19.01,806.07,2418.21,3224.28,2418.21
+Clothing-Clearnote Whiteboard,North,2025Q4,2,1200.03,-62.78,1299.42,-99.39,600.02,-49.69
+Clothing-Clearnote Whiteboard,South,2025Q1,1,2418.21,0.0,806.07,1612.14,2418.21,1612.14
+Clothing-Clearnote Whiteboard,South,2025Q2,3,3712.28,53.51,1792.77,1919.51,1237.43,639.84
+Clothing-Clearnote Whiteboard,South,2025Q3,2,2658.37,-28.39,986.7,1671.67,1329.18,835.84
+Clothing-Clearnote Whiteboard,South,2025Q4,7,11594.52,336.15,3766.17,7828.35,1656.36,1118.34
+Clothing-Clearnote Whiteboard,West,2025Q2,7,6481.9,0.0,3766.17,2715.73,925.99,387.96
+Clothing-Clearnote Whiteboard,West,2025Q3,4,3241.55,-49.99,2286.12,955.43,810.39,238.86
+Clothing-Clearnote Whiteboard,West,2025Q4,3,4036.21,24.51,2105.49,1930.72,1345.4,643.57
+Clothing-Cozycap Knit Hat,Central,2025Q3,1,318.64,0.0,159.32,159.32,318.64,159.32
+Clothing-Cozycap Knit Hat,East,2025Q1,2,1433.88,0.0,318.64,1115.24,716.94,557.62
+Clothing-Cozycap Knit Hat,East,2025Q2,4,1808.81,26.15,637.28,1171.53,452.2,292.88
+Clothing-Cozycap Knit Hat,East,2025Q3,2,981.85,-45.72,318.64,663.21,490.92,331.6
+Clothing-Cozycap Knit Hat,East,2025Q4,2,1116.88,13.75,318.64,798.24,558.44,399.12
+Clothing-Cozycap Knit Hat,North,2025Q1,1,477.96,0.0,159.32,318.64,477.96,318.64
+Clothing-Cozycap Knit Hat,North,2025Q2,1,637.28,33.33,159.32,477.96,637.28,477.96
+Clothing-Cozycap Knit Hat,South,2025Q1,1,477.96,0.0,159.32,318.64,477.96,318.64
+Clothing-Cozycap Knit Hat,South,2025Q3,2,1274.56,166.67,318.64,955.92,637.28,477.96
+Clothing-Cozycap Knit Hat,South,2025Q4,1,127.46,-90.0,159.32,-31.86,127.46,-31.86
+Clothing-Cozycap Knit Hat,West,2025Q1,1,816.38,0.0,159.32,657.06,816.38,657.06
+Clothing-Cozycap Knit Hat,West,2025Q2,2,874.7,7.14,318.64,556.06,437.35,278.03
+Clothing-Cozycap Knit Hat,West,2025Q3,1,286.78,-67.21,159.32,127.46,286.78,127.46
+Clothing-Cozycap Knit Hat,West,2025Q4,2,477.96,66.66,318.64,159.32,238.98,79.66
+Clothing-Echowave Headphones,Central,2025Q1,2,943.13,0.0,751.66,191.47,471.57,95.74
+Clothing-Echowave Headphones,Central,2025Q2,1,559.24,-40.7,279.62,279.62,559.24,279.62
+Clothing-Echowave Headphones,Central,2025Q3,4,1660.83,196.98,382.16,1278.67,415.21,319.67
+Clothing-Echowave Headphones,Central,2025Q4,1,223.7,-86.53,279.62,-55.92,223.7,-55.92
+Clothing-Echowave Headphones,East,2025Q1,2,635.51,0.0,410.01,225.5,317.76,112.75
+Clothing-Echowave Headphones,East,2025Q2,13,5876.71,824.72,1863.96,4012.75,452.05,308.67
+Clothing-Echowave Headphones,East,2025Q3,7,5778.01,-1.68,1658.88,4119.13,825.43,588.45
+Clothing-Echowave Headphones,East,2025Q4,3,1337.07,-76.86,935.07,402.0,445.69,134.0
+Clothing-Echowave Headphones,North,2025Q2,5,3695.47,0.0,512.55,3182.92,739.09,636.58
+Clothing-Echowave Headphones,North,2025Q3,5,3371.4,-8.77,1345.08,2026.32,674.28,405.26
+Clothing-Echowave Headphones,North,2025Q4,4,1955.78,-41.99,627.6,1328.18,488.94,332.04
+Clothing-Echowave Headphones,South,2025Q1,3,1002.01,0.0,444.19,557.82,334.0,185.94
+Clothing-Echowave Headphones,South,2025Q2,5,2112.44,110.82,1099.64,1012.8,422.49,202.56
+Clothing-Echowave Headphones,South,2025Q3,6,3940.24,86.53,1379.26,2560.98,656.71,426.83
+Clothing-Echowave Headphones,South,2025Q4,3,2167.2,-45.0,935.07,1232.13,722.4,410.71
+Clothing-Echowave Headphones,West,2025Q1,2,701.85,0.0,313.8,388.05,350.92,194.02
+Clothing-Echowave Headphones,West,2025Q2,6,3173.19,352.12,1186.84,1986.35,528.86,331.06
+Clothing-Echowave Headphones,West,2025Q3,3,1969.06,-37.95,1031.28,937.78,656.35,312.59
+Clothing-Echowave Headphones,West,2025Q4,5,2581.52,31.1,1494.31,1087.21,516.3,217.44
+Clothing-Ergolux Office Chair,Central,2025Q1,1,439.35,0.0,659.5,-220.15,439.35,-220.15
+Clothing-Ergolux Office Chair,Central,2025Q2,2,906.48,106.32,66.86,839.62,453.24,419.81
+Clothing-Ergolux Office Chair,Central,2025Q3,2,898.1,-0.92,1319.0,-420.9,449.05,-210.45
+Clothing-Ergolux Office Chair,Central,2025Q4,2,4231.43,371.15,1593.43,2638.0,2115.72,1319.0
+Clothing-Ergolux Office Chair,East,2025Q1,1,747.14,0.0,933.93,-186.79,747.14,-186.79
+Clothing-Ergolux Office Chair,East,2025Q2,9,6474.71,766.6,5232.22,1242.49,719.41,138.05
+Clothing-Ergolux Office Chair,East,2025Q3,3,6730.04,3.94,2527.36,4202.68,2243.35,1400.89
+Clothing-Ergolux Office Chair,East,2025Q4,3,4795.46,-28.75,1901.29,2894.17,1598.49,964.72
+Clothing-Ergolux Office Chair,North,2025Q1,1,988.11,0.0,33.43,954.68,988.11,954.68
+Clothing-Ergolux Office Chair,North,2025Q2,3,3679.12,272.34,1626.86,2052.26,1226.37,684.09
+Clothing-Ergolux Office Chair,North,2025Q3,5,2876.52,-21.81,2594.22,282.3,575.3,56.46
+Clothing-Ergolux Office Chair,North,2025Q4,1,1494.29,-48.05,933.93,560.36,1494.29,560.36
+Clothing-Ergolux Office Chair,South,2025Q1,4,2208.56,0.0,1385.86,822.7,552.14,205.67
+Clothing-Ergolux Office Chair,South,2025Q2,8,4101.48,85.71,4023.86,77.62,512.68,9.7
+Clothing-Ergolux Office Chair,South,2025Q3,6,3289.38,-19.8,3253.72,35.66,548.23,5.94
+Clothing-Ergolux Office Chair,South,2025Q4,2,780.57,-76.27,967.36,-186.79,390.28,-93.39
+Clothing-Ergolux Office Chair,West,2025Q2,5,2922.26,0.0,3220.29,-298.03,584.45,-59.61
+Clothing-Ergolux Office Chair,West,2025Q3,5,4814.14,64.74,2594.22,2219.92,962.83,443.98
+Clothing-Ergolux Office Chair,West,2025Q4,4,4093.8,-14.96,1660.29,2433.51,1023.45,608.38
+Clothing-Lumaglow Floor Lamp,Central,2025Q2,2,2176.66,0.0,819.48,1357.18,1088.33,678.59
+Clothing-Lumaglow Floor Lamp,Central,2025Q3,2,3335.44,53.24,1853.02,1482.42,1667.72,741.21
+Clothing-Lumaglow Floor Lamp,Central,2025Q4,4,5452.04,63.46,2672.5,2779.54,1363.01,694.88
+Clothing-Lumaglow Floor Lamp,East,2025Q1,3,7960.63,0.0,2262.76,5697.87,2653.54,1899.29
+Clothing-Lumaglow Floor Lamp,East,2025Q2,4,7009.04,-11.95,2672.5,4336.54,1752.26,1084.14
+Clothing-Lumaglow Floor Lamp,East,2025Q3,3,2565.47,-63.4,1745.99,819.48,855.16,273.16
+Clothing-Lumaglow Floor Lamp,East,2025Q4,2,3335.44,30.01,1853.02,1482.42,1667.72,741.21
+Clothing-Lumaglow Floor Lamp,North,2025Q1,2,4140.54,0.0,1336.25,2804.29,2070.27,1402.14
+Clothing-Lumaglow Floor Lamp,North,2025Q2,6,5192.99,25.42,4008.75,1184.24,865.5,197.37
+Clothing-Lumaglow Floor Lamp,North,2025Q3,2,1024.35,-80.27,819.48,204.87,512.17,102.44
+Clothing-Lumaglow Floor Lamp,South,2025Q1,1,1638.96,0.0,409.74,1229.22,1638.96,1229.22
+Clothing-Lumaglow Floor Lamp,South,2025Q2,5,7582.06,362.61,3599.01,3983.05,1516.41,796.61
+Clothing-Lumaglow Floor Lamp,South,2025Q3,4,4625.05,-39.0,3189.27,1435.78,1156.26,358.94
+Clothing-Lumaglow Floor Lamp,South,2025Q4,1,1229.22,-73.42,409.74,819.48,1229.22,819.48
+Clothing-Lumaglow Floor Lamp,West,2025Q2,1,926.51,0.0,926.51,0.0,926.51,0.0
+Clothing-Lumaglow Floor Lamp,West,2025Q3,4,9938.41,972.67,3189.27,6749.14,2484.6,1687.28
+Clothing-Lumaglow Floor Lamp,West,2025Q4,1,926.51,-90.68,926.51,0.0,926.51,0.0
+Clothing-Nova X Smartphone,Central,2025Q1,1,1732.0,0.0,866.0,866.0,1732.0,866.0
+Clothing-Nova X Smartphone,Central,2025Q3,2,280.22,-83.82,155.68,124.54,140.11,62.27
+Clothing-Nova X Smartphone,East,2025Q1,1,805.71,0.0,77.84,727.87,805.71,727.87
+Clothing-Nova X Smartphone,East,2025Q2,4,2901.95,260.17,1887.68,1014.27,725.49,253.57
+Clothing-Nova X Smartphone,East,2025Q3,4,1900.74,-34.5,2675.84,-775.1,475.18,-193.78
+Clothing-Nova X Smartphone,East,2025Q4,5,5257.1,176.58,3541.84,1715.26,1051.42,343.05
+Clothing-Nova X Smartphone,North,2025Q1,1,186.82,0.0,77.84,108.98,186.82,108.98
+Clothing-Nova X Smartphone,North,2025Q3,1,478.13,155.93,866.0,-387.87,478.13,-387.87
+Clothing-Nova X Smartphone,North,2025Q4,3,1317.47,175.55,1021.68,295.79,439.16,98.6
+Clothing-Nova X Smartphone,South,2025Q1,1,3464.0,0.0,866.0,2598.0,3464.0,2598.0
+Clothing-Nova X Smartphone,South,2025Q2,4,1202.96,-65.27,1099.52,103.44,300.74,25.86
+Clothing-Nova X Smartphone,South,2025Q3,2,373.63,-68.94,155.68,217.95,186.82,108.98
+Clothing-Nova X Smartphone,South,2025Q4,2,3290.8,780.76,1732.0,1558.8,1645.4,779.4
+Clothing-Nova X Smartphone,West,2025Q2,1,210.17,0.0,77.84,132.33,210.17,132.33
+Clothing-Nova X Smartphone,West,2025Q3,1,609.63,190.07,77.84,531.79,609.63,531.79
+Clothing-Nova X Smartphone,West,2025Q4,1,62.27,-89.79,77.84,-15.57,62.27,-15.57
+Clothing-Oakline Coffee Table,Central,2025Q2,3,3569.06,0.0,2152.8,1416.26,1189.69,472.09
+Clothing-Oakline Coffee Table,Central,2025Q3,2,4273.87,19.75,1176.36,3097.51,2136.94,1548.76
+Clothing-Oakline Coffee Table,East,2025Q1,2,1599.36,0.0,399.84,1199.52,799.68,599.76
+Clothing-Oakline Coffee Table,East,2025Q2,6,3112.83,94.63,2752.56,360.27,518.8,60.04
+Clothing-Oakline Coffee Table,East,2025Q3,3,3953.44,27.0,1376.28,2577.16,1317.81,859.05
+Clothing-Oakline Coffee Table,North,2025Q2,2,4491.62,0.0,1952.88,2538.74,2245.81,1269.37
+Clothing-Oakline Coffee Table,North,2025Q3,4,3750.84,-16.49,1576.2,2174.64,937.71,543.66
+Clothing-Oakline Coffee Table,South,2025Q1,2,519.79,0.0,399.84,119.95,259.9,59.98
+Clothing-Oakline Coffee Table,South,2025Q2,1,2636.39,407.2,976.44,1659.95,2636.39,1659.95
+Clothing-Oakline Coffee Table,South,2025Q3,3,1680.13,-36.27,1376.28,303.85,560.04,101.28
+Clothing-Oakline Coffee Table,South,2025Q4,1,179.93,-89.29,199.92,-19.99,179.93,-19.99
+Clothing-Oakline Coffee Table,West,2025Q2,1,1952.88,0.0,976.44,976.44,1952.88,976.44
+Clothing-Oakline Coffee Table,West,2025Q3,1,449.79,-76.97,976.44,-526.65,449.79,-526.65
+Clothing-Oakline Coffee Table,West,2025Q4,1,639.74,42.23,199.92,439.82,639.74,439.82
+Clothing-Printpro Laser Printer,East,2025Q1,1,1492.44,0.0,746.22,746.22,1492.44,746.22
+Clothing-Printpro Laser Printer,East,2025Q3,2,3829.79,156.61,1492.44,2337.35,1914.9,1168.68
+Clothing-Printpro Laser Printer,East,2025Q4,4,8208.42,114.33,2984.88,5223.54,2052.1,1305.88
+Clothing-Printpro Laser Printer,North,2025Q1,3,5074.3,0.0,2238.66,2835.64,1691.43,945.21
+Clothing-Printpro Laser Printer,North,2025Q2,1,1193.95,-76.47,746.22,447.73,1193.95,447.73
+Clothing-Printpro Laser Printer,South,2025Q1,1,2238.66,0.0,746.22,1492.44,2238.66,1492.44
+Clothing-Printpro Laser Printer,South,2025Q2,1,1193.95,-46.67,746.22,447.73,1193.95,447.73
+Clothing-Printpro Laser Printer,South,2025Q3,1,2238.66,87.5,746.22,1492.44,2238.66,1492.44
+Clothing-Printpro Laser Printer,South,2025Q4,1,596.98,-73.33,746.22,-149.24,596.98,-149.24
+Clothing-Printpro Laser Printer,West,2025Q3,1,3731.1,0.0,746.22,2984.88,3731.1,2984.88
+Clothing-Printpro Laser Printer,West,2025Q4,3,3731.1,0.0,2238.66,1492.44,1243.7,497.48
+Clothing-Prodesk Workstation,Central,2025Q1,3,3716.79,0.0,1239.7,2477.09,1238.93,825.7
+Clothing-Prodesk Workstation,Central,2025Q3,1,644.92,-82.65,516.06,128.86,644.92,128.86
+Clothing-Prodesk Workstation,Central,2025Q4,1,373.64,-42.06,207.58,166.06,373.64,166.06
+Clothing-Prodesk Workstation,East,2025Q1,2,705.77,0.0,415.16,290.61,352.88,145.3
+Clothing-Prodesk Workstation,East,2025Q2,4,1689.76,139.42,1138.8,550.96,422.44,137.74
+Clothing-Prodesk Workstation,East,2025Q3,6,3892.16,130.34,1862.44,2029.72,648.69,338.29
+Clothing-Prodesk Workstation,East,2025Q4,3,3133.63,-19.49,931.22,2202.41,1044.54,734.14
+Clothing-Prodesk Workstation,North,2025Q2,4,3640.31,0.0,1138.8,2501.51,910.08,625.38
+Clothing-Prodesk Workstation,North,2025Q3,1,560.47,-84.6,207.58,352.89,560.47,352.89
+Clothing-Prodesk Workstation,North,2025Q4,1,1548.18,176.23,516.06,1032.12,1548.18,1032.12
+Clothing-Prodesk Workstation,South,2025Q2,4,2953.96,0.0,1447.28,1506.68,738.49,376.67
+Clothing-Prodesk Workstation,South,2025Q3,4,2824.39,-4.39,2064.24,760.15,706.1,190.04
+Clothing-Prodesk Workstation,South,2025Q4,4,2117.31,-25.03,830.32,1286.99,529.33,321.75
+Clothing-Prodesk Workstation,West,2025Q1,1,1238.54,0.0,516.06,722.48,1238.54,722.48
+Clothing-Prodesk Workstation,West,2025Q2,5,4890.65,294.87,2580.3,2310.35,978.13,462.07
+Clothing-Prodesk Workstation,West,2025Q3,1,373.64,-92.36,207.58,166.06,373.64,166.06
+Clothing-Prodesk Workstation,West,2025Q4,2,1889.59,405.72,1032.12,857.47,944.8,428.74
+Clothing-Skytab Mini Tablet,Central,2025Q3,1,823.83,0.0,674.97,148.86,823.83,148.86
+Clothing-Skytab Mini Tablet,Central,2025Q4,1,1079.95,31.09,674.97,404.98,1079.95,404.98
+Clothing-Skytab Mini Tablet,East,2025Q1,1,245.89,0.0,674.97,-429.08,245.89,-429.08
+Clothing-Skytab Mini Tablet,East,2025Q2,3,4589.8,1766.61,2024.91,2564.89,1529.93,854.96
+Clothing-Skytab Mini Tablet,East,2025Q3,6,8768.39,91.04,4049.82,4718.57,1461.4,786.43
+Clothing-Skytab Mini Tablet,North,2025Q2,1,1822.42,0.0,674.97,1147.45,1822.42,1147.45
+Clothing-Skytab Mini Tablet,North,2025Q4,3,5252.27,188.2,2024.91,3227.36,1750.76,1075.79
+Clothing-Skytab Mini Tablet,South,2025Q2,3,4792.29,0.0,2024.91,2767.38,1597.43,922.46
+Clothing-Skytab Mini Tablet,South,2025Q3,2,5669.75,18.31,1349.94,4319.81,2834.88,2159.91
+Clothing-Skytab Mini Tablet,West,2025Q1,1,674.97,0.0,674.97,0.0,674.97,0.0
+Clothing-Skytab Mini Tablet,West,2025Q4,1,693.71,2.78,674.97,18.74,693.71,18.74
+Clothing-Softweave Area Rug,Central,2025Q2,1,1114.85,0.0,619.36,495.49,1114.85,495.49
+Clothing-Softweave Area Rug,Central,2025Q3,3,4335.52,288.89,1858.08,2477.44,1445.17,825.81
+Clothing-Softweave Area Rug,Central,2025Q4,2,2043.88,-52.86,1238.72,805.16,1021.94,402.58
+Clothing-Softweave Area Rug,East,2025Q1,2,3045.17,0.0,1238.72,1806.45,1522.58,903.22
+Clothing-Softweave Area Rug,East,2025Q2,1,557.42,-81.69,619.36,-61.94,557.42,-61.94
+Clothing-Softweave Area Rug,East,2025Q3,3,4459.39,700.01,1858.08,2601.31,1486.46,867.1
+Clothing-Softweave Area Rug,East,2025Q4,4,3716.16,-16.67,2477.44,1238.72,929.04,309.68
+Clothing-Softweave Area Rug,North,2025Q1,1,901.38,0.0,619.36,282.02,901.38,282.02
+Clothing-Softweave Area Rug,North,2025Q2,6,9422.87,945.38,3716.16,5706.71,1570.48,951.12
+Clothing-Softweave Area Rug,North,2025Q3,4,6881.13,-26.97,2477.44,4403.69,1720.28,1100.92
+Clothing-Softweave Area Rug,South,2025Q2,3,3572.78,0.0,1858.08,1714.7,1190.93,571.57
+Clothing-Softweave Area Rug,South,2025Q3,2,3716.16,4.01,1238.72,2477.44,1858.08,1238.72
+Clothing-Softweave Area Rug,West,2025Q3,1,990.98,0.0,619.36,371.62,990.98,371.62
+Clothing-Softweave Area Rug,West,2025Q4,1,1858.08,87.5,619.36,1238.72,1858.08,1238.72
+Clothing-Storify Bookshelf,Central,2025Q4,1,3546.75,0.0,709.35,2837.4,3546.75,2837.4
+Clothing-Storify Bookshelf,East,2025Q2,4,5249.19,0.0,2837.4,2411.79,1312.3,602.95
+Clothing-Storify Bookshelf,East,2025Q3,2,2837.4,-45.95,1418.7,1418.7,1418.7,709.35
+Clothing-Storify Bookshelf,East,2025Q4,2,4114.23,45.0,1418.7,2695.53,2057.11,1347.76
+Clothing-Storify Bookshelf,North,2025Q1,1,362.9,0.0,709.35,-346.45,362.9,-346.45
+Clothing-Storify Bookshelf,North,2025Q3,1,475.3,30.97,709.35,-234.05,475.3,-234.05
+Clothing-Storify Bookshelf,North,2025Q4,1,709.35,49.24,709.35,0.0,709.35,0.0
+Clothing-Storify Bookshelf,South,2025Q2,1,408.6,0.0,709.35,-300.75,408.6,-300.75
+Clothing-Storify Bookshelf,South,2025Q4,1,505.64,23.75,709.35,-203.71,505.64,-203.71
+Clothing-Storify Bookshelf,West,2025Q2,1,783.28,0.0,709.35,73.93,783.28,73.93
+Clothing-Strideflex Sneakers,Central,2025Q1,1,792.0,0.0,198.0,594.0,792.0,594.0
+Clothing-Strideflex Sneakers,Central,2025Q3,2,1548.95,95.57,479.85,1069.1,774.48,534.55
+Clothing-Strideflex Sneakers,Central,2025Q4,1,594.0,-61.65,198.0,396.0,594.0,396.0
+Clothing-Strideflex Sneakers,East,2025Q1,1,410.55,0.0,281.85,128.7,410.55,128.7
+Clothing-Strideflex Sneakers,East,2025Q2,5,3087.27,651.98,1073.85,2013.42,617.45,402.68
+Clothing-Strideflex Sneakers,East,2025Q3,6,3614.74,17.09,1439.55,2175.19,602.46,362.53
+Clothing-Strideflex Sneakers,East,2025Q4,1,1127.4,-68.81,281.85,845.55,1127.4,845.55
+Clothing-Strideflex Sneakers,North,2025Q2,3,1515.46,0.0,761.7,753.76,505.15,251.25
+Clothing-Strideflex Sneakers,North,2025Q3,2,1690.86,11.57,479.85,1211.01,845.43,605.5
+Clothing-Strideflex Sneakers,South,2025Q2,3,2821.32,0.0,761.7,2059.62,940.44,686.54
+Clothing-Strideflex Sneakers,South,2025Q3,2,1821.71,-35.43,479.85,1341.86,910.86,670.93
+Clothing-Strideflex Sneakers,South,2025Q4,2,1170.76,-35.73,563.7,607.06,585.38,303.53
+Clothing-Strideflex Sneakers,West,2025Q1,2,890.01,0.0,396.0,494.01,445.0,247.0
+Clothing-Strideflex Sneakers,West,2025Q2,3,1887.54,112.08,761.7,1125.84,629.18,375.28
+Clothing-Strideflex Sneakers,West,2025Q3,3,2043.74,8.28,677.85,1365.89,681.25,455.3
+Clothing-Strideflex Sneakers,West,2025Q4,2,693.71,-66.06,563.7,130.01,346.86,65.0
+Clothing-Urbanfit T,Central,2025Q1,1,826.83,0.0,66.31,760.52,826.83,760.52
+Clothing-Urbanfit T,Central,2025Q2,2,739.99,-10.5,908.41,-168.42,370.0,-84.21
+Clothing-Urbanfit T,Central,2025Q3,2,877.25,18.55,908.41,-31.16,438.62,-15.58
+Clothing-Urbanfit T,Central,2025Q4,1,490.85,-44.05,842.1,-351.25,490.85,-351.25
+Clothing-Urbanfit T,East,2025Q2,4,6949.69,0.0,1816.82,5132.87,1737.42,1283.22
+Clothing-Urbanfit T,East,2025Q3,4,6935.73,-0.2,2592.61,4343.12,1733.93,1085.78
+Clothing-Urbanfit T,East,2025Q4,1,119.36,-98.28,66.31,53.05,119.36,53.05
+Clothing-Urbanfit T,North,2025Q1,1,198.93,0.0,66.31,132.62,198.93,132.62
+Clothing-Urbanfit T,North,2025Q2,2,4263.55,2043.24,908.41,3355.14,2131.78,1677.57
+Clothing-Urbanfit T,North,2025Q4,2,506.73,-88.11,132.62,374.11,253.36,187.06
+Clothing-Urbanfit T,South,2025Q1,4,3381.01,0.0,1816.82,1564.19,845.25,391.05
+Clothing-Urbanfit T,South,2025Q2,3,1745.2,-48.38,974.72,770.48,581.73,256.83
+Clothing-Urbanfit T,South,2025Q3,4,1724.3,-1.2,1816.82,-92.52,431.08,-23.13
+Clothing-Urbanfit T,South,2025Q4,2,2544.32,47.56,1684.2,860.12,1272.16,430.06
+Clothing-Urbanfit T,West,2025Q1,2,651.38,0.0,132.62,518.76,325.69,259.38
+Clothing-Urbanfit T,West,2025Q2,4,2730.55,319.19,2592.61,137.94,682.64,34.48
+Clothing-Urbanfit T,West,2025Q3,1,106.1,-96.11,66.31,39.79,106.1,39.79
+Clothing-Urbanfit T,West,2025Q4,3,4431.97,4077.16,1750.51,2681.46,1477.32,893.82
+Electronics-Clearnote Whiteboard,Central,2025Q3,2,6245.12,0.0,1561.28,4683.84,3122.56,2341.92
+Electronics-Clearnote Whiteboard,East,2025Q1,5,13487.78,0.0,3903.2,9584.58,2697.56,1916.92
+Electronics-Clearnote Whiteboard,East,2025Q2,7,8574.52,-36.43,5464.48,3110.04,1224.93,444.29
+Electronics-Clearnote Whiteboard,East,2025Q3,1,3122.56,-63.58,780.64,2341.92,3122.56,2341.92
+Electronics-Clearnote Whiteboard,North,2025Q2,1,3903.2,0.0,780.64,3122.56,3903.2,3122.56
+Electronics-Clearnote Whiteboard,North,2025Q4,2,3122.56,-20.0,1561.28,1561.28,1561.28,780.64
+Electronics-Clearnote Whiteboard,South,2025Q2,2,4683.84,0.0,1561.28,3122.56,2341.92,1561.28
+Electronics-Clearnote Whiteboard,South,2025Q4,1,1561.28,-66.67,780.64,780.64,1561.28,780.64
+Electronics-Clearnote Whiteboard,West,2025Q2,1,702.58,0.0,780.64,-78.06,702.58,-78.06
+Electronics-Clearnote Whiteboard,West,2025Q3,2,2051.18,191.95,1561.28,489.9,1025.59,244.95
+Electronics-Clearnote Whiteboard,West,2025Q4,1,702.58,-65.75,780.64,-78.06,702.58,-78.06
+Electronics-Comfyrest Sofa,Central,2025Q1,1,1338.0,0.0,836.25,501.75,1338.0,501.75
+Electronics-Comfyrest Sofa,Central,2025Q2,2,4210.89,214.72,1403.63,2807.26,2105.44,1403.63
+Electronics-Comfyrest Sofa,Central,2025Q3,1,40.53,-99.04,13.51,27.02,40.53,27.02
+Electronics-Comfyrest Sofa,Central,2025Q4,5,8354.69,20513.59,3643.51,4711.18,1670.94,942.24
+Electronics-Comfyrest Sofa,East,2025Q1,7,6671.43,0.0,4477.26,2194.17,953.06,313.45
+Electronics-Comfyrest Sofa,East,2025Q2,11,12212.4,83.06,7031.54,5180.86,1110.22,470.99
+Electronics-Comfyrest Sofa,East,2025Q3,8,7095.19,-41.9,4237.91,2857.28,886.9,357.16
+Electronics-Comfyrest Sofa,East,2025Q4,7,7358.4,3.71,4982.98,2375.42,1051.2,339.35
+Electronics-Comfyrest Sofa,North,2025Q1,1,602.28,0.0,836.25,-233.97,602.28,-233.97
+Electronics-Comfyrest Sofa,North,2025Q2,3,2353.06,290.69,2003.03,350.03,784.35,116.68
+Electronics-Comfyrest Sofa,North,2025Q3,7,6796.87,188.85,3686.54,3110.33,970.98,444.33
+Electronics-Comfyrest Sofa,North,2025Q4,3,4428.15,-34.85,2255.89,2172.26,1476.05,724.09
+Electronics-Comfyrest Sofa,South,2025Q1,1,906.33,0.0,820.24,86.09,906.33,86.09
+Electronics-Comfyrest Sofa,South,2025Q2,3,6341.61,599.7,2003.03,4338.58,2113.87,1446.19
+Electronics-Comfyrest Sofa,South,2025Q3,2,3153.8,-50.27,1403.63,1750.17,1576.9,875.08
+Electronics-Comfyrest Sofa,South,2025Q4,6,7161.96,127.09,3893.87,3268.09,1193.66,544.68
+Electronics-Comfyrest Sofa,West,2025Q1,2,1639.25,0.0,1672.5,-33.25,819.62,-16.62
+Electronics-Comfyrest Sofa,West,2025Q2,4,4295.44,162.04,1430.65,2864.79,1073.86,716.2
+Electronics-Comfyrest Sofa,West,2025Q3,7,4720.28,9.89,3670.53,1049.75,674.33,149.96
+Electronics-Comfyrest Sofa,West,2025Q4,2,4101.2,-13.12,1640.48,2460.72,2050.6,1230.36
+Electronics-Cozycap Knit Hat,East,2025Q1,1,3006.53,0.0,939.54,2066.99,3006.53,2066.99
+Electronics-Cozycap Knit Hat,East,2025Q2,2,3758.16,25.0,1879.08,1879.08,1879.08,939.54
+Electronics-Cozycap Knit Hat,East,2025Q3,3,7140.5,90.0,2818.62,4321.88,2380.17,1440.63
+Electronics-Cozycap Knit Hat,East,2025Q4,3,8831.68,23.68,2818.62,6013.06,2943.89,2004.35
+Electronics-Cozycap Knit Hat,North,2025Q2,1,755.65,0.0,939.54,-183.89,755.65,-183.89
+Electronics-Cozycap Knit Hat,North,2025Q4,2,3006.53,297.87,1879.08,1127.45,1503.26,563.73
+Electronics-Cozycap Knit Hat,South,2025Q2,1,1503.26,0.0,939.54,563.72,1503.26,563.72
+Electronics-Cozycap Knit Hat,South,2025Q3,1,751.63,-50.0,939.54,-187.91,751.63,-187.91
+Electronics-Cozycap Knit Hat,South,2025Q4,1,1879.08,150.0,939.54,939.54,1879.08,939.54
+Electronics-Cozycap Knit Hat,West,2025Q2,3,5167.47,0.0,2818.62,2348.85,1722.49,782.95
+Electronics-Cozycap Knit Hat,West,2025Q3,2,3177.04,-38.52,1879.08,1297.96,1588.52,648.98
+Electronics-Denimforge Jeans,Central,2025Q2,3,3820.44,0.0,1685.49,2134.95,1273.48,711.65
+Electronics-Denimforge Jeans,East,2025Q1,3,3410.07,0.0,1685.49,1724.58,1136.69,574.86
+Electronics-Denimforge Jeans,East,2025Q2,4,4382.27,28.51,2247.32,2134.95,1095.57,533.74
+Electronics-Denimforge Jeans,East,2025Q3,2,1629.31,-62.82,1123.66,505.65,814.66,252.82
+Electronics-Denimforge Jeans,East,2025Q4,1,561.83,-65.52,561.83,0.0,561.83,0.0
+Electronics-Denimforge Jeans,North,2025Q1,1,480.79,0.0,561.83,-81.04,480.79,-81.04
+Electronics-Denimforge Jeans,North,2025Q2,1,561.83,16.86,561.83,0.0,561.83,0.0
+Electronics-Denimforge Jeans,North,2025Q3,2,3033.89,440.0,1123.66,1910.23,1516.94,955.11
+Electronics-Denimforge Jeans,North,2025Q4,2,1756.88,-42.09,1123.66,633.22,878.44,316.61
+Electronics-Denimforge Jeans,South,2025Q1,2,2516.26,0.0,1123.66,1392.6,1258.13,696.3
+Electronics-Denimforge Jeans,South,2025Q2,1,756.39,-69.94,561.83,194.56,756.39,194.56
+Electronics-Denimforge Jeans,South,2025Q3,1,1123.66,48.56,561.83,561.83,1123.66,561.83
+Electronics-Denimforge Jeans,West,2025Q2,1,430.58,0.0,561.83,-131.25,430.58,-131.25
+Electronics-Denimforge Jeans,West,2025Q4,1,898.93,108.77,561.83,337.1,898.93,337.1
+Electronics-Ergolux Office Chair,Central,2025Q2,1,839.55,0.0,524.72,314.83,839.55,314.83
+Electronics-Ergolux Office Chair,East,2025Q1,1,965.29,0.0,524.72,440.57,965.29,440.57
+Electronics-Ergolux Office Chair,East,2025Q2,3,2984.6,209.19,1574.16,1410.44,994.87,470.15
+Electronics-Ergolux Office Chair,East,2025Q3,3,4672.26,56.55,1574.16,3098.1,1557.42,1032.7
+Electronics-Ergolux Office Chair,East,2025Q4,2,1993.94,-57.32,1049.44,944.5,996.97,472.25
+Electronics-Ergolux Office Chair,North,2025Q1,2,2098.88,0.0,1049.44,1049.44,1049.44,524.72
+Electronics-Ergolux Office Chair,North,2025Q2,1,849.63,-59.52,524.72,324.91,849.63,324.91
+Electronics-Ergolux Office Chair,North,2025Q3,2,5247.2,517.59,1049.44,4197.76,2623.6,2098.88
+Electronics-Ergolux Office Chair,South,2025Q1,1,441.54,0.0,524.72,-83.18,441.54,-83.18
+Electronics-Ergolux Office Chair,South,2025Q2,3,2227.46,404.48,1574.16,653.3,742.49,217.77
+Electronics-Ergolux Office Chair,South,2025Q3,1,944.5,-57.6,524.72,419.78,944.5,419.78
+Electronics-Ergolux Office Chair,South,2025Q4,1,1049.44,11.11,524.72,524.72,1049.44,524.72
+Electronics-Ergolux Office Chair,West,2025Q2,1,829.48,0.0,524.72,304.76,829.48,304.76
+Electronics-Ergolux Office Chair,West,2025Q3,4,3935.4,374.44,2098.88,1836.52,983.85,459.13
+Electronics-Ergolux Office Chair,West,2025Q4,2,3043.38,-22.67,1049.44,1993.94,1521.69,996.97
+Electronics-Lumaglow Floor Lamp,Central,2025Q1,1,469.28,0.0,117.32,351.96,469.28,351.96
+Electronics-Lumaglow Floor Lamp,Central,2025Q2,3,736.77,57.0,525.59,211.18,245.59,70.39
+Electronics-Lumaglow Floor Lamp,Central,2025Q3,3,2735.39,271.27,1391.1,1344.29,911.8,448.1
+Electronics-Lumaglow Floor Lamp,East,2025Q1,4,1977.7,0.0,990.17,987.53,494.42,246.88
+Electronics-Lumaglow Floor Lamp,East,2025Q2,8,6165.0,211.73,2497.71,3667.29,770.62,458.41
+Electronics-Lumaglow Floor Lamp,East,2025Q3,10,5887.44,-4.5,2559.6,3327.84,588.74,332.78
+Electronics-Lumaglow Floor Lamp,East,2025Q4,5,5413.2,-8.06,1452.99,3960.21,1082.64,792.04
+Electronics-Lumaglow Floor Lamp,North,2025Q2,4,3195.9,0.0,1509.3,1686.6,798.98,421.65
+Electronics-Lumaglow Floor Lamp,North,2025Q3,5,3541.84,10.82,1453.87,2087.97,708.37,417.59
+Electronics-Lumaglow Floor Lamp,North,2025Q4,2,1578.4,-55.44,754.65,823.75,789.2,411.88
+Electronics-Lumaglow Floor Lamp,South,2025Q1,1,370.96,0.0,463.7,-92.74,370.96,-92.74
+Electronics-Lumaglow Floor Lamp,South,2025Q2,6,2012.13,442.41,1570.31,441.82,335.36,73.64
+Electronics-Lumaglow Floor Lamp,South,2025Q3,6,3645.37,81.17,2263.07,1382.3,607.56,230.38
+Electronics-Lumaglow Floor Lamp,West,2025Q2,4,3197.23,0.0,1335.67,1861.56,799.31,465.39
+Electronics-Lumaglow Floor Lamp,West,2025Q3,3,1250.86,-60.88,698.34,552.52,416.95,184.17
+Electronics-Lumaglow Floor Lamp,West,2025Q4,3,1325.2,5.94,698.34,626.86,441.73,208.95
+Electronics-Nova X Smartphone,Central,2025Q2,1,1702.08,0.0,945.6,756.48,1702.08,756.48
+Electronics-Nova X Smartphone,Central,2025Q3,2,2714.07,59.46,1938.62,775.45,1357.04,387.72
+Electronics-Nova X Smartphone,East,2025Q2,6,12122.78,0.0,5673.6,6449.18,2020.46,1074.86
+Electronics-Nova X Smartphone,East,2025Q3,3,5388.21,-55.55,2884.22,2503.99,1796.07,834.66
+Electronics-Nova X Smartphone,East,2025Q4,2,1191.23,-77.89,1914.91,-723.68,595.62,-361.84
+Electronics-Nova X Smartphone,North,2025Q2,3,11536.88,0.0,2884.22,8652.66,3845.63,2884.22
+Electronics-Nova X Smartphone,North,2025Q3,2,3709.18,-67.85,1914.91,1794.27,1854.59,897.14
+Electronics-Nova X Smartphone,North,2025Q4,3,6187.43,66.81,2884.22,3303.21,2062.48,1101.07
+Electronics-Nova X Smartphone,South,2025Q2,4,6740.51,0.0,3806.11,2934.4,1685.13,733.6
+Electronics-Nova X Smartphone,South,2025Q3,1,647.41,-90.4,945.6,-298.19,647.41,-298.19
+Electronics-Nova X Smartphone,South,2025Q4,4,7424.16,1046.75,3853.53,3570.63,1856.04,892.66
+Electronics-Nova X Smartphone,West,2025Q1,1,1938.62,0.0,969.31,969.31,1938.62,969.31
+Electronics-Nova X Smartphone,West,2025Q2,5,10634.83,448.58,4799.13,5835.7,2126.97,1167.14
+Electronics-Nova X Smartphone,West,2025Q3,3,6335.52,-40.43,2836.8,3498.72,2111.84,1166.24
+Electronics-Oakline Coffee Table,Central,2025Q2,2,1292.64,0.0,1292.64,0.0,646.32,0.0
+Electronics-Oakline Coffee Table,Central,2025Q3,2,1368.77,5.89,1292.64,76.13,684.38,38.06
+Electronics-Oakline Coffee Table,East,2025Q1,1,1938.96,0.0,646.32,1292.64,1938.96,1292.64
+Electronics-Oakline Coffee Table,East,2025Q2,4,4810.5,148.1,2585.28,2225.22,1202.62,556.31
+Electronics-Oakline Coffee Table,East,2025Q4,2,1293.71,-73.11,1292.64,1.07,646.86,0.53
+Electronics-Oakline Coffee Table,North,2025Q2,2,4131.61,0.0,1292.64,2838.97,2065.8,1419.48
+Electronics-Oakline Coffee Table,South,2025Q2,2,1615.8,0.0,1292.64,323.16,807.9,161.58
+Electronics-Oakline Coffee Table,West,2025Q2,2,5816.88,0.0,1292.64,4524.24,2908.44,2262.12
+Electronics-Oakline Coffee Table,West,2025Q3,2,2036.49,-64.99,1292.64,743.85,1018.25,371.92
+Electronics-Printpro Laser Printer,Central,2025Q2,1,2451.22,0.0,907.86,1543.36,2451.22,1543.36
+Electronics-Printpro Laser Printer,Central,2025Q3,1,2178.86,-11.11,907.86,1271.0,2178.86,1271.0
+Electronics-Printpro Laser Printer,East,2025Q1,1,481.4,0.0,907.86,-426.46,481.4,-426.46
+Electronics-Printpro Laser Printer,East,2025Q2,1,597.22,24.06,907.86,-310.64,597.22,-310.64
+Electronics-Printpro Laser Printer,East,2025Q3,2,3086.73,416.85,1815.72,1271.01,1543.36,635.5
+Electronics-Printpro Laser Printer,East,2025Q4,3,2571.71,-16.68,2723.58,-151.87,857.24,-50.62
+Electronics-Printpro Laser Printer,North,2025Q2,5,8638.74,0.0,4539.3,4099.44,1727.75,819.89
+Electronics-Printpro Laser Printer,North,2025Q3,1,4539.3,-47.45,907.86,3631.44,4539.3,3631.44
+Electronics-Printpro Laser Printer,South,2025Q2,2,3268.29,0.0,1815.72,1452.57,1634.14,726.28
+Electronics-Printpro Laser Printer,South,2025Q3,3,4902.44,50.0,2723.58,2178.86,1634.15,726.29
+Electronics-Printpro Laser Printer,South,2025Q4,2,4539.3,-7.41,1815.72,2723.58,2269.65,1361.79
+Electronics-Printpro Laser Printer,West,2025Q2,1,3631.44,0.0,907.86,2723.58,3631.44,2723.58
+Electronics-Printpro Laser Printer,West,2025Q3,1,3631.44,0.0,907.86,2723.58,3631.44,2723.58
+Electronics-Printpro Laser Printer,West,2025Q4,1,2723.58,-25.0,907.86,1815.72,2723.58,1815.72
+Electronics-Snapbind Stapler,Central,2025Q2,1,1800.7,0.0,360.14,1440.56,1800.7,1440.56
+Electronics-Snapbind Stapler,Central,2025Q4,1,648.25,-64.0,360.14,288.11,648.25,288.11
+Electronics-Snapbind Stapler,East,2025Q2,4,5056.78,0.0,1440.56,3616.22,1264.2,904.06
+Electronics-Snapbind Stapler,East,2025Q3,2,2160.84,-57.27,720.28,1440.56,1080.42,720.28
+Electronics-Snapbind Stapler,East,2025Q4,2,3241.26,50.0,720.28,2520.98,1620.63,1260.49
+Electronics-Snapbind Stapler,North,2025Q1,1,1440.56,0.0,360.14,1080.42,1440.56,1080.42
+Electronics-Snapbind Stapler,North,2025Q4,1,264.52,-81.64,360.14,-95.62,264.52,-95.62
+Electronics-Snapbind Stapler,South,2025Q1,1,288.11,0.0,360.14,-72.03,288.11,-72.03
+Electronics-Snapbind Stapler,South,2025Q3,2,665.13,130.86,720.28,-55.15,332.56,-27.57
+Electronics-Snapbind Stapler,West,2025Q3,1,648.25,0.0,360.14,288.11,648.25,288.11
+Electronics-Strideflex Sneakers,Central,2025Q3,1,560.87,0.0,623.19,-62.32,560.87,-62.32
+Electronics-Strideflex Sneakers,Central,2025Q4,1,1121.74,100.0,623.19,498.55,1121.74,498.55
+Electronics-Strideflex Sneakers,East,2025Q1,2,2234.02,0.0,1294.37,939.65,1117.01,469.82
+Electronics-Strideflex Sneakers,East,2025Q2,5,6109.01,173.45,3307.91,2801.1,1221.8,560.22
+Electronics-Strideflex Sneakers,East,2025Q3,7,7751.64,26.89,4602.28,3149.36,1107.38,449.91
+Electronics-Strideflex Sneakers,East,2025Q4,4,4966.59,-35.93,2588.74,2377.85,1241.65,594.46
+Electronics-Strideflex Sneakers,North,2025Q1,1,502.41,0.0,623.19,-120.78,502.41,-120.78
+Electronics-Strideflex Sneakers,North,2025Q2,2,1039.0,106.8,1342.36,-303.36,519.5,-151.68
+Electronics-Strideflex Sneakers,North,2025Q3,4,4860.88,367.84,2492.76,2368.12,1215.22,592.03
+Electronics-Strideflex Sneakers,North,2025Q4,2,1285.21,-73.56,1294.37,-9.16,642.6,-4.58
+Electronics-Strideflex Sneakers,South,2025Q1,2,1294.37,0.0,1294.37,0.0,647.18,0.0
+Electronics-Strideflex Sneakers,South,2025Q2,5,4258.34,228.99,3211.93,1046.41,851.67,209.28
+Electronics-Strideflex Sneakers,South,2025Q3,4,6111.71,43.52,2636.73,3474.98,1527.93,868.75
+Electronics-Strideflex Sneakers,South,2025Q4,1,1073.89,-82.43,671.18,402.71,1073.89,402.71
+Electronics-Strideflex Sneakers,West,2025Q1,1,830.41,0.0,671.18,159.23,830.41,159.23
+Electronics-Strideflex Sneakers,West,2025Q2,1,784.24,-5.56,671.18,113.06,784.24,113.06
+Electronics-Strideflex Sneakers,West,2025Q3,1,3115.95,297.32,623.19,2492.76,3115.95,2492.76
+Electronics-Strideflex Sneakers,West,2025Q4,1,2684.72,-13.84,671.18,2013.54,2684.72,2013.54
+Electronics-Thermashell Jacket,Central,2025Q3,1,1084.52,0.0,542.26,542.26,1084.52,542.26
+Electronics-Thermashell Jacket,East,2025Q1,1,2169.04,0.0,542.26,1626.78,2169.04,1626.78
+Electronics-Thermashell Jacket,East,2025Q2,4,6452.89,197.5,2169.04,4283.85,1613.22,1070.96
+Electronics-Thermashell Jacket,East,2025Q3,2,1355.65,-78.99,1084.52,271.13,677.82,135.56
+Electronics-Thermashell Jacket,East,2025Q4,4,5447.63,301.85,2169.04,3278.59,1361.91,819.65
+Electronics-Thermashell Jacket,North,2025Q1,1,314.62,0.0,542.26,-227.64,314.62,-227.64
+Electronics-Thermashell Jacket,North,2025Q2,2,3524.69,1020.3,1084.52,2440.17,1762.34,1220.08
+Electronics-Thermashell Jacket,North,2025Q3,2,2060.59,-41.54,1084.52,976.07,1030.3,488.04
+Electronics-Thermashell Jacket,South,2025Q1,1,542.26,0.0,542.26,0.0,542.26,0.0
+Electronics-Thermashell Jacket,South,2025Q2,1,867.62,60.0,542.26,325.36,867.62,325.36
+Electronics-Thermashell Jacket,South,2025Q3,2,2711.3,212.5,1084.52,1626.78,1355.65,813.39
+Electronics-Thermashell Jacket,South,2025Q4,1,867.62,-68.0,542.26,325.36,867.62,325.36
+Electronics-Thermashell Jacket,West,2025Q2,1,817.3,0.0,542.26,275.04,817.3,275.04
+Electronics-Thermashell Jacket,West,2025Q3,1,1301.42,59.23,542.26,759.16,1301.42,759.16
+Electronics-Thermashell Jacket,West,2025Q4,1,867.62,-33.33,542.26,325.36,867.62,325.36
+Electronics-Urbanfit T,Central,2025Q1,1,1531.06,0.0,637.94,893.12,1531.06,893.12
+Electronics-Urbanfit T,Central,2025Q2,2,2169.0,41.67,1275.88,893.12,1084.5,446.56
+Electronics-Urbanfit T,Central,2025Q4,1,1148.29,-47.06,637.94,510.35,1148.29,510.35
+Electronics-Urbanfit T,East,2025Q1,1,510.35,0.0,637.94,-127.59,510.35,-127.59
+Electronics-Urbanfit T,East,2025Q3,4,5996.63,1075.0,2551.76,3444.87,1499.16,861.22
+Electronics-Urbanfit T,East,2025Q4,2,5103.52,-14.89,1275.88,3827.64,2551.76,1913.82
+Electronics-Urbanfit T,North,2025Q1,2,1850.03,0.0,1275.88,574.15,925.02,287.08
+Electronics-Urbanfit T,North,2025Q2,3,5741.46,210.34,1913.82,3827.64,1913.82,1275.88
+Electronics-Urbanfit T,South,2025Q1,1,534.99,0.0,637.94,-102.95,534.99,-102.95
+Electronics-Urbanfit T,South,2025Q3,2,2041.41,281.58,1275.88,765.53,1020.7,382.76
+Electronics-Urbanfit T,South,2025Q4,2,3380.51,65.6,1275.88,2104.63,1690.26,1052.32
+Electronics-Urbanfit T,West,2025Q1,1,2551.76,0.0,637.94,1913.82,2551.76,1913.82
+Electronics-Urbanfit T,West,2025Q2,1,1531.06,-40.0,637.94,893.12,1531.06,893.12
+Electronics-Urbanfit T,West,2025Q4,1,1148.29,-25.0,637.94,510.35,1148.29,510.35
+Home-Comfyrest Sofa,Central,2025Q2,2,2624.53,0.0,978.89,1645.64,1312.26,822.82
+Home-Comfyrest Sofa,Central,2025Q3,2,811.56,-69.08,624.28,187.28,405.78,93.64
+Home-Comfyrest Sofa,Central,2025Q4,2,2588.33,218.93,978.89,1609.44,1294.16,804.72
+Home-Comfyrest Sofa,East,2025Q1,4,2952.08,0.0,2312.39,639.69,738.02,159.92
+Home-Comfyrest Sofa,East,2025Q2,3,5067.3,71.65,2000.25,3067.05,1689.1,1022.35
+Home-Comfyrest Sofa,East,2025Q3,9,9334.37,84.21,5291.53,4042.84,1037.15,449.2
+Home-Comfyrest Sofa,East,2025Q4,1,1200.15,-87.14,666.75,533.4,1200.15,533.4
+Home-Comfyrest Sofa,North,2025Q1,1,675.37,0.0,312.14,363.23,675.37,363.23
+Home-Comfyrest Sofa,North,2025Q2,2,1566.22,131.91,978.89,587.33,783.11,293.66
+Home-Comfyrest Sofa,North,2025Q3,2,3123.95,99.46,978.89,2145.06,1561.98,1072.53
+Home-Comfyrest Sofa,South,2025Q2,4,4128.23,0.0,2312.39,1815.84,1032.06,453.96
+Home-Comfyrest Sofa,South,2025Q3,1,396.62,-90.39,666.75,-270.13,396.62,-270.13
+Home-Comfyrest Sofa,South,2025Q4,5,3882.96,879.01,2979.14,903.82,776.59,180.76
+Home-Comfyrest Sofa,West,2025Q1,1,842.78,0.0,312.14,530.64,842.78,530.64
+Home-Comfyrest Sofa,West,2025Q2,5,5312.63,530.37,2979.14,2333.49,1062.53,466.7
+Home-Comfyrest Sofa,West,2025Q4,5,5404.68,1.73,2979.14,2425.54,1080.94,485.11
+Home-Cozycap Knit Hat,Central,2025Q1,2,2393.09,0.0,1877.79,515.3,1196.54,257.65
+Home-Cozycap Knit Hat,Central,2025Q2,2,3950.35,65.07,1877.79,2072.56,1975.18,1036.28
+Home-Cozycap Knit Hat,Central,2025Q3,2,2452.77,-37.91,1877.79,574.98,1226.38,287.49
+Home-Cozycap Knit Hat,Central,2025Q4,3,1872.63,-23.65,2840.92,-968.29,624.21,-322.76
+Home-Cozycap Knit Hat,East,2025Q1,5,7646.87,0.0,4718.71,2928.16,1529.37,585.63
+Home-Cozycap Knit Hat,East,2025Q2,7,15562.68,103.52,6609.09,8953.59,2223.24,1279.08
+Home-Cozycap Knit Hat,East,2025Q3,8,10042.11,-35.47,7489.76,2552.35,1255.26,319.04
+Home-Cozycap Knit Hat,East,2025Q4,8,11555.44,15.07,7513.05,4042.39,1444.43,505.3
+Home-Cozycap Knit Hat,North,2025Q1,1,845.86,0.0,939.84,-93.98,845.86,-93.98
+Home-Cozycap Knit Hat,North,2025Q2,2,3824.55,352.15,1890.38,1934.17,1912.28,967.08
+Home-Cozycap Knit Hat,North,2025Q3,8,14621.56,282.31,7548.93,7072.63,1827.7,884.08
+Home-Cozycap Knit Hat,North,2025Q4,4,7034.86,-51.89,3757.47,3277.39,1758.72,819.35
+Home-Cozycap Knit Hat,South,2025Q1,2,3276.74,0.0,1854.5,1422.24,1638.37,711.12
+Home-Cozycap Knit Hat,South,2025Q2,6,9093.09,177.5,5645.96,3447.13,1515.52,574.52
+Home-Cozycap Knit Hat,South,2025Q3,5,7799.72,-14.22,4720.6,3079.12,1559.94,615.82
+Home-Cozycap Knit Hat,South,2025Q4,2,1640.36,-78.97,1890.38,-250.02,820.18,-125.01
+Home-Cozycap Knit Hat,West,2025Q1,3,1984.88,0.0,2805.04,-820.16,661.63,-273.39
+Home-Cozycap Knit Hat,West,2025Q2,1,2225.4,12.12,927.25,1298.15,2225.4,1298.15
+Home-Cozycap Knit Hat,West,2025Q3,6,18502.76,731.44,5635.26,12867.5,3083.79,2144.58
+Home-Cozycap Knit Hat,West,2025Q4,3,3046.85,-83.53,2817.63,229.22,1015.62,76.41
+Home-Denimforge Jeans,Central,2025Q3,1,929.56,0.0,232.39,697.17,929.56,697.17
+Home-Denimforge Jeans,East,2025Q2,2,667.23,0.0,464.78,202.45,333.62,101.22
+Home-Denimforge Jeans,East,2025Q3,3,2106.79,215.75,697.17,1409.62,702.26,469.87
+Home-Denimforge Jeans,North,2025Q3,2,697.17,0.0,464.78,232.39,348.58,116.2
+Home-Denimforge Jeans,North,2025Q4,1,627.45,-10.0,232.39,395.06,627.45,395.06
+Home-Denimforge Jeans,South,2025Q3,2,1533.77,0.0,464.78,1068.99,766.88,534.5
+Home-Denimforge Jeans,South,2025Q4,1,232.39,-84.85,232.39,0.0,232.39,0.0
+Home-Denimforge Jeans,West,2025Q2,1,697.17,0.0,232.39,464.78,697.17,464.78
+Home-Denimforge Jeans,West,2025Q3,2,1254.9,80.0,464.78,790.12,627.45,395.06
+Home-Echowave Headphones,Central,2025Q2,2,1775.62,0.0,1799.98,-24.36,887.81,-12.18
+Home-Echowave Headphones,Central,2025Q4,1,1619.98,-8.77,899.99,719.99,1619.98,719.99
+Home-Echowave Headphones,East,2025Q1,1,348.77,0.0,217.98,130.79,348.77,130.79
+Home-Echowave Headphones,East,2025Q2,4,6814.27,1853.8,1553.93,5260.34,1703.57,1315.08
+Home-Echowave Headphones,East,2025Q3,4,2818.87,-58.63,1553.93,1264.94,704.72,316.24
+Home-Echowave Headphones,East,2025Q4,2,741.13,-73.71,435.96,305.17,370.56,152.58
+Home-Echowave Headphones,North,2025Q1,1,871.92,0.0,217.98,653.94,871.92,653.94
+Home-Echowave Headphones,North,2025Q2,3,1063.07,21.92,2017.96,-954.89,354.36,-318.3
+Home-Echowave Headphones,North,2025Q3,5,3639.66,242.37,2453.92,1185.74,727.93,237.15
+Home-Echowave Headphones,South,2025Q1,2,937.32,0.0,435.96,501.36,468.66,250.68
+Home-Echowave Headphones,South,2025Q2,4,2773.01,195.84,1553.93,1219.08,693.25,304.77
+Home-Echowave Headphones,South,2025Q3,7,3237.17,16.74,2207.87,1029.3,462.45,147.04
+Home-Echowave Headphones,South,2025Q4,4,2401.25,-25.82,1553.93,847.32,600.31,211.83
+Home-Echowave Headphones,West,2025Q1,1,472.33,0.0,217.98,254.35,472.33,254.35
+Home-Echowave Headphones,West,2025Q2,4,2315.96,390.33,2235.94,80.02,578.99,20.0
+Home-Echowave Headphones,West,2025Q3,1,2699.97,16.58,899.99,1799.98,2699.97,1799.98
+Home-Echowave Headphones,West,2025Q4,4,2236.58,-17.16,2235.94,0.64,559.14,0.16
+Home-Oakline Coffee Table,Central,2025Q1,1,326.7,0.0,408.38,-81.68,326.7,-81.68
+Home-Oakline Coffee Table,Central,2025Q2,3,1511.16,362.55,1123.64,387.52,503.72,129.17
+Home-Oakline Coffee Table,Central,2025Q3,2,2327.77,54.04,816.76,1511.01,1163.89,755.51
+Home-Oakline Coffee Table,Central,2025Q4,3,1882.71,-19.12,1174.39,708.32,627.57,236.11
+Home-Oakline Coffee Table,East,2025Q1,3,2606.79,0.0,1174.39,1432.4,868.93,477.47
+Home-Oakline Coffee Table,East,2025Q2,6,3992.41,53.15,2247.28,1745.13,665.4,290.86
+Home-Oakline Coffee Table,East,2025Q3,2,1123.64,-71.86,766.01,357.63,561.82,178.82
+Home-Oakline Coffee Table,East,2025Q4,5,4800.25,327.21,1940.4,2859.85,960.05,571.97
+Home-Oakline Coffee Table,North,2025Q2,5,3181.28,0.0,1889.65,1291.63,636.26,258.33
+Home-Oakline Coffee Table,North,2025Q3,4,2624.73,-17.49,1582.77,1041.96,656.18,260.49
+Home-Oakline Coffee Table,North,2025Q4,1,763.27,-70.92,357.63,405.64,763.27,405.64
+Home-Oakline Coffee Table,South,2025Q1,1,1144.42,0.0,357.63,786.79,1144.42,786.79
+Home-Oakline Coffee Table,South,2025Q2,2,3022.49,164.11,766.01,2256.48,1511.24,1128.24
+Home-Oakline Coffee Table,South,2025Q3,1,1225.14,-59.47,408.38,816.76,1225.14,816.76
+Home-Oakline Coffee Table,South,2025Q4,1,641.91,-47.61,408.38,233.53,641.91,233.53
+Home-Oakline Coffee Table,West,2025Q1,3,2293.27,0.0,1123.64,1169.63,764.42,389.88
+Home-Oakline Coffee Table,West,2025Q2,5,4565.61,99.09,1940.4,2625.21,913.12,525.04
+Home-Oakline Coffee Table,West,2025Q3,5,2745.89,-39.86,1889.65,856.24,549.18,171.25
+Home-Oakline Coffee Table,West,2025Q4,2,1323.23,-51.81,715.26,607.97,661.62,303.98
+Home-Printpro Laser Printer,Central,2025Q1,1,708.92,0.0,242.15,466.77,708.92,466.77
+Home-Printpro Laser Printer,Central,2025Q2,6,5698.92,703.89,1779.18,3919.74,949.82,653.29
+Home-Printpro Laser Printer,Central,2025Q3,5,2253.08,-60.46,1481.66,771.42,450.62,154.28
+Home-Printpro Laser Printer,East,2025Q1,5,2151.66,0.0,1626.02,525.64,430.33,105.13
+Home-Printpro Laser Printer,East,2025Q2,11,9853.73,357.96,4368.23,5485.5,895.79,498.68
+Home-Printpro Laser Printer,East,2025Q3,13,8678.36,-11.93,5501.15,3177.21,667.57,244.4
+Home-Printpro Laser Printer,East,2025Q4,7,4491.21,-48.25,1965.96,2525.25,641.6,360.75
+Home-Printpro Laser Printer,North,2025Q1,1,501.98,0.0,242.15,259.83,501.98,259.83
+Home-Printpro Laser Printer,North,2025Q2,1,387.44,-22.82,242.15,145.29,387.44,145.29
+Home-Printpro Laser Printer,North,2025Q3,8,5864.74,1413.72,2280.29,3584.45,733.09,448.06
+Home-Printpro Laser Printer,North,2025Q4,8,5783.92,-1.38,2678.75,3105.17,722.99,388.15
+Home-Printpro Laser Printer,South,2025Q1,4,3776.05,0.0,1367.06,2408.99,944.01,602.25
+Home-Printpro Laser Printer,South,2025Q2,7,3624.07,-4.02,3106.97,517.1,517.72,73.87
+Home-Printpro Laser Printer,South,2025Q3,13,8914.4,145.98,4271.15,4643.25,685.72,357.17
+Home-Printpro Laser Printer,South,2025Q4,6,4650.34,-47.83,2288.38,2361.96,775.06,393.66
+Home-Printpro Laser Printer,West,2025Q1,2,856.68,0.0,1010.31,-153.63,428.34,-76.82
+Home-Printpro Laser Printer,West,2025Q2,7,5305.41,519.3,3001.17,2304.24,757.92,329.18
+Home-Printpro Laser Printer,West,2025Q3,4,4101.18,-22.7,1367.06,2734.12,1025.3,683.53
+Home-Printpro Laser Printer,West,2025Q4,2,1473.57,-64.07,428.93,1044.64,736.79,522.32
+Home-Prodesk Workstation,Central,2025Q1,1,253.08,0.0,124.27,128.81,253.08,128.81
+Home-Prodesk Workstation,Central,2025Q2,2,1128.75,346.01,880.21,248.54,564.38,124.27
+Home-Prodesk Workstation,Central,2025Q4,1,755.94,-33.03,755.94,0.0,755.94,0.0
+Home-Prodesk Workstation,East,2025Q1,2,2491.51,0.0,880.21,1611.3,1245.76,805.65
+Home-Prodesk Workstation,East,2025Q2,7,6830.18,174.14,2764.9,4065.28,975.74,580.75
+Home-Prodesk Workstation,East,2025Q3,1,2419.01,-64.58,755.94,1663.07,2419.01,1663.07
+Home-Prodesk Workstation,East,2025Q4,1,2267.82,-6.25,755.94,1511.88,2267.82,1511.88
+Home-Prodesk Workstation,North,2025Q1,2,2112.51,0.0,880.21,1232.3,1056.26,616.15
+Home-Prodesk Workstation,North,2025Q2,3,1541.84,-27.01,1636.15,-94.31,513.95,-31.44
+Home-Prodesk Workstation,North,2025Q3,5,1875.13,21.62,1253.02,622.11,375.03,124.42
+Home-Prodesk Workstation,North,2025Q4,2,4082.08,117.7,1511.88,2570.2,2041.04,1285.1
+Home-Prodesk Workstation,South,2025Q1,4,4556.39,0.0,1760.42,2795.97,1139.1,698.99
+Home-Prodesk Workstation,South,2025Q2,2,994.16,-78.18,248.54,745.62,497.08,372.81
+Home-Prodesk Workstation,South,2025Q3,5,5161.13,419.14,2516.36,2644.77,1032.23,528.95
+Home-Prodesk Workstation,West,2025Q2,3,1988.97,0.0,1636.15,352.82,662.99,117.61
+Home-Prodesk Workstation,West,2025Q3,1,552.55,-72.22,755.94,-203.39,552.55,-203.39
+Home-Prodesk Workstation,West,2025Q4,2,1213.81,119.67,248.54,965.27,606.9,482.64
+Home-Skytab Mini Tablet,Central,2025Q2,2,3584.35,0.0,1024.1,2560.25,1792.18,1280.12
+Home-Skytab Mini Tablet,Central,2025Q4,1,338.5,-90.56,211.56,126.94,338.5,126.94
+Home-Skytab Mini Tablet,East,2025Q1,2,963.57,0.0,723.61,239.96,481.78,119.98
+Home-Skytab Mini Tablet,East,2025Q2,3,4659.66,383.58,1536.15,3123.51,1553.22,1041.17
+Home-Skytab Mini Tablet,East,2025Q3,5,2833.99,-39.18,1358.29,1475.7,566.8,295.14
+Home-Skytab Mini Tablet,East,2025Q4,6,2837.84,0.14,2170.83,667.01,472.97,111.17
+Home-Skytab Mini Tablet,North,2025Q1,1,3072.3,0.0,512.05,2560.25,3072.3,2560.25
+Home-Skytab Mini Tablet,North,2025Q3,4,2790.8,-9.16,1146.73,1644.07,697.7,411.02
+Home-Skytab Mini Tablet,North,2025Q4,1,423.12,-84.84,211.56,211.56,423.12,211.56
+Home-Skytab Mini Tablet,South,2025Q1,1,606.08,0.0,211.56,394.52,606.08,394.52
+Home-Skytab Mini Tablet,South,2025Q2,2,973.18,60.57,423.12,550.06,486.59,275.03
+Home-Skytab Mini Tablet,South,2025Q3,3,4706.55,383.63,1235.66,3470.89,1568.85,1156.96
+Home-Skytab Mini Tablet,South,2025Q4,4,2978.96,-36.71,2048.2,930.76,744.74,232.69
+Home-Skytab Mini Tablet,West,2025Q2,1,423.12,0.0,211.56,211.56,423.12,211.56
+Home-Skytab Mini Tablet,West,2025Q3,2,1308.71,209.3,1024.1,284.61,654.36,142.31
+Home-Snapbind Stapler,Central,2025Q2,1,349.58,0.0,436.98,-87.4,349.58,-87.4
+Home-Snapbind Stapler,Central,2025Q3,1,590.16,68.82,436.98,153.18,590.16,153.18
+Home-Snapbind Stapler,East,2025Q2,3,2947.18,0.0,1310.94,1636.24,982.39,545.41
+Home-Snapbind Stapler,East,2025Q3,3,2010.11,-31.8,1310.94,699.17,670.04,233.06
+Home-Snapbind Stapler,East,2025Q4,4,3387.91,68.54,1747.92,1639.99,846.98,410.0
+Home-Snapbind Stapler,North,2025Q4,3,2420.06,0.0,1310.94,1109.12,806.69,369.71
+Home-Snapbind Stapler,South,2025Q2,3,2796.67,0.0,1310.94,1485.73,932.22,495.24
+Home-Snapbind Stapler,South,2025Q3,6,5195.54,85.78,2621.88,2573.66,865.92,428.94
+Home-Snapbind Stapler,South,2025Q4,4,1922.7,-62.99,1747.92,174.78,480.67,43.69
+Home-Snapbind Stapler,West,2025Q3,3,3645.13,0.0,1310.94,2334.19,1215.04,778.06
+Home-Snapbind Stapler,West,2025Q4,3,3670.64,0.7,1310.94,2359.7,1223.55,786.57
+Home-Softweave Area Rug,Central,2025Q3,2,159.81,0.0,133.18,26.63,79.9,13.32
+Home-Softweave Area Rug,East,2025Q2,2,266.36,0.0,133.18,133.18,133.18,66.59
+Home-Softweave Area Rug,East,2025Q3,3,625.95,135.0,199.77,426.18,208.65,142.06
+Home-Softweave Area Rug,East,2025Q4,1,66.59,-89.36,66.59,0.0,66.59,0.0
+Home-Softweave Area Rug,North,2025Q2,1,59.93,0.0,66.59,-6.66,59.93,-6.66
+Home-Softweave Area Rug,North,2025Q3,2,632.75,955.82,133.18,499.57,316.38,249.78
+Home-Softweave Area Rug,South,2025Q1,1,133.18,0.0,66.59,66.59,133.18,66.59
+Home-Softweave Area Rug,South,2025Q2,1,266.36,100.0,66.59,199.77,266.36,199.77
+Home-Softweave Area Rug,South,2025Q3,1,466.13,75.0,66.59,399.54,466.13,399.54
+Home-Softweave Area Rug,West,2025Q3,2,372.9,0.0,133.18,239.72,186.45,119.86
+Home-Storify Bookshelf,Central,2025Q2,3,7933.8,0.0,2519.46,5414.34,2644.6,1804.78
+Home-Storify Bookshelf,Central,2025Q4,1,731.26,-90.78,731.26,0.0,731.26,0.0
+Home-Storify Bookshelf,East,2025Q1,3,1160.9,0.0,1457.38,-296.48,386.97,-98.83
+Home-Storify Bookshelf,East,2025Q2,7,15326.95,1220.26,5033.78,10293.17,2189.56,1470.45
+Home-Storify Bookshelf,East,2025Q3,12,15677.86,2.29,6214.28,9463.58,1306.49,788.63
+Home-Storify Bookshelf,East,2025Q4,4,6040.15,-61.47,2969.72,3070.43,1510.04,767.61
+Home-Storify Bookshelf,North,2025Q1,3,3770.58,0.0,1842.14,1928.44,1256.86,642.81
+Home-Storify Bookshelf,North,2025Q2,4,7016.58,86.09,2969.72,4046.86,1754.14,1011.71
+Home-Storify Bookshelf,North,2025Q3,4,8442.97,20.33,3250.72,5192.25,2110.74,1298.06
+Home-Storify Bookshelf,North,2025Q4,2,5557.58,-34.18,1462.52,4095.06,2778.79,2047.53
+Home-Storify Bookshelf,South,2025Q1,5,5512.92,0.0,2742.66,2770.26,1102.58,554.05
+Home-Storify Bookshelf,South,2025Q2,6,5361.94,-2.74,3917.76,1444.18,893.66,240.7
+Home-Storify Bookshelf,South,2025Q3,5,7460.02,39.13,3700.98,3759.04,1492.0,751.81
+Home-Storify Bookshelf,South,2025Q4,3,2826.1,-62.12,1516.46,1309.64,942.03,436.55
+Home-Storify Bookshelf,West,2025Q1,3,3171.02,0.0,1679.3,1491.72,1057.01,497.24
+Home-Storify Bookshelf,West,2025Q2,1,53.94,-98.3,53.94,0.0,53.94,0.0
+Home-Storify Bookshelf,West,2025Q3,3,6258.7,11503.08,2682.3,3576.4,2086.23,1192.13
+Home-Storify Bookshelf,West,2025Q4,3,2296.67,-63.3,1679.3,617.37,765.56,205.79
+Home-Strideflex Sneakers,Central,2025Q2,1,470.34,0.0,470.34,0.0,470.34,0.0
+Home-Strideflex Sneakers,Central,2025Q3,4,2704.67,475.05,1528.76,1175.91,676.17,293.98
+Home-Strideflex Sneakers,Central,2025Q4,1,343.02,-87.32,428.78,-85.76,343.02,-85.76
+Home-Strideflex Sneakers,East,2025Q1,1,752.54,0.0,470.34,282.2,752.54,282.2
+Home-Strideflex Sneakers,East,2025Q2,5,5217.72,593.35,1874.42,3343.3,1043.54,668.66
+Home-Strideflex Sneakers,East,2025Q3,11,9006.87,72.62,4437.04,4569.83,818.81,415.44
+Home-Strideflex Sneakers,East,2025Q4,5,4499.49,-50.04,2133.84,2365.65,899.9,473.13
+Home-Strideflex Sneakers,North,2025Q1,1,539.06,0.0,428.78,110.28,539.06,110.28
+Home-Strideflex Sneakers,North,2025Q2,4,4430.9,721.97,1487.2,2943.7,1107.72,735.92
+Home-Strideflex Sneakers,North,2025Q3,3,4145.22,-6.45,1234.72,2910.5,1381.74,970.17
+Home-Strideflex Sneakers,North,2025Q4,2,1840.7,-55.59,722.82,1117.88,920.35,558.94
+Home-Strideflex Sneakers,South,2025Q1,1,376.27,0.0,470.34,-94.07,376.27,-94.07
+Home-Strideflex Sneakers,South,2025Q2,3,2787.71,640.88,1327.9,1459.81,929.24,486.6
+Home-Strideflex Sneakers,South,2025Q3,1,1157.71,-58.47,428.78,728.93,1157.71,728.93
+Home-Strideflex Sneakers,South,2025Q4,8,5136.7,343.69,2798.1,2338.6,642.09,292.32
+Home-Strideflex Sneakers,West,2025Q1,1,235.23,0.0,294.04,-58.81,235.23,-58.81
+Home-Strideflex Sneakers,West,2025Q2,4,3914.85,1564.26,1705.06,2209.79,978.71,552.45
+Home-Strideflex Sneakers,West,2025Q3,1,428.78,-89.05,428.78,0.0,428.78,0.0
+Home-Strideflex Sneakers,West,2025Q4,2,1947.96,354.3,722.82,1225.14,973.98,612.57
+Home-Thermashell Jacket,Central,2025Q2,1,447.08,0.0,167.61,279.47,447.08,279.47
+Home-Thermashell Jacket,Central,2025Q4,1,167.61,-62.51,167.61,0.0,167.61,0.0
+Home-Thermashell Jacket,East,2025Q1,3,2385.79,0.0,502.83,1882.96,795.26,627.65
+Home-Thermashell Jacket,East,2025Q2,1,402.26,-83.14,167.61,234.65,402.26,234.65
+Home-Thermashell Jacket,East,2025Q3,2,1173.27,191.67,335.22,838.05,586.64,419.02
+Home-Thermashell Jacket,East,2025Q4,2,502.83,-57.14,335.22,167.61,251.42,83.8
+Home-Thermashell Jacket,North,2025Q2,1,167.61,0.0,167.61,0.0,167.61,0.0
+Home-Thermashell Jacket,South,2025Q2,1,335.22,0.0,167.61,167.61,335.22,167.61
+Home-Thermashell Jacket,West,2025Q2,1,510.63,0.0,167.61,343.02,510.63,343.02
+Home-Thermashell Jacket,West,2025Q3,3,1739.74,240.7,502.83,1236.91,579.91,412.3
+Home-Urbanfit T,Central,2025Q2,2,745.31,0.0,1181.66,-436.35,372.66,-218.18
+Home-Urbanfit T,Central,2025Q3,1,822.53,10.36,246.3,576.23,822.53,576.23
+Home-Urbanfit T,Central,2025Q4,3,1828.19,122.26,2117.02,-288.83,609.4,-96.28
+Home-Urbanfit T,East,2025Q1,3,3800.67,0.0,2117.02,1683.65,1266.89,561.22
+Home-Urbanfit T,East,2025Q2,5,4259.83,12.08,1920.56,2339.27,851.97,467.85
+Home-Urbanfit T,East,2025Q3,7,7973.21,87.17,3102.22,4870.99,1139.03,695.86
+Home-Urbanfit T,East,2025Q4,3,2885.24,-63.81,1427.96,1457.28,961.75,485.76
+Home-Urbanfit T,North,2025Q1,1,748.29,0.0,935.36,-187.07,748.29,-187.07
+Home-Urbanfit T,North,2025Q2,3,5903.02,688.87,2117.02,3786.0,1967.67,1262.0
+Home-Urbanfit T,North,2025Q3,2,540.51,-90.84,492.6,47.91,270.26,23.96
+Home-Urbanfit T,South,2025Q1,4,3963.5,0.0,1674.26,2289.24,990.88,572.31
+Home-Urbanfit T,South,2025Q2,1,891.02,-77.52,935.36,-44.34,891.02,-44.34
+Home-Urbanfit T,South,2025Q3,4,5806.59,551.68,3052.38,2754.21,1451.65,688.55
+Home-Urbanfit T,South,2025Q4,1,736.59,-87.31,246.3,490.29,736.59,490.29
+Home-Urbanfit T,West,2025Q1,3,5228.63,0.0,2117.02,3111.61,1742.88,1037.2
+Home-Urbanfit T,West,2025Q2,4,11325.61,116.61,3052.38,8273.23,2831.4,2068.31
+Home-Urbanfit T,West,2025Q3,2,5415.7,-52.18,1181.66,4234.04,2707.85,2117.02
+Home-Urbanfit T,West,2025Q4,1,246.3,-95.45,246.3,0.0,246.3,0.0
+Office-Comfyrest Sofa,Central,2025Q2,1,816.24,0.0,323.02,493.22,816.24,493.22
+Office-Comfyrest Sofa,Central,2025Q4,2,1706.47,109.06,646.04,1060.43,853.24,530.22
+Office-Comfyrest Sofa,East,2025Q1,2,1227.48,0.0,646.04,581.44,613.74,290.72
+Office-Comfyrest Sofa,East,2025Q2,5,2916.24,137.58,1615.1,1301.14,583.25,260.23
+Office-Comfyrest Sofa,East,2025Q3,1,516.83,-82.28,323.02,193.81,516.83,193.81
+Office-Comfyrest Sofa,East,2025Q4,1,872.15,68.75,323.02,549.13,872.15,549.13
+Office-Comfyrest Sofa,North,2025Q1,1,290.72,0.0,323.02,-32.3,290.72,-32.3
+Office-Comfyrest Sofa,North,2025Q2,1,2584.16,788.88,323.02,2261.14,2584.16,2261.14
+Office-Comfyrest Sofa,South,2025Q1,1,872.15,0.0,323.02,549.13,872.15,549.13
+Office-Comfyrest Sofa,South,2025Q3,3,2454.95,181.48,969.06,1485.89,818.32,495.3
+Office-Comfyrest Sofa,South,2025Q4,2,1647.4,-32.89,646.04,1001.36,823.7,500.68
+Office-Comfyrest Sofa,West,2025Q1,1,646.04,0.0,323.02,323.02,646.04,323.02
+Office-Comfyrest Sofa,West,2025Q2,1,761.0,17.79,323.02,437.98,761.0,437.98
+Office-Comfyrest Sofa,West,2025Q3,1,1162.87,52.81,323.02,839.85,1162.87,839.85
+Office-Echowave Headphones,Central,2025Q1,5,2851.03,0.0,2090.55,760.48,570.21,152.1
+Office-Echowave Headphones,Central,2025Q2,4,5510.02,93.26,2104.87,3405.15,1377.5,851.29
+Office-Echowave Headphones,Central,2025Q3,5,8097.4,46.96,3096.62,5000.78,1619.48,1000.16
+Office-Echowave Headphones,Central,2025Q4,3,1020.01,-87.4,849.32,170.69,340.0,56.9
+Office-Echowave Headphones,East,2025Q1,1,103.62,0.0,34.54,69.08,103.62,69.08
+Office-Echowave Headphones,East,2025Q2,11,6444.37,6119.23,4580.32,1864.05,585.85,169.46
+Office-Echowave Headphones,East,2025Q3,10,3747.55,-41.85,1729.33,2018.22,374.76,201.82
+Office-Echowave Headphones,East,2025Q4,7,4868.53,29.91,3270.01,1598.52,695.5,228.36
+Office-Echowave Headphones,North,2025Q1,1,31.09,0.0,34.54,-3.45,31.09,-3.45
+Office-Echowave Headphones,North,2025Q2,2,5825.82,18638.57,1664.52,4161.3,2912.91,2080.65
+Office-Echowave Headphones,North,2025Q3,9,6909.65,18.6,3713.52,3196.13,767.74,355.13
+Office-Echowave Headphones,North,2025Q4,4,2905.88,-57.94,1466.64,1439.24,726.47,359.81
+Office-Echowave Headphones,South,2025Q1,1,947.96,0.0,565.3,382.66,947.96,382.66
+Office-Echowave Headphones,South,2025Q2,9,11568.48,1120.36,4563.26,7005.22,1285.39,778.36
+Office-Echowave Headphones,South,2025Q3,10,12526.45,8.28,4174.51,8351.94,1252.64,835.19
+Office-Echowave Headphones,South,2025Q4,5,6420.95,-48.74,2513.84,3907.11,1284.19,781.42
+Office-Echowave Headphones,West,2025Q1,1,4993.56,0.0,832.26,4161.3,4993.56,4161.3
+Office-Echowave Headphones,West,2025Q2,4,4867.09,-2.53,1574.11,3292.98,1216.77,823.24
+Office-Echowave Headphones,West,2025Q3,9,8126.34,66.97,3873.01,4253.33,902.93,472.59
+Office-Echowave Headphones,West,2025Q4,4,3656.92,-55.0,1997.4,1659.52,914.23,414.88
+Office-Ergolux Office Chair,Central,2025Q1,2,3741.16,0.0,981.58,2759.58,1870.58,1379.79
+Office-Ergolux Office Chair,Central,2025Q2,1,762.2,-79.63,482.21,279.99,762.2,279.99
+Office-Ergolux Office Chair,Central,2025Q3,3,3928.7,415.44,1463.79,2464.91,1309.57,821.64
+Office-Ergolux Office Chair,Central,2025Q4,3,2936.16,-25.26,1463.79,1472.37,978.72,490.79
+Office-Ergolux Office Chair,East,2025Q1,1,981.58,0.0,490.79,490.79,981.58,490.79
+Office-Ergolux Office Chair,East,2025Q2,3,1827.58,86.19,1463.79,363.79,609.19,121.26
+Office-Ergolux Office Chair,East,2025Q3,4,4991.5,173.12,1946.0,3045.5,1247.88,761.38
+Office-Ergolux Office Chair,East,2025Q4,4,3883.42,-22.2,1937.42,1946.0,970.86,486.5
+Office-Ergolux Office Chair,North,2025Q1,2,1393.78,0.0,973.0,420.78,696.89,210.39
+Office-Ergolux Office Chair,North,2025Q2,4,6077.22,336.02,1954.58,4122.64,1519.3,1030.66
+Office-Ergolux Office Chair,North,2025Q3,5,7476.98,23.03,2419.63,5057.35,1495.4,1011.47
+Office-Ergolux Office Chair,North,2025Q4,2,3900.58,-47.83,973.0,2927.58,1950.29,1463.79
+Office-Ergolux Office Chair,South,2025Q2,3,4794.3,0.0,1463.79,3330.51,1598.1,1110.17
+Office-Ergolux Office Chair,South,2025Q3,3,2033.87,-57.58,1455.21,578.66,677.96,192.89
+Office-Ergolux Office Chair,South,2025Q4,5,4832.65,137.61,2428.21,2404.44,966.53,480.89
+Office-Ergolux Office Chair,West,2025Q2,4,3632.29,0.0,1937.42,1694.87,908.07,423.72
+Office-Lumaglow Floor Lamp,Central,2025Q2,2,453.22,0.0,533.2,-79.98,226.61,-39.99
+Office-Lumaglow Floor Lamp,Central,2025Q3,2,2476.44,446.41,819.06,1657.38,1238.22,828.69
+Office-Lumaglow Floor Lamp,Central,2025Q4,1,883.94,-64.31,552.46,331.48,883.94,331.48
+Office-Lumaglow Floor Lamp,East,2025Q1,1,719.82,0.0,266.6,453.22,719.82,453.22
+Office-Lumaglow Floor Lamp,East,2025Q2,2,864.03,20.03,819.06,44.97,432.02,22.48
+Office-Lumaglow Floor Lamp,East,2025Q3,3,3192.1,269.44,1085.66,2106.44,1064.03,702.15
+Office-Lumaglow Floor Lamp,East,2025Q4,3,1721.65,-46.07,1085.66,635.99,573.88,212.0
+Office-Lumaglow Floor Lamp,North,2025Q1,2,3295.5,0.0,819.06,2476.44,1647.75,1238.22
+Office-Lumaglow Floor Lamp,North,2025Q2,3,2825.96,-14.25,799.8,2026.16,941.99,675.39
+Office-Lumaglow Floor Lamp,North,2025Q3,5,4145.15,46.68,1904.72,2240.43,829.03,448.09
+Office-Lumaglow Floor Lamp,North,2025Q4,3,1614.7,-61.05,1085.66,529.04,538.23,176.35
+Office-Lumaglow Floor Lamp,South,2025Q1,1,359.76,0.0,266.6,93.16,359.76,93.16
+Office-Lumaglow Floor Lamp,South,2025Q2,6,3058.44,750.13,2743.04,315.4,509.74,52.57
+Office-Lumaglow Floor Lamp,South,2025Q3,1,799.8,-73.85,266.6,533.2,799.8,533.2
+Office-Lumaglow Floor Lamp,South,2025Q4,3,2262.17,182.84,799.8,1462.37,754.06,487.46
+Office-Lumaglow Floor Lamp,West,2025Q1,1,3314.76,0.0,552.46,2762.3,3314.76,2762.3
+Office-Lumaglow Floor Lamp,West,2025Q2,3,1915.03,-42.23,799.8,1115.23,638.34,371.74
+Office-Lumaglow Floor Lamp,West,2025Q3,1,994.43,-48.07,552.46,441.97,994.43,441.97
+Office-Lumaglow Floor Lamp,West,2025Q4,2,2083.94,109.56,819.06,1264.88,1041.97,632.44
+Office-Nova X Smartphone,Central,2025Q2,1,3241.84,0.0,900.51,2341.33,3241.84,2341.33
+Office-Nova X Smartphone,Central,2025Q3,1,823.37,-74.6,900.51,-77.14,823.37,-77.14
+Office-Nova X Smartphone,East,2025Q1,1,900.51,0.0,900.51,0.0,900.51,0.0
+Office-Nova X Smartphone,East,2025Q2,2,2522.07,180.07,1801.02,721.05,1261.03,360.52
+Office-Nova X Smartphone,East,2025Q3,1,427.98,-83.03,900.51,-472.53,427.98,-472.53
+Office-Nova X Smartphone,East,2025Q4,4,3577.64,735.94,3602.04,-24.4,894.41,-6.1
+Office-Nova X Smartphone,South,2025Q2,1,900.51,0.0,900.51,0.0,900.51,0.0
+Office-Nova X Smartphone,South,2025Q3,1,821.1,-8.82,900.51,-79.41,821.1,-79.41
+Office-Nova X Smartphone,South,2025Q4,3,6569.47,700.08,2701.53,3867.94,2189.82,1289.31
+Office-Nova X Smartphone,West,2025Q3,4,7425.45,0.0,3602.04,3823.41,1856.36,955.85
+Office-Nova X Smartphone,West,2025Q4,1,1620.92,-78.17,900.51,720.41,1620.92,720.41
+Office-Oakline Coffee Table,Central,2025Q2,3,2478.17,0.0,1450.75,1027.42,826.06,342.47
+Office-Oakline Coffee Table,East,2025Q1,2,1282.63,0.0,1030.45,252.18,641.32,126.09
+Office-Oakline Coffee Table,East,2025Q2,4,5100.28,297.64,2060.9,3039.38,1275.07,759.84
+Office-Oakline Coffee Table,East,2025Q3,3,1579.26,-69.04,1450.75,128.51,526.42,42.84
+Office-Oakline Coffee Table,East,2025Q4,7,7206.37,356.31,3511.65,3694.72,1029.48,527.82
+Office-Oakline Coffee Table,North,2025Q1,2,2522.27,0.0,1220.3,1301.97,1261.14,650.99
+Office-Oakline Coffee Table,North,2025Q3,3,6133.98,143.19,1640.6,4493.38,2044.66,1497.79
+Office-Oakline Coffee Table,North,2025Q4,3,5247.29,-14.46,1830.45,3416.84,1749.1,1138.95
+Office-Oakline Coffee Table,South,2025Q1,2,3511.65,0.0,1030.45,2481.2,1755.82,1240.6
+Office-Oakline Coffee Table,South,2025Q2,3,6386.16,81.86,1640.6,4745.56,2128.72,1581.85
+Office-Oakline Coffee Table,South,2025Q3,3,2329.92,-63.52,1450.75,879.17,776.64,293.06
+Office-Oakline Coffee Table,South,2025Q4,1,378.27,-83.76,420.3,-42.03,378.27,-42.03
+Office-Oakline Coffee Table,West,2025Q1,1,1830.45,0.0,610.15,1220.3,1830.45,1220.3
+Office-Oakline Coffee Table,West,2025Q2,2,2562.63,40.0,1220.3,1342.33,1281.32,671.16
+Office-Oakline Coffee Table,West,2025Q3,3,2879.77,12.38,1450.75,1429.02,959.92,476.34
+Office-Oakline Coffee Table,West,2025Q4,1,1134.81,-60.59,420.3,714.51,1134.81,714.51
+Office-Prodesk Workstation,Central,2025Q2,1,217.87,0.0,136.17,81.7,217.87,81.7
+Office-Prodesk Workstation,Central,2025Q4,1,245.11,12.5,136.17,108.94,245.11,108.94
+Office-Prodesk Workstation,East,2025Q1,1,873.45,0.0,873.45,0.0,873.45,0.0
+Office-Prodesk Workstation,East,2025Q2,6,5181.81,493.26,3766.14,1415.67,863.64,235.95
+Office-Prodesk Workstation,East,2025Q3,5,5556.37,7.23,1418.13,4138.24,1111.27,827.65
+Office-Prodesk Workstation,East,2025Q4,3,7271.23,30.86,1883.07,5388.16,2423.74,1796.05
+Office-Prodesk Workstation,North,2025Q1,1,403.93,0.0,873.45,-469.52,403.93,-469.52
+Office-Prodesk Workstation,North,2025Q3,2,1244.17,208.02,1746.9,-502.73,622.08,-251.37
+Office-Prodesk Workstation,North,2025Q4,2,1790.08,43.88,1009.62,780.46,895.04,390.23
+Office-Prodesk Workstation,South,2025Q1,1,2620.35,0.0,873.45,1746.9,2620.35,1746.9
+Office-Prodesk Workstation,South,2025Q2,7,13228.18,404.82,4639.59,8588.59,1889.74,1226.94
+Office-Prodesk Workstation,South,2025Q3,4,5261.31,-60.23,2756.52,2504.79,1315.33,626.2
+Office-Prodesk Workstation,South,2025Q4,2,2877.71,-45.3,1009.62,1868.09,1438.86,934.04
+Office-Prodesk Workstation,West,2025Q1,2,1721.71,0.0,272.34,1449.37,860.86,724.68
+Office-Prodesk Workstation,West,2025Q2,2,1688.97,-1.9,1009.62,679.35,844.48,339.68
+Office-Prodesk Workstation,West,2025Q3,1,326.81,-80.65,136.17,190.64,326.81,190.64
+Office-Prodesk Workstation,West,2025Q4,1,988.12,202.35,873.45,114.67,988.12,114.67
+Office-Skytab Mini Tablet,Central,2025Q1,1,481.8,0.0,835.41,-353.61,481.8,-353.61
+Office-Skytab Mini Tablet,Central,2025Q2,2,1020.68,111.85,1450.57,-429.89,510.34,-214.94
+Office-Skytab Mini Tablet,Central,2025Q3,3,3485.93,241.53,2065.73,1420.2,1161.98,473.4
+Office-Skytab Mini Tablet,Central,2025Q4,1,835.41,-76.03,835.41,0.0,835.41,0.0
+Office-Skytab Mini Tablet,East,2025Q1,3,3573.82,0.0,2285.98,1287.84,1191.27,429.28
+Office-Skytab Mini Tablet,East,2025Q2,6,5537.98,54.96,4131.46,1406.52,923.0,234.42
+Office-Skytab Mini Tablet,East,2025Q3,3,4784.67,-13.6,2285.98,2498.69,1594.89,832.9
+Office-Skytab Mini Tablet,East,2025Q4,5,4675.71,-2.28,3516.3,1159.41,935.14,231.88
+Office-Skytab Mini Tablet,North,2025Q1,1,2506.23,0.0,835.41,1670.82,2506.23,1670.82
+Office-Skytab Mini Tablet,North,2025Q2,4,2397.54,-4.34,2680.89,-283.35,599.38,-70.84
+Office-Skytab Mini Tablet,North,2025Q3,4,3543.11,47.78,2680.89,862.22,885.78,215.56
+Office-Skytab Mini Tablet,North,2025Q4,3,3318.85,-6.33,2285.98,1032.87,1106.28,344.29
+Office-Skytab Mini Tablet,South,2025Q1,1,426.53,0.0,835.41,-408.88,426.53,-408.88
+Office-Skytab Mini Tablet,South,2025Q2,1,1845.48,332.67,615.16,1230.32,1845.48,1230.32
+Office-Skytab Mini Tablet,South,2025Q4,2,2636.84,42.88,1450.57,1186.27,1318.42,593.14
+Office-Skytab Mini Tablet,West,2025Q1,1,984.26,0.0,615.16,369.1,984.26,369.1
+Office-Skytab Mini Tablet,West,2025Q2,5,5611.86,470.16,3736.55,1875.31,1122.37,375.06
+Office-Skytab Mini Tablet,West,2025Q3,2,1136.09,-79.76,1230.32,-94.23,568.05,-47.11
+Office-Skytab Mini Tablet,West,2025Q4,1,1670.82,47.07,835.41,835.41,1670.82,835.41
+Office-Softweave Area Rug,Central,2025Q1,1,2481.12,0.0,413.52,2067.6,2481.12,2067.6
+Office-Softweave Area Rug,Central,2025Q2,2,1217.35,-50.94,827.04,390.31,608.67,195.16
+Office-Softweave Area Rug,Central,2025Q3,1,413.52,-66.03,413.52,0.0,413.52,0.0
+Office-Softweave Area Rug,East,2025Q1,1,2067.6,0.0,413.52,1654.08,2067.6,1654.08
+Office-Softweave Area Rug,East,2025Q2,4,4535.03,119.34,1654.08,2880.95,1133.76,720.24
+Office-Softweave Area Rug,East,2025Q3,1,661.63,-85.41,413.52,248.11,661.63,248.11
+Office-Softweave Area Rug,North,2025Q1,1,413.52,0.0,413.52,0.0,413.52,0.0
+Office-Softweave Area Rug,North,2025Q3,2,1157.86,180.0,827.04,330.82,578.93,165.41
+Office-Softweave Area Rug,North,2025Q4,1,372.17,-67.86,413.52,-41.35,372.17,-41.35
+Office-Softweave Area Rug,South,2025Q2,2,2398.42,0.0,827.04,1571.38,1199.21,785.69
+Office-Softweave Area Rug,South,2025Q3,5,5003.49,108.62,2067.6,2935.89,1000.7,587.18
+Office-Softweave Area Rug,South,2025Q4,2,1736.47,-65.29,827.04,909.43,868.23,454.72
+Office-Softweave Area Rug,West,2025Q1,1,330.82,0.0,413.52,-82.7,330.82,-82.7
+Office-Softweave Area Rug,West,2025Q2,2,2894.64,774.99,827.04,2067.6,1447.32,1033.8
+Office-Storify Bookshelf,Central,2025Q2,1,258.61,0.0,258.61,0.0,258.61,0.0
+Office-Storify Bookshelf,Central,2025Q4,1,775.83,200.0,258.61,517.22,775.83,517.22
+Office-Storify Bookshelf,East,2025Q1,1,868.32,0.0,258.61,609.71,868.32,609.71
+Office-Storify Bookshelf,East,2025Q2,1,413.78,-52.35,258.61,155.17,413.78,155.17
+Office-Storify Bookshelf,East,2025Q3,1,698.25,68.75,258.61,439.64,698.25,439.64
+Office-Storify Bookshelf,East,2025Q4,1,1034.44,48.15,258.61,775.83,1034.44,775.83
+Office-Storify Bookshelf,North,2025Q3,1,232.75,0.0,258.61,-25.86,232.75,-25.86
+Office-Storify Bookshelf,South,2025Q3,4,2274.47,0.0,1034.44,1240.03,568.62,310.01
+Office-Storify Bookshelf,West,2025Q2,1,465.5,0.0,258.61,206.89,465.5,206.89
+Office-Storify Bookshelf,West,2025Q4,1,517.22,11.11,258.61,258.61,517.22,258.61
+Office-Strideflex Sneakers,Central,2025Q1,1,3216.84,0.0,804.21,2412.63,3216.84,2412.63
+Office-Strideflex Sneakers,Central,2025Q3,1,1447.58,-55.0,804.21,643.37,1447.58,643.37
+Office-Strideflex Sneakers,Central,2025Q4,4,6011.35,315.27,3521.58,2489.77,1502.84,622.44
+Office-Strideflex Sneakers,East,2025Q1,1,2717.37,0.0,905.79,1811.58,2717.37,1811.58
+Office-Strideflex Sneakers,East,2025Q2,2,3056.0,12.46,1608.42,1447.58,1528.0,723.79
+Office-Strideflex Sneakers,East,2025Q3,4,6708.25,119.51,3420.0,3288.25,1677.06,822.06
+Office-Strideflex Sneakers,East,2025Q4,4,9420.22,40.43,3623.16,5797.06,2355.05,1449.26
+Office-Strideflex Sneakers,North,2025Q1,1,2412.63,0.0,804.21,1608.42,2412.63,1608.42
+Office-Strideflex Sneakers,North,2025Q2,4,6691.84,177.37,3521.58,3170.26,1672.96,792.56
+Office-Strideflex Sneakers,North,2025Q3,2,2607.5,-61.03,1608.42,999.08,1303.75,499.54
+Office-Strideflex Sneakers,North,2025Q4,1,636.21,-75.6,804.21,-168.0,636.21,-168.0
+Office-Strideflex Sneakers,South,2025Q2,3,5655.01,0.0,2615.79,3039.22,1885.0,1013.07
+Office-Strideflex Sneakers,South,2025Q3,2,1258.31,-77.75,1608.42,-350.11,629.16,-175.06
+Office-Strideflex Sneakers,South,2025Q4,2,1329.05,5.62,1811.58,-482.53,664.53,-241.26
+Office-Strideflex Sneakers,West,2025Q1,2,4021.05,0.0,1608.42,2412.63,2010.52,1206.32
+Office-Strideflex Sneakers,West,2025Q3,2,3623.16,-9.9,1811.58,1811.58,1811.58,905.79
+Office-Strideflex Sneakers,West,2025Q4,2,1235.1,-65.91,1811.58,-576.48,617.55,-288.24
+Office-Thermashell Jacket,Central,2025Q1,1,717.16,0.0,499.43,217.73,717.16,217.73
+Office-Thermashell Jacket,Central,2025Q4,2,1997.72,178.56,998.86,998.86,998.86,499.43
+Office-Thermashell Jacket,East,2025Q2,3,2146.34,0.0,1498.29,648.05,715.45,216.02
+Office-Thermashell Jacket,East,2025Q3,1,1498.29,-30.19,499.43,998.86,1498.29,998.86
+Office-Thermashell Jacket,North,2025Q2,2,3296.24,0.0,998.86,2297.38,1648.12,1148.69
+Office-Thermashell Jacket,North,2025Q3,1,799.09,-75.76,499.43,299.66,799.09,299.66
+Office-Thermashell Jacket,North,2025Q4,1,399.54,-50.0,499.43,-99.89,399.54,-99.89
+Office-Thermashell Jacket,South,2025Q2,1,499.43,0.0,499.43,0.0,499.43,0.0
+Office-Thermashell Jacket,South,2025Q3,1,1997.72,300.0,499.43,1498.29,1997.72,1498.29
+Office-Thermashell Jacket,South,2025Q4,1,2247.44,12.5,499.43,1748.01,2247.44,1748.01
+Office-Thermashell Jacket,West,2025Q2,1,499.43,0.0,499.43,0.0,499.43,0.0
+Office-Thermashell Jacket,West,2025Q3,2,2930.36,486.74,998.86,1931.5,1465.18,965.75
+Office-Thermashell Jacket,West,2025Q4,2,2130.52,-27.29,998.86,1131.66,1065.26,565.83
+Office-Urbanfit T,Central,2025Q2,1,863.81,0.0,334.98,528.83,863.81,528.83
+Office-Urbanfit T,Central,2025Q3,2,1341.45,55.29,143.28,1198.17,670.72,599.08
+Office-Urbanfit T,East,2025Q1,2,1203.37,0.0,669.96,533.41,601.68,266.7
+Office-Urbanfit T,East,2025Q2,4,2124.1,76.51,813.24,1310.86,531.03,327.72
+Office-Urbanfit T,East,2025Q3,7,3975.01,87.14,1554.84,2420.17,567.86,345.74
+Office-Urbanfit T,East,2025Q4,4,2461.11,-38.09,1076.58,1384.53,615.28,346.13
+Office-Urbanfit T,North,2025Q2,2,682.64,0.0,406.62,276.02,341.32,138.01
+Office-Urbanfit T,North,2025Q3,2,1492.62,118.65,669.96,822.66,746.31,411.33
+Office-Urbanfit T,North,2025Q4,3,1866.2,25.03,741.6,1124.6,622.07,374.87
+Office-Urbanfit T,South,2025Q1,2,1016.19,0.0,406.62,609.57,508.1,304.78
+Office-Urbanfit T,South,2025Q2,3,437.01,-57.0,214.92,222.09,145.67,74.03
+Office-Urbanfit T,South,2025Q3,5,4352.59,895.99,1148.22,3204.37,870.52,640.87
+Office-Urbanfit T,South,2025Q4,3,1018.87,-76.59,741.6,277.27,339.62,92.42
+Office-Urbanfit T,West,2025Q1,2,1129.25,0.0,406.62,722.63,564.62,361.32
+Office-Urbanfit T,West,2025Q2,3,1626.48,44.03,741.6,884.88,542.16,294.96
+Office-Urbanfit T,West,2025Q3,2,769.75,-52.67,406.62,363.13,384.88,181.56
+Office-Urbanfit T,West,2025Q4,3,2532.71,229.03,1004.94,1527.77,844.24,509.26

@@ -168,10 +168,20 @@ Before starting a new session, remember to do a `git pull` and keep your tools u
 Each time forward progress is made, remember to git add-commit-push.
 
 
-### Added Starter Code
-- Created new file 'src/analytics_project/data_prep.py'
-- Copied code from the [smart-sales-starter-files](https://github.com/denisecase/smart-sales-starter-files) GitHub repo
-- Saved the file in correct folder
+### SmartSales Setup
+- Created new file 'src/analytics_project/data_prep.py' for C:/Repos
+  - Cloned repo to local drive.
+    - Repo cloned [smart-sales-starter-files](https://github.com/denisecase/smart-sales-starter-files) GitHub repo
+    - Installed recommended extensions to VS Code
+
+- Set up Virtual Enviroment
+  - Opened VS Code, open new terminal in powershell
+  - Ran the following lines
+    - Create virtual enviroment : uv venv
+    - Pin Python version (3.12) : uv python pin 3.12
+    - Install all dependencies  : uv sync -- extra dev --extra docs -- upgrade
+    - Enable pre-commit checks, automatically runs each commit : uv run pre-commit install
+    - Verify Python version : uv run python --version
 
 ### Run Data Prep Module and Commit
 - Opened the terminal
@@ -181,8 +191,53 @@ Each time forward progress is made, remember to git add-commit-push.
       -  git add .
       -  git commit -m "add starter files"
       -  git push -u origin main
--
+
+# P3: Prep Data for ETL
+
+# P4: Create and Populate DW
+### Introductions of new folders/files added
+- data/warehouse/smart_sales.db
+  - Location of dw, made through sqlite3
+- etl_to_dw
+- data_scrubber.py
+  - Module including general instructions/operations for cleaning raw data
+
 ### Run etl_to_dw
 - Open terminal
-- Ran module using
-- uv run python -m analytics_project.dw.etl_to_dw
+- Run module using
+  - uv run python -m analytics_project.dw.etl_to_dw
+
+### etl_to_dw
+- Python module performs a series of operations for the ETL process. (Extract, Transform, Load)
+  - Extraction: Reads CSV files from data/prepared/
+  - Schema Creation: Creates tables corresponding to extracted files. Customers, Products, Sales.
+  - Transform
+    - Rename columns to match schema theme.
+    - Select relevant columns for each table.
+    - Ensure data types are compatible.
+  - Load: Load to data/warehouse/smart_sales.db
+
+### TO DO: Added Images, table dimensions, etc.
+
+### Challenges encountered
+- TO BE ADDED
+
+# P5: Cross-Platform Reporting with Power BI
+### Connecting data-warehouse to BI Tools, Power BI.
+- Requirements:
+  - Power BI Desktop
+  - SQLite ODBC Driver
+  - Create DSN named SmartSalesDSN
+- Process
+  - Load tables to Power BI
+    - Power BI -> Data (Tab) -> Get Data -> Other
+    - Select new DSN: SmartSalesDSN
+- TO DO: Add what was done
+  - SQL Query
+  - Slicing
+  - Dicing
+  - Drilldown
+  - Images
+# P6: BI Insight, Storytelling, and Engagement
+
+

@@ -96,6 +96,11 @@ def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
         df[col] = df[col].fillna(mean_value)
         logger.info(f"Filled missing values in '{col}' with mean {mean_value:.2f}")
 
+    # Convert CampaignID to integer (remove decimal places)
+    if "CampaignID" in df.columns:
+        df["CampaignID"] = df["CampaignID"].astype(int)
+        logger.info("Converted CampaignID to integer format")
+
     # Categorical columns
     categorical_cols = df.select_dtypes(include=["object"]).columns
     for col in categorical_cols:

@@ -96,6 +96,14 @@ def delete_existing_records(cursor: sqlite3.Cursor) -> None:
 
 def insert_customers(customers_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert customer data into the customer table."""
+    # Ensure there are no duplicate primary keys before inserting
+    initial = len(customers_df)
+    if "customer_id" in customers_df.columns:
+        customers_df = customers_df.drop_duplicates(subset=["customer_id"], keep="first")
+        dropped = initial - len(customers_df)
+        if dropped:
+            logger.info(f"Dropped {dropped} duplicate customer_id rows before insert")
+
     logger.info(f"Inserting {len(customers_df)} customer rows.")
     customers_df.to_sql("customer", cursor.connection, if_exists="append", index=False)
 

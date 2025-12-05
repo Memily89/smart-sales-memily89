@@ -1,101 +1,101 @@
 ProductID,ProductName,Category,UnitPrice,StockCount,Supplier
-2000,Electronics-Be,Electronics,969.31,123,PrimeGate Procurement
-2001,Electronics-Be,Clothing,412.35,275,ApexNova Supplies
-2002,Office-Family,Clothing,866,354,HorizonWorks Industries
-2003,Electronics-Training,Clothing,385.18,255,IronBridge Importers
-2004,Office-Where,Home,927.25,71,GreenPort Essentials
-2005,Office-Huge,Home,428.78,345,MetroVale Supply Co.
-2006,Office-Class,Clothing,198,404,MetroVale Supply Co.
-2007,Clothing-Over,Electronics,583.39,53,SummitStone Trading
-2008,Electronics-Skin,Home,66.59,158,OceanSpan Supply Chain
-2009,Office-Raise,Clothing,66.31,342,BlueRiver Distributors
-2010,Electronics-Themselves,Clothing,77.84,76,MetroVale Supply Co.
-2011,Electronics-Religious,Clothing,409.74,103,OceanSpan Supply Chain
-2012,Clothing-Artist,Electronics,623.19,314,HorizonWorks Industries
-2013,Office-Cultural,Home,935.36,465,AtlasPeak Sourcing
-2014,Clothing-Eat,Home,246.3,58,VertexOne Global
-2015,Office-Itself,Clothing,674.97,62,MetroVale Supply Co.
-2016,Home-He,Office,323.02,344,MetroVale Supply Co.
-2017,Electronics-Feeling,Electronics,463.7,451,ClearWave Enterprises
-2018,Electronics-Nature,Electronics,542.26,199,GreenPort Essentials
-2019,Home-History,Clothing,933.93,126,ApexNova Supplies
-2020,Electronics-Share,Clothing,375.83,460,PrimeGate Procurement
-2021,Clothing-Skill,Office,835.41,421,EcoFood Wholesale
-2022,Home-Economy,Electronics,671.18,31,ApexNova Supplies
-2023,Home-Yeah,Electronics,939.54,192,OceanSpan Supply Chain
-2024,Clothing-Paper,Home,124.27,323,TerraCore Solutions
-2025,Electronics-Assume,Clothing,279.62,280,ClearWave Enterprises
-2026,Clothing-Use,Home,211.56,260,IronBridge Importers
-2027,Home-Purpose,Office,258.61,72,SummitStone Trading
-2028,Electronics-Take,Electronics,637.94,94,QuantumEdge Traders
-2029,Home-Yourself,Electronics,13.51,59,ZenithFlow Materials
-2030,Clothing-First,Home,169.97,471,GreenPort Essentials
-2031,Office-Develop,Office,565.3,36,QuantumEdge Traders
-2032,Electronics-There,Electronics,945.6,28,MetroVale Supply Co.
-2033,Clothing-Argue,Electronics,836.25,254,ZenithFlow Materials
-2034,Clothing-Feel,Office,136.17,93,IronBridge Importers
-2035,Home-According,Home,899.99,378,ApexNova Supplies
-2036,Electronics-Candidate,Home,217.98,56,Zero Supplies
-2037,Clothing-Meeting,Electronics,360.14,263,HorizonWorks Industries
-2038,Office-Soon,Clothing,926.51,445,SilverPoint Logistics
-2039,Clothing-Need,Clothing,976.44,93,SummitStone Trading
-2040,Clothing-Determine,Office,34.54,136,NorthStar Components
-2041,Home-Assume,Office,804.21,151,SummitStone Trading
-2042,Clothing-Lawyer,Home,167.61,330,TerraCore Solutions
-2043,Electronics-Practice,Office,873.45,357,EcoFood Wholesale
-2044,Office-Society,Clothing,207.58,89,NorthStar Components
-2045,Office-Next,Home,312.14,122,BlueRiver Distributors
-2046,Clothing-Worry,Clothing,33.43,322,QuantumEdge Traders
-2047,Clothing-Hair,Office,334.98,490,MetroVale Supply Co.
-2048,Electronics-Candidate,Home,357.63,346,HorizonWorks Industries
-2049,Office-Easy,Home,939.84,337,VertexOne Global
-2050,Electronics-Young,Home,186.78,260,ZenithFlow Materials
-2051,Home-Century,Electronics,117.32,409,VertexOne Global
-2052,Office-Year,Home,731.26,356,MetroVale Supply Co.
-2053,Home-Ground,Office,610.15,288,BlueRiver Distributors
-2054,Electronics-Above,Office,900.51,440,ClearWave Enterprises
-2055,Clothing-Politics,Home,53.94,305,Zero Supplies
-2056,Office-About,Electronics,524.72,181,NorthStar Components
-2057,Clothing-Identify,Home,436.98,203,BlueRiver Distributors
-2058,Home-Wear,Home,666.75,169,SummitStone Trading
-2059,Electronics-Clear,Home,512.05,154,OceanSpan Supply Chain
-2060,Office-Term,Home,408.38,261,Zero Supplies
-2061,Home-Quite,Clothing,199.92,147,SilverPoint Logistics
-2062,Office-Receive,Clothing,619.36,346,VertexOne Global
-2063,Home-Good,Office,552.46,268,BlueRiver Distributors
-2064,Electronics-Stop,Home,294.04,355,BlueRiver Distributors
-2065,Office-Animal,Home,470.34,441,BlueRiver Distributors
-2066,Office-Occur,Clothing,516.06,181,OceanSpan Supply Chain
-2067,Clothing-Remain,Electronics,290.95,391,TerraCore Solutions
-2068,Home-Read,Electronics,820.24,173,SilverPoint Logistics
-2069,Clothing-Garden,Home,232.39,187,BlueRiver Distributors
-2070,Clothing-About,Clothing,34.18,274,HorizonWorks Industries
-2071,Clothing-Success,Office,615.16,320,SilverPoint Logistics
-2072,Electronics-Become,Office,420.3,72,HorizonWorks Industries
-2073,Clothing-Executive,Office,499.43,363,PrimeGate Procurement
-2074,Clothing-Strong,Clothing,659.5,119,GreenPort Essentials
-2075,Electronics-Letter,Electronics,780.64,394,GreenPort Essentials
-2076,Clothing-Affect,Clothing,806.07,497,SummitStone Trading
-2077,Office-Ball,Electronics,561.83,229,SummitStone Trading
-2078,Electronics-Film,Office,142.01,68,HorizonWorks Industries
-2079,Office-Who,Home,950.54,152,HorizonWorks Industries
-2080,Office-Doctor,Office,832.26,376,PrimeGate Procurement
-2081,Office-Light,Clothing,746.22,196,SummitStone Trading
-2082,Office-Figure,Office,266.6,321,ApexNova Supplies
-2083,Clothing-Cut,Home,768.16,178,NorthStar Components
-2084,Office-Stuff,Clothing,281.85,143,NorthStar Components
-2085,Electronics-Officer,Home,242.15,235,ZenithFlow Materials
-2086,Home-Of,Home,894.1,227,Zero Supplies
-2087,Electronics-Rather,Clothing,159.32,460,SummitStone Trading
-2088,Office-Evening,Clothing,709.35,30,MetroVale Supply Co.
-2089,Electronics-Action,Office,413.52,101,QuantumEdge Traders
-2090,Office-Staff,Office,71.64,58,AtlasPeak Sourcing
-2091,Office-Mrs,Office,905.79,384,AtlasPeak Sourcing
-2092,Electronics-Add,Office,482.21,25,MetroVale Supply Co.
-2093,Home-Real,Home,755.94,136,SilverPoint Logistics
-2094,Office-Fight,Clothing,493.35,55,BlueRiver Distributors
-2095,Home-Seem,Office,490.79,312,ApexNova Supplies
-2096,Office-Discuss,Home,672.18,373,MetroVale Supply Co.
-2097,Office-Recent,Clothing,842.1,260,AtlasPeak Sourcing
-2098,Clothing-Trouble,Electronics,907.86,457,OceanSpan Supply Chain
-2099,Electronics-Several,Electronics,646.32,150,ZenithFlow Materials
+2000,Electronics-Nova X Smartphone,Electronics,969.31,123,PrimeGate Procurement
+2001,Clothing-Apex Pro Laptop,Clothing,412.35,275,ApexNova Supplies
+2002,Clothing-Nova X Smartphone,Clothing,866,354,HorizonWorks Industries
+2003,Clothing-Apex Pro Laptop,Clothing,385.18,255,IronBridge Importers
+2004,Home-CozyCap Knit Hat,Home,927.25,71,GreenPort Essentials
+2005,Home-StrideFlex Sneakers,Home,428.78,345,MetroVale Supply Co.
+2006,Clothing-StrideFlex Sneakers,Clothing,198,404,MetroVale Supply Co.
+2007,Electronics-ComfyRest Sofa,Electronics,583.39,53,SummitStone Trading
+2008,Home-SoftWeave Area Rug,Home,66.59,158,OceanSpan Supply Chain
+2009,Clothing-UrbanFit T,Clothing,66.31,342,BlueRiver Distributors
+2010,Clothing-Nova X Smartphone,Clothing,77.84,76,MetroVale Supply Co.
+2011,Clothing-LumaGlow Floor Lamp,Clothing,409.74,103,OceanSpan Supply Chain
+2012,Electronics-StrideFlex Sneakers,Electronics,623.19,314,HorizonWorks Industries
+2013,Home-UrbanFit T,Home,935.36,465,AtlasPeak Sourcing
+2014,Home-UrbanFit T,Home,246.3,58,VertexOne Global
+2015,Clothing-SkyTab Mini Tablet,Clothing,674.97,62,MetroVale Supply Co.
+2016,Office-ComfyRest Sofa,Office,323.02,344,MetroVale Supply Co.
+2017,Electronics-LumaGlow Floor Lamp,Electronics,463.7,451,ClearWave Enterprises
+2018,Electronics-ThermaShell Jacket,Electronics,542.26,199,GreenPort Essentials
+2019,Clothing-ErgoLux Office Chair,Clothing,933.93,126,ApexNova Supplies
+2020,Clothing-EchoWave Headphones,Clothing,375.83,460,PrimeGate Procurement
+2021,Office-SkyTab Mini Tablet,Office,835.41,421,EcoFood Wholesale
+2022,Electronics-StrideFlex Sneakers,Electronics,671.18,31,ApexNova Supplies
+2023,Electronics-CozyCap Knit Hat,Electronics,939.54,192,OceanSpan Supply Chain
+2024,Home-ProDesk Workstation,Home,124.27,323,TerraCore Solutions
+2025,Clothing-EchoWave Headphones,Clothing,279.62,280,ClearWave Enterprises
+2026,Home-SkyTab Mini Tablet,Home,211.56,260,IronBridge Importers
+2027,Office-Storify Bookshelf,Office,258.61,72,SummitStone Trading
+2028,Electronics-UrbanFit T,Electronics,637.94,94,QuantumEdge Traders
+2029,Electronics-ComfyRest Sofa,Electronics,13.51,59,ZenithFlow Materials
+2030,Home-PrintPro Laser Printer,Home,169.97,471,GreenPort Essentials
+2031,Office-EchoWave Headphones,Office,565.3,36,QuantumEdge Traders
+2032,Electronics-Nova X Smartphone,Electronics,945.6,28,MetroVale Supply Co.
+2033,Electronics-ComfyRest Sofa,Electronics,836.25,254,ZenithFlow Materials
+2034,Office-ProDesk Workstation,Office,136.17,93,IronBridge Importers
+2035,Home-EchoWave Headphones,Home,899.99,378,ApexNova Supplies
+2036,Home-EchoWave Headphones,Home,217.98,56,Zero Supplies
+2037,Electronics-SnapBind Stapler,Electronics,360.14,263,HorizonWorks Industries
+2038,Clothing-LumaGlow Floor Lamp,Clothing,926.51,445,SilverPoint Logistics
+2039,Clothing-OakLine Coffee Table,Clothing,976.44,93,SummitStone Trading
+2040,Office-EchoWave Headphones,Office,34.54,136,NorthStar Components
+2041,Office-StrideFlex Sneakers,Office,804.21,151,SummitStone Trading
+2042,Home-ThermaShell Jacket,Home,167.61,330,TerraCore Solutions
+2043,Office-ProDesk Workstation,Office,873.45,357,EcoFood Wholesale
+2044,Clothing-ProDesk Workstation,Clothing,207.58,89,NorthStar Components
+2045,Home-ComfyRest Sofa,Home,312.14,122,BlueRiver Distributors
+2046,Clothing-ErgoLux Office Chair,Clothing,33.43,322,QuantumEdge Traders
+2047,Office-UrbanFit T,Office,334.98,490,MetroVale Supply Co.
+2048,Home-OakLine Coffee Table,Home,357.63,346,HorizonWorks Industries
+2049,Home-CozyCap Knit Hat,Home,939.84,337,VertexOne Global
+2050,Home-PrintPro Laser Printer,Home,186.78,260,ZenithFlow Materials
+2051,Electronics-LumaGlow Floor Lamp,Electronics,117.32,409,VertexOne Global
+2052,Home-Storify Bookshelf,Home,731.26,356,MetroVale Supply Co.
+2053,Office-OakLine Coffee Table,Office,610.15,288,BlueRiver Distributors
+2054,Office-Nova X Smartphone,Office,900.51,440,ClearWave Enterprises
+2055,Home-Storify Bookshelf,Home,53.94,305,Zero Supplies
+2056,Electronics-ErgoLux Office Chair,Electronics,524.72,181,NorthStar Components
+2057,Home-SnapBind Stapler,Home,436.98,203,BlueRiver Distributors
+2058,Home-ComfyRest Sofa,Home,666.75,169,SummitStone Trading
+2059,Home-SkyTab Mini Tablet,Home,512.05,154,OceanSpan Supply Chain
+2060,Home-OakLine Coffee Table,Home,408.38,261,Zero Supplies
+2061,Clothing-OakLine Coffee Table,Clothing,199.92,147,SilverPoint Logistics
+2062,Clothing-SoftWeave Area Rug,Clothing,619.36,346,VertexOne Global
+2063,Office-LumaGlow Floor Lamp,Office,552.46,268,BlueRiver Distributors
+2064,Home-StrideFlex Sneakers,Home,294.04,355,BlueRiver Distributors
+2065,Home-StrideFlex Sneakers,Home,470.34,441,BlueRiver Distributors
+2066,Clothing-ProDesk Workstation,Clothing,516.06,181,OceanSpan Supply Chain
+2067,Electronics-LumaGlow Floor Lamp,Electronics,290.95,391,TerraCore Solutions
+2068,Electronics-ComfyRest Sofa,Electronics,820.24,173,SilverPoint Logistics
+2069,Home-DenimForge Jeans,Home,232.39,187,BlueRiver Distributors
+2070,Clothing-EchoWave Headphones,Clothing,34.18,274,HorizonWorks Industries
+2071,Office-SkyTab Mini Tablet,Office,615.16,320,SilverPoint Logistics
+2072,Office-OakLine Coffee Table,Office,420.3,72,HorizonWorks Industries
+2073,Office-ThermaShell Jacket,Office,499.43,363,PrimeGate Procurement
+2074,Clothing-ErgoLux Office Chair,Clothing,659.5,119,GreenPort Essentials
+2075,Electronics-ClearNote Whiteboard,Electronics,780.64,394,GreenPort Essentials
+2076,Clothing-ClearNote Whiteboard,Clothing,806.07,497,SummitStone Trading
+2077,Electronics-DenimForge Jeans,Electronics,561.83,229,SummitStone Trading
+2078,Office-EchoWave Headphones,Office,142.01,68,HorizonWorks Industries
+2079,Home-CozyCap Knit Hat,Home,950.54,152,HorizonWorks Industries
+2080,Office-EchoWave Headphones,Office,832.26,376,PrimeGate Procurement
+2081,Clothing-PrintPro Laser Printer,Clothing,746.22,196,SummitStone Trading
+2082,Office-LumaGlow Floor Lamp,Office,266.6,321,ApexNova Supplies
+2083,Home-PrintPro Laser Printer,Home,768.16,178,NorthStar Components
+2084,Clothing-StrideFlex Sneakers,Clothing,281.85,143,NorthStar Components
+2085,Home-PrintPro Laser Printer,Home,242.15,235,ZenithFlow Materials
+2086,Home-Storify Bookshelf,Home,894.1,227,Zero Supplies
+2087,Clothing-CozyCap Knit Hat,Clothing,159.32,460,SummitStone Trading
+2088,Clothing-Storify Bookshelf,Clothing,709.35,30,MetroVale Supply Co.
+2089,Office-SoftWeave Area Rug,Office,413.52,101,QuantumEdge Traders
+2090,Office-UrbanFit T,Office,71.64,58,AtlasPeak Sourcing
+2091,Office-StrideFlex Sneakers,Office,905.79,384,AtlasPeak Sourcing
+2092,Office-ErgoLux Office Chair,Office,482.21,25,MetroVale Supply Co.
+2093,Home-ProDesk Workstation,Home,755.94,136,SilverPoint Logistics
+2094,Clothing-ClearNote Whiteboard,Clothing,493.35,55,BlueRiver Distributors
+2095,Office-ErgoLux Office Chair,Office,490.79,312,ApexNova Supplies
+2096,Home-Storify Bookshelf,Home,672.18,373,MetroVale Supply Co.
+2097,Clothing-UrbanFit T,Clothing,842.1,260,AtlasPeak Sourcing
+2098,Electronics-PrintPro Laser Printer,Electronics,907.86,457,OceanSpan Supply Chain
+2099,Electronics-OakLine Coffee Table,Electronics,646.32,150,ZenithFlow Materials
