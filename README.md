@@ -239,5 +239,50 @@ Each time forward progress is made, remember to git add-commit-push.
   - Drilldown
   - Images
 # P6: BI Insight, Storytelling, and Engagement
-
-
+- OLAP Creation
+  - Create OLAP calculating for new metrics for further analysis and insights
+  - OLAP output to new csv data/olap_cubing_outputs/multidimensional_olap_cube.csv
+#P7 Custom BI Project
+- Section 1. Business Goal
+  - Identify regional product sales trends to identify product and store sales performance
+- Section 2.
+  - Dataset from warehouse
+  - Columns
+    - units_sold, total_cogs, total_sales_revenue, average_gross_profit, average_selling_price
+    - product_category, product_item
+    - region, sale_quarter
+  - Time Period: 2025
+- Section 3: Tools Used
+  - Primary tools:
+    - VS Code - Data cleaning, ETL, and OLAP processes
+    - Power BI - Data transformation and visualiazation
+  - Data Source:
+    - CSV file imports
+    - Data warehouse - smart_sales.db
+  - Features Utilized:
+    - Interactive slicers for filtering
+    - Cross-filtering between visuals
+    - Conditional Formatting
+    - Dashboard
+- Section 4: Workflow & Logic
+  - Data Import Process
+    - Clean file data from data/raw
+    - Build OLAP utulizaing data/prepared
+      - Utulize OLAP to generate new metric and calculations
+      - Export to new CSV
+    - Import CSV to Power BI
+  - Data Transformation
+    - New columns generated
+      - units_sold
+      - total_cogs
+      - total_sales_revenue
+      - average_gross_profit
+      - average_selling_price
+      - sale_growth_pct
+      - sale_quarter - Parsed from sales_date
+    - Analytical Techniques
+    - Slicing & Dicing: Region, Sales Quarter
+    - Drilldown: Region, Qtr ,Product item
+    - Aggregation: AVG, SUM, COUNT,
+    - Trend Analysis: Time series visualization
+    -
